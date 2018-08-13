@@ -1,7 +1,5 @@
 //Sidebar pusher
-$('.ui.sidebar').sidebar('attach events', '.top.ui.menu .item.sidebar');
-
+$(".ui.sidebar").sidebar("attach events", ".top.ui.menu .item.sidebar");
 
 //Drop-down behaviour
-$('.ui.dropdown').dropdown();
-
+$(".ui.dropdown").dropdown();
