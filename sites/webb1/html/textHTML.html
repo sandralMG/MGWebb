@@ -223,66 +223,89 @@
                     <div class="ten wide column">
 
                         <!-- Intro HTML-->
-                        <h2 class="ui header"> Introduktion till HTML </h2>
+                        <h2 class="ui header"> Text och Rubriker </h2>
                         <div class="ui hidden divider"></div>
                         <p>
-                            HTML står för Hyper Text Markup Language och är koden som strukturerar webbsidans innehåll. Exempelvis “det här är ett textstycke
-                            (en paragraf)”eller “där här är en punktlist” eller hur man lägger in bilder eller gör tabeller.
-                            HTML är inget programmeringsspråk utan ett s.k märkspråk som märker upp data som är vad i innehållet,
-                            d.v.s. ger sidan struktur. HTML består av olika “element” som man omsluter med s.k taggar. En
-                            tagg i början (starttagg) och en i slutet (sluttag).
+                            I den här delen ska vi lära oss hur märker upp vi märker upp text och rubriker i HTML, men även olika typer av listor och
+                            hur man strukturer innehåll till olika sektioner.
                         </p>
 
-                        <h3 class="header">Grundregeln</h3>
-
-                        <div class="ui hidden divider"></div>
-
-                        <div class="ui compact segment">
-                            <pre><code class="html">&lt;p&gt; Det här innehållet vill jag ha på min sida &lt;/p&gt;</code></pre>
-                        </div>
-                        <div class="ui hidden divider"></div>
-
                         <p>
-                            Starttaggen talar alltså om var den ska börja gälla. I det här fallet är definierar “p” att elementet är en paragraf, d.v.s
-                            ett textstycke. Sluttaggen talar alltså om var elementet slutar gälla. Det som är mellan start-
-                            och sluttag är innehållet av elementet - i detta fall text.
+                            Ni har lärt er hur man strukturerar en enkel html-sida och öppnar i en webbläsare. Innan vi börjar lära oss mer om HTML vill
+                            jag introducera ett begrepp som är viktigt att veta innebörden av. När vi märker upp ett innehåll
+                            för en webbsida, som antingen kan vara ditt eget material eller från en beställare, är det viktigt
+                            att vi väljer rätt element för rätt innehåll så att webbsidan blir semantisk korrekt - d.v.s
+                            att den struktur vi ger sidan känns så meningsfull som möjligt. Att skriva semantisk korrekta
+                            webbsidor kan ibland vara krångligt, men det är viktigt att så långt som möjligt följa riktlinjerna
+                            för varje html-elements innehåll. En sådan html-kod gör det lättare för sökmotorer att förstå
+                            vad som är vad på webbplatsen men också för tillängligthetsanpassning som vi kommer komma till
+                            senare.
                         </p>
 
                         <div class="ui hidden divider"></div>
-                        <h3 class="header"> Nestlade element </h3>
-                        <p>
-                            Man kan även ha andra element inuti ett element - vilket kallas för nästlade element (nestling elements). Exempelvis kan
-                            vi märka upp att ett av orden ska vara “fetmarkerat” vår paragraf inuti vår. Då använder vi start-
-                            och sluttag på samma sätt, men i detta fall använder vi taggnamnet, eller elementnamnet strong
-                        </p>
-                        <div class="ui compact segment">
-                            <pre><code class="html">&lt;p&gt; Det här är &lt;strong&gt; innehållet &lt;/strong&gt; vill jag ha på min sida &lt;/p&gt;</code></pre>
-                        </div>
+
+                        <h3 class="ui header"> Rubriker </h2>
 
 
-                        <div class="ui hidden divider"></div>
-                        <h3 class="header">Element utan sluttag </h3>
-                        <p>
-                            En del element saknar sluttag och kallas för tomma element. Element för att lägga in en bild, &lt; img&gt; är ett exempel
-                            på sådant
-                        </p>
-                        <div class="ui compact segment">
-                            <pre><code class="html">&lt;img src=“images/minbild.jpg" alt=“Min bild” &gt; </code></pre>
-                        </div>
-                        <div class="ui hidden divider"></div>
+                            <p>
+                                Rubriker skrivs med &lt;h1&gt;, &lt;h2&gt;…, &lt;h6&gt; beroende på vilken nivå rubriken har. Precis som en bok har en huvudtitel,
+                                kapitelrubriker, underrubriker är det viktigt att en webbsida följer en logisk ordning i
+                                rubriken. Den rubrik som är störst, och som webbläsare ser som viktigast är &lt;h1&gt; och
+                                får förekomma endast en gång på webbsidan. Efter den får man fylla på med underrubriker &lt;h2&gt;.
+                                &lt;h3&gt;, o.s.v
+                            </p>
+
+                            <div class="ui hidden divider"></div>
+
+                            <h3 class="ui header"> Textstycken </h2>
+
+                                <p>
+
+                                    Textstycken, eller även kallad brödtext märks upp i HTML med &lt;p&gt;-elementet. “p” är en förkortning av engelskans “paragraph".
+                                    Nedan ser ni två textstycken inom &lt;p&gt;-elementet. Webbläsaren förstår att all text
+                                    inom en paragraf är ett sammanhängande textstycke, men om ett ny paragraf anges börjar
+                                    det vanligtvis på en ny rad.
+                                </p>
+                                <div class="ui hidden divider"></div>
+                                <div class="ui warning message">
+                                    <p>
+                                        Obs! Det är viktigt att man märker upp allt innehåll, ingen text får stå utan taggar - “naken”.
+
+                                    </p>
+                                </div>
+
+                                <div class="ui hidden divider"></div>
+
+                                <h3 class="ui header"> Radbrytning </h2>
+
+                                    <p>
+
+                                        Ibland behöver man göra en radbrytning i texten vilket använder taggen &lt;br&gt; till. Elementet ska inte användas till
+                                        att skapa större utrymmen (vilket det ibland missvisande används för) utan bara för
+                                        enstaka radbrytningar, exempelvis till adresser eller några poesirader. Hur man skapar
+                                        mellanrum kommer mellan textstycken, rubriker kommer vi till när vi tar upp boxmodellen.(länk)
+
+                                    </p>
+
+                                    <div class="ui hidden divider"></div>
+
+                                    <h3 class="ui header"> Listor </h2>
+
+                                        <p>
+
+                                            Det finns mycket innehåll på webbsidor som struktureras i listor. Ibland för att strukturera innehållet tydligt och i en
+                                            viss ordning. Listor brukar också användas för att skapa navigationsmenyer. Det
+                                            finns två olika typer av listor som är bra att kunna, oordnade och ordnade lister
+                                            Oordnade listor använder &lt;ul&gt;-elementet, de har även en punkt framför sig.
+                                            &lt;li&gt; motsvarar varje element i listan.
+
+                                        </p>
 
 
-                        <p>
-                            Det här elementet saknar alltså en sluttag, men den innehåller istället information inuti taggen, d.v.s. attributet src som
-                            definierar från var och vilket filnamn bilden har. Attributet alt definierar bildens beskrivnin.
-                            De flesta element kan även ha olika attribut, vilket kommer gå igenom senare.
-                        </p>
-                        <div class="ui hidden divider"></div>
-
-                        <div class="ui segment ">
-                            <h4 class="ui header ">Länkar </h4>
-                            <a href="https://developer.mozilla.org/sv-SE/docs/Web/HTML ">MDN HTML</a>
-                        </div>
+                                        <div class="ui segment ">
+                                            <h4 class="ui header ">Länkar </h4>
+                                            <a href="https://developer.mozilla.org/sv-SE/docs/Web/HTML ">MDN HTML</a>
+                                        </div>
 
 
                     </div>
