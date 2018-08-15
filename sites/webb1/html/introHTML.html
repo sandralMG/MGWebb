@@ -49,9 +49,7 @@
                 <a class="item" href="../intro/begrepp.html">
                     Begrepp
                 </a>
-                <a class="item" href="../intro/htmlanatomi.html">
-                    En webbsidas struktur
-                </a>
+
             </div>
 
         </div>
@@ -224,68 +222,118 @@
             </div> -->
                     </div>
                     <div class="ten wide column">
+                        <div class="ui vertical segment">
+                            <!-- Intro HTML-->
+                            <h2 class="ui header"> Introduktion till HTML </h2>
+                            <p>
+                                HTML står för Hyper Text Markup Language och är koden som strukturerar webbsidans innehåll. Exempelvis “det här är en rubrik"
+                                ” eller “det här en paragraf” eller "lägg in en bild här". HTML är inget programmeringsspråk
+                                utan ett s.k märkspråk som märker upp vad som är vad i innehållet - det ger sidan struktur
+                                och mening. HTML består av olika “element” som man omsluter med s.k taggar.
+                            </p>
 
-                        <!-- Intro HTML-->
-                        <h2 class="ui header"> Introduktion till HTML </h2>
-                        <div class="ui hidden divider"></div>
-                        <p>
-                            HTML står för Hyper Text Markup Language och är koden som strukturerar webbsidans innehåll. Exempelvis “det här är ett textstycke
-                            (en paragraf)”eller “där här är en punktlist” eller hur man lägger in bilder eller gör tabeller.
-                            HTML är inget programmeringsspråk utan ett s.k märkspråk som märker upp data som är vad i innehållet,
-                            d.v.s. ger sidan struktur. HTML består av olika “element” som man omsluter med s.k taggar. En
-                            tagg i början (starttagg) och en i slutet (sluttag).
-                        </p>
 
-                        <h3 class="header">Grundregeln</h3>
 
-                        <div class="ui hidden divider"></div>
+                            <h3 class="ui header">Grundregeln är:</h3>
 
-                        <div class="ui compact segment">
-                            <pre><code class="html">&lt;p&gt; Det här innehållet vill jag ha på min sida &lt;/p&gt;</code></pre>
-                        </div>
-                        <div class="ui hidden divider"></div>
 
-                        <p>
-                            Starttaggen talar alltså om var den ska börja gälla. I det här fallet är definierar “p” att elementet är en paragraf, d.v.s
-                            ett textstycke. Sluttaggen talar alltså om var elementet slutar gälla. Det som är mellan start-
-                            och sluttag är innehållet av elementet - i detta fall text.
-                        </p>
+                            <div class="ui compact segment">
+                                <!--                                 <pre><code class="html">&lt;p&gt; Det här innehållet vill jag ha på min sida &lt;/p&gt;</code></pre>
+ -->
+                                <img src="../../../assets/images/grundregel.PNG" alt="html grundregel" width="500px">
+                            </div>
 
-                        <div class="ui hidden divider"></div>
-                        <h3 class="header"> Nestlade element </h3>
-                        <p>
-                            Man kan även ha andra element inuti ett element - vilket kallas för nästlade element (nestling elements). Exempelvis kan
-                            vi märka upp att ett av orden ska vara “fetmarkerat” vår paragraf inuti vår. Då använder vi start-
-                            och sluttag på samma sätt, men i detta fall använder vi taggnamnet, eller elementnamnet strong
-                        </p>
-                        <div class="ui compact segment">
-                            <pre><code class="html">&lt;p&gt; Det här är &lt;strong&gt; innehållet &lt;/strong&gt; vill jag ha på min sida &lt;/p&gt;</code></pre>
+                            <p>
+                                En start- och sluttagg omsluter innehållet. Det som skiljer dem åt är tecknet för backslash "/" i sluttaggen. Taggen som
+                                används i exemplet ovan är "p" som står för engelska order paragraph och märker upp att webbläsaren
+                                ska tolka innehållet som ett textstycke. Ett element är alltså taggarna inklusive innehållet.
+                            </p>
+
                         </div>
 
+                        <div class="ui vertical segment">
 
-                        <div class="ui hidden divider"></div>
-                        <h3 class="header">Element utan sluttag </h3>
-                        <p>
-                            En del element saknar sluttag och kallas för tomma element. Element för att lägga in en bild, &lt; img&gt; är ett exempel
-                            på sådant
-                        </p>
-                        <div class="ui compact segment">
-                            <pre><code class="html">&lt;img src=“images/minbild.jpg" alt=“Min bild” &gt; </code></pre>
+                            <h3 class="ui header"> Element inuti element </h3>
+                            <p>
+                                Man kan även markera upp med html-taggar inuti ett element. Exempelvis kan vi märka upp med taggen för att fetmarkera text,
+                                d.v.s &lt;strong&gt; inuti vårt p-element.
+                            </p>
+                            <div class="ui compact segment">
+                                <pre><code class="html">&lt;p&gt; Det här är &lt;strong&gt; innehållet &lt;/strong&gt; vill jag ha på min sida &lt;/p&gt;</code></pre>
+                            </div>
+                            <p>
+                                På det här sättet kan vi märka upp element inuti element och skapa en struktur i ett html-dokument. Man kan säga att strong-elementet
+                                "bor" i p-elementet eller mer utifrån rätt terminologi inom webbutveckling att p-elemetet
+                                är förälder (parent) och att strong-elementet är barn (children) - just i detta fall. Vi
+                                kommer att återkomma till det när vi lär oss att styla en webbsida med CSS.
+                            </p>
+
+
                         </div>
-                        <div class="ui hidden divider"></div>
 
+                        <div class="ui vertical segment">
 
-                        <p>
-                            Det här elementet saknar alltså en sluttag, men den innehåller istället information inuti taggen, d.v.s. attributet src som
-                            definierar från var och vilket filnamn bilden har. Attributet alt definierar bildens beskrivnin.
-                            De flesta element kan även ha olika attribut, vilket kommer gå igenom senare.
-                        </p>
-                        <div class="ui hidden divider"></div>
+                            <h3 class="ui header">Element utan sluttag </h3>
+                            <p>
+                                En del element saknar sluttag och kallas således för tomma element. Html-taggen för att lägga in en bild, &lt; img&gt; är
+                                ett exempel på detta. Istället står information inuti taggen vilket kallas för ett elements
+                                attribut. För img-taggen måste man ange vilken bild man ska visa och var den ligger vilket
+                                man gör med attributet "src". Attributet "alt" anger en beskrivning av bilden.
+                            </p>
+                            <div class="ui compact segment">
+                                <pre><code class="html">&lt;img src=“images/minbild.jpg" alt=“Min bild” &gt; </code></pre>
+                            </div>
 
-                        <div class="ui segment ">
-                            <h4 class="ui header ">Länkar </h4>
-                            <a href="https://developer.mozilla.org/sv-SE/docs/Web/HTML ">MDN HTML</a>
                         </div>
+
+                        <div class="ui vertical segment">
+
+
+
+
+                            <div class="ui message">
+
+                                <div class="ui header">Kuriosa</div>
+
+                                <i>Hur många html-taggar kommer jag behöva lära mig?</i>
+
+                                <br/>
+                                <br/> Det finns totalt omkring 100 st olika html-taggar. De finns alla listade på länken nedan
+                                (MDN referensguide). Kika in om du är nyfiken. Faktum är att du aldig kommer behöva lära
+                                dig alla dessa. Ungefär endast 10-15 st räcker för grundläggande webbutveckling.
+
+                            </div>
+
+                        </div>
+
+                        <div class="ui segment link">
+                            <h4 class="ui header link">Länkar </h4>
+                            <a href="https://developer.mozilla.org/sv-SE/docs/Web/HTML ">MDN Nybörjarguide till HTML</a>
+                            <br>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN Referensguide till samtliga html-element</a>
+                            <br>
+                            <a href="https://www.w3schools.com/html/html_intro.asp">W3 Schools introdution till HTML</a>
+                            <br>
+
+
+                        </div>
+
+                        <div class="ui hidden divider"></div>
+
+                        <a href="introHTML.html">
+                            <button class="ui left floated labeled icon button">
+                                <i class="left arrow icon"></i>
+                                Tillbaka
+                            </button>
+                        </a>
+
+
+                        <a href="grundkodHTML.html">
+                            <button class="ui right floated labeled icon button">
+                                <i class="right arrow icon"></i>
+                                Grundkod för HTML
+                            </button>
+                        </a>
 
 
                     </div>

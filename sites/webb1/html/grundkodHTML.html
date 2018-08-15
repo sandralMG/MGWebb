@@ -222,19 +222,27 @@
             </div> -->
                     </div>
                     <div class="ten wide column">
+                        <div class="ui vertical segment">
+                            <!-- Intro HTML-->
+                            <h2 class="ui header"> Grundkod för en HTML-sida</h2>
 
-                        <!-- Intro HTML-->
-                        <h2 class="ui header"> Grundstruktur för en HTML-sida</h2>
+                            <p>
+                                Nu ska vi titta på de rader kod man behöver för att skapa en webbsida. Det är den grundkod som alltid måste finnas för att
+                                en webbläsare ska kunna tolka och visa en webbsida. Du kan prova själv redan nu.
 
-                        <p>
-                            Om man skulle spara följande kod i en textfil med filnamnet index.html och sedan öppna filen i valfri webbläsare skulle det
-                            se ut så här. Allt det man vill som ska visas på sidan ligger i &lt;body&gt;-elementet. Vi ska
-                            gå igenom varje del för sig.
-                        </p>
-                        <div class="class ui hidden divider"></div>
-                        <div class="ui compact segment">
+                                <ol>
+                                    <li>Öppna din editor eller textredigerare</li>
+                                    <li>Skriv av koden från exemplet nedan. Det som står innanför body-elementet kommer att visas
+                                        på sidan. Om du vill visa bilden, lägg en bild med motsvarande namn i samma mapp</li>
+                                    <li>Spara filen med filändelsen .html</li>
+                                    <li> Gå till valifri webbläsare och välj "Öppna fil" och leta reda på ditt html-dokument</li>
+                                </ol>
 
-                            <pre><code class="html">
+
+                            </p>
+                            <div class="ui compact segment">
+
+                                <pre><code class="html">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="sv"&gt;
     &lt;head&gt;
@@ -246,76 +254,96 @@
     &lt;p&gt; Det här är &lt;strong&gt; innehållet &lt;/strong&gt; - en text jag vill
     ha med på min sida &lt;/p&gt;
     &lt;p&gt; Det här en bild&lt;/p&gt;
-    &lt;img src="images/minbild.jpg" alt="Min bild"&gt;  
+    &lt;img src="minbild.jpg" alt="Min bild"&gt;  
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                            <a href="../../../assets/examples/firstsite.html">
-                                <div class="ui right floated small button">Visa sida</div>
-                            </a>
+                                <a href="../../../assets/examples/firstsite.html">
+                                    <div class="ui right floated small button">Visa sida</div>
+                                </a>
+
+                            </div>
+
+                            Vad ser du? Visar webbläsaren vad du har skrivit innanför body-taggarna? Ser du en titel på webbsidans flik?
+                            <br/>
+                            <br/> Vi kommer att gå igenom varje element för sig. Vad som är viktigt att skilja på är att det innanför
+                            &lt;body&gt;-elementet är det som visas i din webbläsare - det är här du bygger din webbsida.
+                            <br/>Innehållet inom &lt;head&gt;-elementet innehåller inställningar, länkar till andra filer som
+                            exempelvis .css-fil etc och är på så sätt dolt.
 
                         </div>
 
-                        <div class="class ui hidden divider"></div>
+                        <div class="ui vertical segment">
 
-                        <p>
-                            Varje gång du behöver skapa en webbsida måste alltså dessa element finnas med enlig strukturen. Till en början är det bra
-                            att skriva in koden för hand för att lära sig grundstrukturen för en html-sida.
-                        </p>
+                            <h3 class="ui header">1. &lt;!DOCTYPE html&gt;</h3>
 
-                        <div class="class ui hidden divider"></div>
+                            <p>Denna rad är nödvändig för att webbläsaren ska förstå att det är ett HTML-dokument. HTML har
+                                funnits i olika versioner och denna kod anger att det handlar om version HTML5 som är den
+                                senaste standarden. Detta element måste alltid finnas överst på sidan och det får inte finnas
+                                några tecken eller mellanslag innan den. </p>
 
-                        <p>
-                            <strong>Kuriosa:</strong> Dock kan det kännas upprepande i längden och då kanske man istället vill kopiera
+
+                            <h3 class="ui header">2. &lt;html&gt; &lt;/html&gt; </h3>
+
+                            <p>Enligt standarden ska det finnas en html-tagg som omsluter hela dokumentet. Html-elementet brukar
+                                kallas roten av dokumentet eftersom den innehåller alla andra element. Man kan även lägga
+                                till vilket språk som webbläsaren ska tolka in, i det här fallet svenska med attributet lang=“sv”.</p>
+
+
+                            <h3 class="ui header">3. &lt;head&gt; &lt;/head&gt; </h3>
+
+                            <p>Html-elementet är uppdelat i två element, &lt;head&gt; och &lt;body&gt;. Till skillnad från &lt;body&gt;
+                                innehåller &lt;head&gt; instruktioner till webbläsaren som en länkning till en stilmall som
+                                ger sidan utseende, eller till javascript. I &lt;head&gt; brukar man också definiera i &lt;meta&gt;-elementet
+                                vilken teckenkodning man vill använda och det här fallet UTF-8 som gör att bokstäver å,ä,ö
+                                visas som de ska. Vi går inte in i detalj på det, men det är viktigt att ni har med den raden
+                                när ni skapar era sidor. I &lt;head&gt; skriver man även webbsidans titel som syns i översta
+                                raden i webbläsaren, men också viktigt att den ger rätt beskrivning för sökmotorer. </p>
+
+
+                            <h3 class="ui header">4. &lt;body&gt; &lt;/body&gt; </h3>
+
+                            <p>Till slut, precis som översättningen säger är detta webbsidans “kropp”. Allt innehåll ni lägger
+                                i &lt;body&gt;-elementet är det som kommer att synas i webbläsaren. </p>
+
+                            <h3 class="ui header">5. Kommentarer </h3>
+
+                            <p>Det är även bra att känna till &lt;!— … —&gt; vilket är kommentarer. Det är inga instruktioner
+                                eller något som kommer synas i webbläsaren utan bara till för att man ska hålla reda på sin
+                                egen kod och att andra ska kunna läsa och förstå :-)</p>
+                        </div>
+
+                        <div class="ui message">
+
+                            <div class="header">Kuriosa</div>Till en början är det bra att skriva in koden för hand för att lära sig grundstrukturen
+                            för en html-sida. Dock kan det kännas upprepande i längden och då kanske man istället vill kopiera
                             koden. Det finns även bra stöd i en program och editorer för upprepande uppgifter. Med tillägget
                             Emmet i VS Code räcker det att man först skapar en html-fil sedan ställer sig först i dokumenten
-                            och skriver ! + Tab.
-                        </p>
-
-                        <div class="class ui hidden divider"></div>
-
-                        <h3 class="ui header">1. &lt;!DOCTYPE html&gt;</h3>
-
-                        <p>HTML har funnits i olika versioner. Det är viktigt att man är tydlig för webbläsaren vilken version
-                            som används, d.v.s i det här fallet standarden enligt HTML5. Detta element måste alltid finnas
-                            överst på sidan och det får inte finnas några tecken eller mellanslag innan den. </p>
-
-                        <div class="class ui hidden divider"></div>
-
-                        <h3 class="ui header">2. &lt;html&gt; &lt;/html&gt; </h3>
-
-                        <p>Enligt standarden ska det finnas en html-tagg som omsluter hela dokumentet. html-elementet brukar
-                            kallas roten av dokumentet eftersom den innehåller alla andra element. Man kan även lägga till
-                            vilket språk som webbläsaren ska tolka in, i det här fallet svenska med attributet lang=“sv”.</p>
-
-                        <div class="class ui hidden divider"></div>
-
-                        <h3 class="ui header">3. &lt;head&gt; &lt;/head&gt; </h3>
-
-                        <p>Html-elementet är uppdelat i två element, &lt;head&gt; och &lt;body&gt;. Till skillnad från &lt;body&gt;
-                            innehåller &lt;head&gt; instruktioner till webbläsaren som en länkning till en stilmall som ger
-                            sidan utseende, eller till javascript. I &lt;head&gt; brukar man också definiera i &lt;meta&gt;-elementet
-                            vilken teckenkodning man vill använda och det här fallet UTF-8 som gör att bokstäver å,ä,ö visas
-                            som de ska. Vi går inte in i detalj på det, men det är viktigt att ni har med den raden när ni
-                            skapar era sidor. I &lt;head&gt; skriver man även webbsidans titel som syns i översta raden i
-                            webbläsaren, men också viktigt att den ger rätt beskrivning för sökmotorer. </p>
-
-                        <div class="class ui hidden divider"></div>
-
-                        <h3 class="ui header">4. &lt;body&gt; &lt;/body&gt; </h3>
-
-                        <p>Till slut, precis som översättningen säger är detta webbsidans “kropp”. Allt innehåll ni lägger i
-                            &lt;body&gt;-elementet är det som kommer att synas i webbläsaren. </p>
-
-                        <h3 class="ui header">5. Kommentarer </h3>
-
-                        <p>Det är även bra att känna till &lt;!— … —&gt; vilket är kommentarer. Det är inga instruktioner eller
-                            något som kommer synas i webbläsaren utan bara till för att man ska hålla reda på sin egen kod
-                            och att andra ska kunna läsa och förstå :-)</p>
-
-                        <div class="ui segment ">
-                            <h4 class="ui header ">Länkar </h4>
-                            <a href="https://developer.mozilla.org/sv-SE/docs/Web/HTML ">MDN HTML</a>
+                            och skriver ! + Tab + Enter för att få grundkoden för HTML.
                         </div>
+
+
+                        <div class="ui segment link">
+                            <h4 class="ui header">Länkar </h4>
+                            <a href="http://webbkoda.se/html/">Webbkoda Startkod HTML</a>
+
+                        </div>
+
+                        <div class="ui hidden divider"></div>
+
+
+                        <a href="textHTML.html">
+                            <button class="ui left floated labeled icon button">
+                                <i class="left arrow icon"></i>
+                                Tillbaka
+                            </button>
+                        </a>
+
+                        <a href="textHTML.html">
+                            <button class="ui right floated labeled icon button">
+                                <i class="right arrow icon"></i>
+                                Text och Rubriker
+                            </button>
+                        </a>
 
 
                     </div>
