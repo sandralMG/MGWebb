@@ -39,24 +39,25 @@ OVERRIDES
   margin-bottom: 40px !important;
 }
 
-.ui.header {
+.ui.main.header {
   margin-bottom: 30px !important;
 }
 
-.ui.header.link {
+.ui.main.header.link {
   margin-bottom: 20px !important;
 }
 
-.ui.link a {
+.ui.main.link a {
   line-height: 2em;
 }
 
-p,
+ui.main p,
 .ui.compact.segment {
   margin-bottom: 30px !important;
 }
 
-.ui.main p {
+.ui.main p,
+.ui.message {
   line-height: 1.7em !important;
 }
 
