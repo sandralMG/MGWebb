@@ -64,3 +64,11 @@ ui.main p,
 .ui.message {
   margin-bottom: 30px !important;
 }
+
+.footer.segment {
+  padding: 5em 0;
+}
+
+#schedule table {
+  font-size: 0.9em;
+}
