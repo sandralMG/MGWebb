@@ -73,3 +73,7 @@ ui.main p,
   font-size: 1.2em;
   line-height: 1.5em;
 }
+
+.top.ui.secondary.menu.item a {
+  padding: 2px;
+}
