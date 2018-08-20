@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../../style/style.css">
+
+    <title>Webbutveckling 1</title>
+</head>
+
+<body>
+    <!--Sidebar-->
+    <div class="ui sidebar vertical menu">
+
+
+        <div class="item">
+            <div class="header">
+                Webbserverprogrammering 1
+            </div>
+            <div class="menu">
+                <a class="item" href="planering.html">
+                    Planering
+                </a>
+                <a class="item" href="kursplan.html">
+                    Kursens innehåll
+                </a>
+
+            </div>
+        </div>
+
+
+
+        <div class="item">
+            <div class="header">
+                PHP
+            </div>
+            <div class="menu">
+                <a class="item" href="../php/about.html">
+                    Introduktion
+                </a>
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="header">
+                MySQL
+            </div>
+            <div class="menu">
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+
+            </div>
+        </div>
+
+
+        <div class="item">
+            <div class="header">
+                Säkerhet
+            </div>
+            <div class="menu">
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="header">
+                Projekt Bloggen
+            </div>
+            <div class="menu">
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+                <a class="item">
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <!--end of sidebar-->
+    <!-- Pusher-->
+    <div class="pusher">
+
+        <!-- Top menu-->
+        <div class="top ui secondary menu">
+            <a class="item sidebar">
+                <i class="icon sidebar"></i>
+            </a>
+            <a class="item">
+                <div class="ui header">Webbutveckling 1</div>
+            </a>
+            <div class="right menu">
+                <div class="right menu">
+                    <div class="item">
+
+                        <a href="../../../index.html">
+                            <img src=" ../../../assets/images/mglogo.jpg " width="100px ">
+                        </a>
+                    </div>
+                    <div class="ui dropdown item">
+                        Kurser
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item" href="../../webb1/info/kursplan.html">Webbutveckling 1</a>
+                            <a class="item" href="planering.html">Webbutveckling 2</a>
+                            <a class="item" href="../../webbsev1/info/kursplan.html">Webbserverprogrammering 1</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui icon input">
+                            <input type="text" placeholder="Sök...">
+                            <i class="search link icon"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--end of top menu-->
+
+        </div>
+        <!--end of pusher-->
+        <div class="ui main container">
+
+            <div class="ui  grid">
+                <div class="row">
+                    <div class="three wide column">
+                        <!--   <div class="ui grey segment">
+              <p>three wide column</p>
+            </div> -->
+                    </div>
+                    <div class="ten wide column">
+                        <div class="ui vertical segment">
+                            <!-- Intro HTML-->
+                            <h1 class="ui header"> Introduktion</h1>
+
+                            <p>
+                                PHP används till att bygga interaktiva webbapplikationer som till exempel forum, gästböcker, webbshoppar, CMS (Content Management
+                                System) och liknande. PHP skapades 1995 av Linus Lerdorf och då stod förkortningen för ”Personal
+                                Home Page”, men numera står det för ”Hypertext Preprocessor”. Statiska webbsidor som är skrivna
+                                i HTML tolkas av webbläsaren direkt. När du skriver serverbaserade skript så talar du om
+                                för webbservern vad du vill göra eller veta. Du vill kanske veta vilka menyval en användare
+                                gjort för att sedan dynamiskt bestämma vad som ska hända utifrån svaret från servern. För
+                                att förstå PHP behöver du ha grundläggande kunskap om HTML.
+                            </p>
+
+                            <p> Backend vs front-end</p>
+
+                            <h2 class="ui header">Installation av PHP och webbserver </h2>
+
+                            <p>ändring. Notera dock att skillnader mellan vår php-server och den du sätter upp hemma kan
+                                förekomma och lösningen måste fungera på vår php-server innan inlämning. Med andra ord, testa
+                                regelbundet din lösning (framförallt projektet) mot skolans webbserver för att fånga upp
+                                sådant som skiljer sig åt så tidigt som möjligt. Att sätta upp en PHP-miljö är inte krävande
+                                för din dator. Du behöver installera: En webbserver som stödjer PHP, skolans server använder
+                                för tillfället version 7.1.6 En installation av PHP (inklusive MySQL) En PHP-editor XAMPP
+                                för Windows/Mac: https://www.apachefriends.org/index.html (Links to an external site.)Links
+                                to an external site.
+                            </p>
+
+                        </div>
+                        <div class="three wide column ">
+                            <!--  <div class="ui grey segment ">
+              <p>three wide column</p>
+            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <div class="ui inverted vertical center aligned footer segment">
+        <div class="ui container">
+
+            <!-- <h4 class="ui inverted header">Footer Header</h4> -->
+            <p>&copy; &nbsp; Sandra Larsson, Mediagymnasiet Nacka Strand</p>
+
+        </div>
+    </div>
+    <!--end of footer-->
+    <!--Code syntax highlightning-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js "></script>
+    <!--jQuery include -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js " integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin=" anonymous "></script>
+    <!-- Semantic UI include script-->
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js "></script>
+    <!--Local script-->
+    <script src="../../../src/script.js "></script>
+</body>
+
+</html>
