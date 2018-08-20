@@ -12,17 +12,17 @@
   background: none;
 }
 
-.ui.sidebar~.fixed,
-.ui.sidebar~.pusher {
+.ui.sidebar ~ .fixed,
+.ui.sidebar ~ .pusher {
   width: 100%;
 }
 
-.ui.visible.left.sidebar~.fixed,
-.ui.visible.left.sidebar~.pusher {
+.ui.visible.left.sidebar ~ .fixed,
+.ui.visible.left.sidebar ~ .pusher {
   width: calc(100% - 260px);
 }
 
-.pushable>.pusher {
+.pushable > .pusher {
   transition: transform 500ms ease, width 800ms ease;
 }
 
@@ -51,7 +51,7 @@ OVERRIDES
   line-height: 2em;
 }
 
-ui.main p,
+.ui.main p,
 .ui.compact.segment {
   margin-bottom: 30px !important;
 }
