@@ -12,7 +12,6 @@
         hljs.initHighlightingOnLoad();
     </script>
     <link rel="stylesheet" type="text/css" href="../../../style/style.css">
-
     <title>Webbutveckling 1</title>
 </head>
 
@@ -48,9 +47,7 @@
                 <a class="item" href="../intro/begrepp.html">
                     Begrepp
                 </a>
-                <a class="item" href="../intro/htmlanatomi.html">
-                    En webbsidas struktur
-                </a>
+
             </div>
 
         </div>
@@ -198,8 +195,8 @@
                         Kurser
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a class="item" href="../../webb1/info/kursplan.html">Webbutveckling 1</a>
-                            <a class="item" href="planering.html">Webbutveckling 2</a>
+                            <a class="item" href="../info/planering.html">Webbutveckling 1</a>
+                            <a class="item" href="../../webb2/info/kursplan.html">Webbutveckling 2</a>
                             <a class="item" href="../../webbsev1/info/kursplan.html">Webbserverprogrammering 1</a>
                         </div>
                     </div>
@@ -226,122 +223,92 @@
             </div> -->
                     </div>
                     <div class="ten wide column">
+
                         <div class="ui vertical segment">
+
                             <!-- Intro HTML-->
-                            <h1 class="ui header"> Grundkod för en HTML-sida</h1>
-
+                            <h1 class="ui header"> Bilder </h1>
+                            <div class="ui hidden divider"></div>
                             <p>
-                                Nu ska vi titta på de rader kod man behöver för att skapa en webbsida. Det är den grundkod som alltid måste finnas för att
-                                en webbläsare ska kunna tolka och visa en webbsida. Du kan prova själv redan nu.
 
-                                <ol>
-                                    <li>Öppna din editor eller textredigerare</li>
-                                    <li>Skriv av koden från exemplet nedan. Det som står innanför body-elementet kommer att visas
-                                        på sidan. Om du vill visa bilden, lägg en bild med motsvarande namn i samma mapp</li>
-                                    <li>Spara filen med filändelsen .html</li>
-                                    <li> Gå till valifri webbläsare och välj "Öppna fil" och leta reda på ditt html-dokument</li>
-                                </ol>
+                                Bilder gör en webbsida mer levande. Det är relevant för att beskriva ett innehåll, men även att skapa stilmässig layout,
+                                exempelvis med en passande backgrundsbild. För att lägga in en bild i HTML använder du dig
+                                av img-taggen och det är en av de taggar som inte har en sluttag. Här är det attributet "src"
+                                som anger vilken bild och sökvägen dit.
 
 
                             </p>
-                            <div class="ui compact segment">
 
-                                <pre><code class="html">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="sv"&gt;
-    &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title>Min första sida&lt;/title&gt;
-    &lt;/head&gt;
-&lt;body&gt;
-    &lt;!-- Det här är en kommentar--&gt;
-    &lt;p&gt; Det här är &lt;strong&gt; innehållet &lt;/strong&gt; - en text jag vill
-    ha med på min sida &lt;/p&gt;
-    &lt;p&gt; Det här en bild&lt;/p&gt;
-    &lt;img src="minbild.jpg" alt="Min bild"&gt;  
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                                <a href="../../../assets/examples/firstsite.html">
-                                    <div class="ui right floated small button">Visa sida</div>
-                                </a>
+                            <p>
+                                Det är även vikigt att ange en beskrivning av bilden med attributet "alt". Den är inte synlig, men viktig ör sökmotorer och
+                                för blinda som inte kan se vad bilden föreställer. Ha som vana att alltid ange en bildbeskrvning
+                                med "alt".
+
+
+                            </p>
+
+                            <div class="ui compact segment">
+                                <pre><code class="html">&lt;!-- Här visas en bild i undermappen img --&gt;
+&lt;img src="img/bild.jpg" alt="En bild" &lt;/img&gt;
+ </code></pre>
 
                             </div>
 
-                            Vad ser du? Visar webbläsaren vad du har skrivit innanför body-taggarna? Ser du en titel på webbsidans flik?
-                            <br/> Vad som är viktigt att skilja på är att det innanför &lt;body&gt;-elementet är det som visas
-                            i din webbläsare - det är här du bygger din webbsida.
-                            <br/>Innehållet inom &lt;head&gt;-elementet innehåller inställningar, länkar till andra filer som
-                            exempelvis .css-fil etc och är på så sätt dolt.
-                            <br/> De taggar du behöver kunna från start är:
 
                         </div>
+
 
                         <div class="ui vertical segment">
 
-                            <h2 class="ui header">1. &lt;!DOCTYPE html&gt;</h2>
+                            <h2 class="ui header"> Filtyper för bilder på webben</h2>
 
-                            <p>Denna rad är nödvändig för att webbläsaren ska förstå att det är ett HTML-dokument. HTML har
-                                funnits i olika versioner och denna kod anger att det handlar om version HTML5 som är den
-                                senaste standarden. Detta element måste alltid finnas överst på sidan och det får inte finnas
-                                några tecken eller mellanslag innan den. </p>
+                            <h3 class="ui header"> JPG</h3>
 
+                            <p> Mer info kommer... </p>
+                            <h3 class="ui header"> PNG</h3>
+                            <p> Mer info kommer... </p>
 
-                            <h2 class="ui header">2. &lt;html&gt; &lt;/html&gt; </h2>
+                            <h3 class="ui header"> GIF</h3>
+                            <p> Mer info kommer... </p>
 
-                            <p>Enligt standarden ska det finnas en html-tagg som omsluter hela dokumentet. Html-elementet brukar
-                                kallas roten av dokumentet eftersom den innehåller alla andra element. Man kan även lägga
-                                till vilket språk som webbläsaren ska tolka in, i det här fallet svenska med attributet lang=“sv”.</p>
-
-
-                            <h2 class="ui header">3. &lt;head&gt; &lt;/head&gt; </h2>
-
-                            <p>Html-elementet är uppdelat i två element, &lt;head&gt; och &lt;body&gt;. Till skillnad från &lt;body&gt;
-                                innehåller &lt;head&gt; instruktioner till webbläsaren som en länkning till en stilmall som
-                                ger sidan utseende, eller till javascript. I &lt;head&gt; brukar man också definiera i &lt;meta&gt;-elementet
-                                vilken teckenkodning man vill använda och det här fallet UTF-8 som gör att bokstäver å,ä,ö
-                                visas som de ska. Vi går inte in i detalj på det, men det är viktigt att ni har med den raden
-                                när ni skapar era sidor. I &lt;head&gt; skriver man även webbsidans titel som syns i översta
-                                raden i webbläsaren, men också viktigt att den ger rätt beskrivning för sökmotorer. </p>
-
-
-                            <h2 class="ui header">4. &lt;body&gt; &lt;/body&gt; </h2>
-
-                            <p>Till slut, precis som översättningen säger är detta webbsidans “kropp”. Allt innehåll ni lägger
-                                i &lt;body&gt;-elementet är det som kommer att synas i webbläsaren. </p>
-
-                            <h2 class="ui header">Kommentarer </h2>
-
-                            <p>Kommentarer används för att förklara vad koden står för. Det är viktigt både för dig själv för
-                                att komma ihåg, men även för någon annan som vill läsa och förstå din kod. Ha som vana att
-                                kommentera din kod där det behövs!
-                                <br/>
-                                <br/>Kommentarer i HTML ser ut så här:
-
-                                <div class="ui compact segment">
-                                    <pre><code class="html"> &lt;!-- Det här är en kommentar --&gt; </code></pre>
-                                </div>
-                                Kommentarer ignoreras alltså när en webbsida ska visas.
                         </div>
+                        <div class="ui vertical segment">
 
-                        <div class="ui message">
+                            <h2 class="ui header"> Bildredigering</h2>
 
-                            <div class="header">Kuriosa</div>Till en början är det bra att skriva in koden för hand för att lära sig grundstrukturen
-                            för en html-sida. Dock kan det kännas upprepande i längden och då kanske man istället vill kopiera
-                            koden. Det finns även bra stöd i en program och editorer för upprepande uppgifter. Med tillägget
-                            <a href="https://www.youtube.com/watch?v=Z5RkLrSDlFA" target="_blank">Emmet i VS Code </a> räcker det att man först skapar en html-fil sedan ställer sig först i dokumenten
-                            och skriver
-                            <b>! + Enter </b>för att få grundkoden för HTML.
+                            <p> Man kan sätta storlek på bilden i img-elementet med attributen "width" och "height". För att
+                                ändra en bilds storlek är detta dock inte en optimal lösning. Då är det bättre att du använder
+                                en bildredigerare för att exempelvis minska en större bild till en mindre, som tar mindre
+                                minnesutrymme.
+                            </p>
+                            <p> Om du både sätter width och height kan bildens dimension ändras och den stretchas ut, vilket
+                                inte blir så snyggt.</p>
+
+                            <div class="ui compact segment">
+                                <pre><code class="html">&lt;!-- En bild som är satt till 100px bred --&gt;
+ &lt;img src="bild.jpg" alt="En bild" width="100px" &lt;/img&gt;
+
+ &lt;!-- En bild som är satt till 100px bred och 50px i höjd --&gt;
+ &lt;img src="bild.jpg" alt="En bild" width="100px" height="50px"&lt;/img&gt;
+         </code></pre>
+
+                            </div>
                         </div>
-
 
                         <div class="ui segment link">
-                            <h4 class="ui header">Länkar </h4>
-                            <a href="http://webbkoda.se/html/" target="_blank">Webbkoda Startkod HTML</a>
+                            <h4 class="ui header ">Länkar </h4>
+                            <a href="https://www.w3schools.com/html/html_headings.asp" target="_blank">W3schools HTML Headings</a>
+                            <br/>
+                            <a href="https://www.w3schools.com/html/html_paragraphs.asp" target="_blank">W3schools HTML Paragraphs</a>
+                            <br/>
 
+                            <a href="https://www.w3schools.com/html/html_lists.asp" target="_blank">W3schools HTML Lists</a>
+                            <br/>
+
+                            <a href="http://blog.proliit.se/semantik/" target="_blank">Semantik inom HTML</a>
                         </div>
 
                         <div class="ui hidden divider"></div>
-
 
                         <a href="textHTML.html">
                             <button class="ui left floated labeled icon button">
@@ -350,25 +317,26 @@
                             </button>
                         </a>
 
-                        <a href="textHTML.html">
+
+                        <a href="imagesHTML.html">
                             <button class="ui right floated labeled icon button">
                                 <i class="right arrow icon"></i>
-                                Text och Rubriker
+                                Bilder
                             </button>
                         </a>
 
 
-                    </div>
-                    <div class="three wide column ">
-                        <!--  <div class="ui grey segment ">
+
+                        <div class="three wide column ">
+                            <!--  <div class="ui grey segment ">
               <p>three wide column</p>
             </div> -->
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
 
     </div>
 

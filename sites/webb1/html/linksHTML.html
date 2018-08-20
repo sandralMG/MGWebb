@@ -68,7 +68,7 @@
                 <a class="item" href="linksHTML.html">
                     Länkar
                 </a>
-                <a class="item">
+                <a class="item" href="imagesHTML.html">
                     Bilder
                 </a>
                 <a class="item">
@@ -227,7 +227,7 @@
                         <div class="ui vertical segment">
 
                             <!-- Intro HTML-->
-                            <h3 class="ui header"> Länkar och navigering </h3>
+                            <h1 class="ui header"> Länkar och navigering </h1>
                             <div class="ui hidden divider"></div>
                             <p>
 
@@ -245,14 +245,13 @@
 
                         <div class="ui vertical segment">
 
-                            <h3 class="ui header"> Interna länkar</h3>
+                            <h2 class="ui header"> Interna länkar</h2>
 
 
                             <p>
                                 Länkar till andra dokument på din webbsida. Det som är viktigt att tänka på är hur sökvägen skrivs. I exemplet är sökvägarna
-                                relativa, d.v.s de utgår från nuvarande position av html-dokumentet. Vi återkommer hur man
-                                på bästa sätt kan organisera sina mappar och filer och hur man kan skriva relativa sökvägar
-                                så att man kan länka till html-dokument som inte ligger i samma mapp.
+                                relativa, d.v.s de utgår från nuvarande position av html-dokumentet för att referera till
+                                en annan i mappstrukturen.
                             </p>
 
                             <div class="ui compact segment">
@@ -264,17 +263,23 @@ html-sidan som ligger i samma mapp--&gt;
 
 
 &lt;!-- När man klickar på länken dirigeras man om till 
-html-sidan som ligger i mappen "news" utifrån nuvarande
-position--&gt;
+html-sidan som ligger i en undermappp--&gt;
 &lt;a href="news/page_1.html"&gt; Nyheter &lt;/a&gt;
+
+&lt;!-- När man klickar på länken dirigeras man om till 
+html-sidan som ligger i en övermapp--&gt;
+&lt;a href="../contact.html"&gt; Kontakta oss &lt;/a&gt;
 </code></pre>
 
                             </div>
 
+                            <p>Vi kommer att återkomma till hur man skapar relativa sökvägar och en tydlig mappstruktur. Det
+                                är även bra att kunna när man infogar bilder och andra filer.</p>
+
                         </div>
                         <div class="ui vertical segment">
 
-                            <h3 class="ui header"> Externa länkar</h3>
+                            <h2 class="ui header"> Externa länkar</h2>
 
                             <p>
                                 När du klickar på länken kommer du till mediagymnasiet hemsida. När du skriver externa länkar måste url:en vara fullständiga
@@ -300,7 +305,7 @@ position--&gt;
 
 
                         <div class="ui vertical segment">
-                            <h3 class="ui header"> Ankare/Bokmärke </h3>
+                            <h2 class="ui header"> Ankare/Bokmärke </h2>
 
                             <p>
 
@@ -324,30 +329,22 @@ position--&gt;
                         </div>
                         <div class="ui vertical segment">
 
-                            <h3 class="ui header"> Länkar behöver inte bara vara text </h3>
+                            <h2 class="ui header"> Länkar behöver inte bara vara text </h2>
 
                             <p>
-
-                                Det är vanligt att man gör en länk som omsluter text - d.v.s om klickar på ordet, meningen kan man navigera till länken.
-                                Men egentligen kan man skapa länkar av vilka html-element som helst. Det är väldigt vanligt
-                                att bilder fungerar som länkar och även button-elementet.
+                                I exemplen har vi endast visat hur vi markerar text som länkar. Men egentligen kan man skapa länkar av vilket html-element
+                                som helst, d.v.s omsluta med a-taggen. Förutom text är det väldigt vanligt att man använder
+                                bilder eller button-elementet som länkar.
                             </p>
 
 
-                            <div class="ui vertical segment">
-
-                                <div class="ui compact warning message">
-
+                        </div>
+                        <div class="ui compact warning message">
 
 
-                                    Per default, d.v.s en webbläsares grundinställningar, får alla länkar en blå färg. Detta kan man ändra på när vi kommer till
-                                    delen om CSS och styla webbsidor.
 
-
-                                </div>
-
-                            </div>
-
+                            Per default, d.v.s en webbläsares grundinställningar, får alla länkar en blå färg. Detta kan man ändra på när vi kommer till
+                            delen om CSS och styla webbsidor.
 
 
                         </div>
