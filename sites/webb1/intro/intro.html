@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
     <link rel="stylesheet" type="text/css" href="../../../style/style.css">
+
     <title>Webbutveckling 1</title>
 </head>
 
@@ -19,10 +25,10 @@
                 Webbutveckling 1
             </div>
             <div class="menu">
-                <a class="item" href="planering.html">
+                <a class="item" href="../info/planering.html">
                     Planering
                 </a>
-                <a class="item" href="kursplan.html">
+                <a class="item" href="../info/kursplan.html">
                     Kursens innehåll
                 </a>
 
@@ -53,19 +59,19 @@
                 HTML
             </div>
             <div class="menu">
-                <a class="item" href="../html/introHTML.html">
+                <a class="item" href="introHTML.html">
                     Intro till HTML
                 </a>
-                <a class="item" href="../html/grundkodHTML.html">
+                <a class="item" href="grundkodHTML.html">
                     En webbsidas struktur
                 </a>
-                <a class="item" href="../html/textHTML.html">
+                <a class="item" href="textHTML.html">
                     Paragrafer och rubriker
                 </a>
-                <a class="item">
+                <a class="item" href="linksHTML.html">
                     Länkar
                 </a>
-                <a class="item">
+                <a class="item" href="imagesHTML.html">
                     Bilder
                 </a>
                 <a class="item">
@@ -192,8 +198,8 @@
                         Kurser
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a class="item" href="../info/planering.html">Webbutveckling 1</a>
-                            <a class="item" href="../../webb2/info/kursplan.html">Webbutveckling 2</a>
+                            <a class="item" href="../../webb1/info/kursplan.html">Webbutveckling 1</a>
+                            <a class="item" href="planering.html">Webbutveckling 2</a>
                             <a class="item" href="../../webbsev1/info/kursplan.html">Webbserverprogrammering 1</a>
                         </div>
                     </div>
@@ -212,7 +218,7 @@
         <!--end of pusher-->
         <div class="ui main container">
 
-            <div class="ui center aligned grid">
+            <div class="ui  grid">
                 <div class="row">
                     <div class="three wide column">
                         <!--   <div class="ui grey segment">
@@ -220,23 +226,61 @@
             </div> -->
                     </div>
                     <div class="ten wide column">
+                        <div class="ui vertical segment">
+                            <!-- Intro HTML-->
+                            <h1 class="ui header"> Introduktiom till Webbutveckling</h1>
 
-                        <!-- Kunskapskrav-->
-                        <h1 class="ui header">Begrepp</h1>
-                        <div class="ui hidden divider"></div>
+                            <p>
+                                Webbutveckling är en samlingsterm för allt runtomkring uppbyggnaden av en webbplats. Det handlar både om att skapa webbplatser
+                                eller webbapplikationer och inkluderar såväl ta fram en design för sidan utseende (exempelvis
+                                i Photoshop eller på papper), ta fram protoyper för att pröva webbsidans användbarhet, till
+                                att koda själva sidan för att den ska fungera i olika webbläsare. Det kräver även att man
+                                testar webbsidan så att den fungerar som den ska i olika webbläsare, men även att den är
+                                optimerad så att den kan laddas hem snabbt. Det är även viktigt att anpassa webbplatsen till
+                                alla besökare, även de som använder hjälpmedel som skärmläsare för blinda. Man bör även ha
+                                kännedom om de tekniska aspekterna på webben, exempelvis om hur datorer kommunicerar med
+                                varandra och olika säkerhetsaspekter som man bör ta hänsyn till. Till sist hur man publicerar
+                                sin webbsida på world wide web och hur man underhåller :-)
 
+                            </p>
+                            <p>
+                                Webbutveckling kan alltså vara allt från att skriva enkel HTML i en textfil till att bygga komplexa webbapplikationer. Moderna
+                                webbsidor bygger på tre grundläggande tekniker som vi mer eller mindre kommer gå igenom i
+                                kursen.
+                            </p>
 
-                    </div>
-                    <div class="three wide column">
-                        <!--  <div class="ui grey segment">
+                            <h2 class="ui header">HTML</h2>
+                            Är grunden för att skapa webbsidor. HTML står för Hyper Text Markup Language och är ett enkelt språk som definerar hur webbsidan
+                            ska struktureras. Exempelvis, “det här är en rubrik” eller “lägg in en bild här”. Det är html-filen
+                            som laddas in och tolkas av webbläsaren för att kunna visas som den ska för användaren. Man kan
+                            säga att HTML är “substantiven” för webbsidan.
+                            <p>
+
+                            </p>
+                            <h2 class="ui header">CSS</h2>
+                            <p>
+                                Står för Cascading Syle Sheets och ger sidan utseende. Exempelvis gör den här “rubriken blå” eller “lägg den här bilden tlll
+                                höger på sidan”. Man kan även göra enklare animationer och effekter med CSS, som exempelvis
+                                byta bakgrundsfärg när man drar musen över. Om HTML är substantiven så kan CSS beskrivas
+                                som “adjektiven”.
+                            </p>
+                            <h2 class="ui header">Javascript</h2>
+                            <p>Är ett programmeringspråk till skillnad mot HTML/CSS som är märkspråk. Javascript ger sidan
+                                interaktivitet och kan tillföra logik. Exempelvis en lista i menyn ska synas när jag klickar
+                                tll att göra mer avancerade applikationer till att göra spel. Eftersom Javascript ger funktionalitet,
+                                gör så att det händer saker, kan det ses som “verben” för sidan. I Webbutveckling 1 ingår
+                                endast en orientering om Javascript. Det området lärs ut mer grundligt i Webbutveckling 2.</p>
+                        </div>
+                        <div class="three wide column ">
+                            <!--  <div class="ui grey segment ">
               <p>three wide column</p>
             </div> -->
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
 
     </div>
 
@@ -250,15 +294,16 @@
         </div>
     </div>
     <!--end of footer-->
-
-
+    <!--Code syntax highlightning-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js "></script>
     <!--jQuery include -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js " integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin=" anonymous "></script>
     <!-- Semantic UI include script-->
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js "></script>
     <!--Local script-->
-    <script src="../../../src/script.js"></script>
+    <script src="../../../src/script.js "></script>
 </body>
 
 </html>
