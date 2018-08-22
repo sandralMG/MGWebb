@@ -203,7 +203,7 @@
                         Kurser
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a class="item" href="planering.html">Webbutveckling 1</a>
+                            <a class="item" href="../info/planering.html">Webbutveckling 1</a>
                             <a class="item" href="../../webb2/info/kursplan.html">Webbutveckling 2</a>
                             <a class="item" href="../../webbsev1/info/kursplan.html">Webbserverprogrammering 1</a>
                         </div>
@@ -214,15 +214,14 @@
                             <i class="search link icon"></i>
                         </div>
                     </div>
-                    >
+
                 </div>
             </div>
             <!--end of top menu-->
 
         </div>
         <!--end of pusher-->
-
-        <div id="introHTML" class="ui main container">
+        <div class="ui main container">
 
             <div class="ui  grid">
                 <div class="row">
@@ -232,133 +231,106 @@
             </div> -->
                     </div>
                     <div class="ten wide column">
-                        <div class="ui vertical segment">
-                            <!-- Intro HTML-->
-                            <h1 class="ui header"> Introduktion till HTML </h1>
-                            <p>
-                                HTML står för Hyper Text Markup Language och är koden som strukturerar webbsidans innehåll. Exempelvis “det här är en rubrik"
-                                ” eller “det här en paragraf” eller "lägg in en bild här". HTML är inget programmeringsspråk
-                                utan ett s.k märkspråk som märker upp vad som är vad i innehållet - det ger sidan struktur
-                                och mening. HTML består av olika “element” som man omsluter med s.k taggar.
-                            </p>
-
-
-
-                            <h2 class="ui header">Grundregeln är:</h2>
-
-
-                            <div class="ui compact segment">
-                                <!--                                 <pre><code class="html">&lt;p&gt; Det här innehållet vill jag ha på min sida &lt;/p&gt;</code></pre>
- -->
-                                <img src="../../../assets/images/grundregel.PNG" alt="html grundregel" width="500px">
-                            </div>
-
-                            <p>
-                                En start- och sluttagg omsluter innehållet. Det som skiljer dem åt är tecknet för backslash "/" i sluttaggen. Taggen som
-                                används i exemplet ovan är "p" som står för engelska order paragraph och märker upp att webbläsaren
-                                ska tolka innehållet som ett textstycke. Ett element är alltså taggarna inklusive innehållet.
-                            </p>
-
-                        </div>
 
                         <div class="ui vertical segment">
 
-                            <h2 class="ui header"> Element inuti element </h2>
-                            <p>
-                                Man kan även markera upp med html-taggar inuti ett element. Exempelvis kan vi märka upp med taggen för att fetmarkera text,
-                                d.v.s &lt;strong&gt; inuti vårt p-element.
-                            </p>
-                            <div class="ui compact segment">
-                                <pre><code class="html">&lt;p&gt; Det här är &lt;strong&gt; innehållet &lt;/strong&gt; vill jag ha på min sida &lt;/p&gt;</code></pre>
-                            </div>
-                            <p>
-                                På det här sättet kan vi märka upp element inuti element och skapa en struktur i ett html-dokument. Man kan säga att strong-elementet
-                                "bor" i p-elementet eller mer utifrån rätt terminologi inom webbutveckling att p-elemetet
-                                är förälder (parent) och att strong-elementet är barn (children) - just i detta fall. Vi
-                                kommer att återkomma till det när vi lär oss att styla en webbsida med CSS.
-                            </p>
+                            <h1 class="ui header"> Dokumentstrukur enligt HTML5-standard</h1>
 
+                            <p>För att strukturera upp innehållet finns det html-taggar som hjälper oss att gruppera innehållet.
+                                I föregående avsnitt introducerade vi &lt;div&gt;-taggen. Innan HTML5 introduserades så var
+                                &lt;div&gt; den vanligaste taggen för att gruppera innehåll. Problemet var att man fick stort
+                                antal &lt;div&gt; taggar och det var svårt som utvecklare att hålla koll på vilken &lt;div&gt;-tagg
+                                som gjorde vad. Det var även svårt för sökmotorer att förstå och tolka en webbsidas innehåll.
 
+                            </p>
+                            <p> I och med HTML5 så introducerades en uppsättning nya taggar som gav förutsättningar att skapa
+                                mer semantisk kod. Med det menas alltså en navigeringsmeny alltid ska ha det logiska namnet
+                                "nav" och att sidomeny ska a namnet "aside", m. fl. Följande taggar är därför bra att använda
+                                när man ska strukturera upp en sida.</p>
                         </div>
 
                         <div class="ui vertical segment">
-
-                            <h2 class="ui header">Element utan sluttag </h2>
-                            <p>
-                                En del element saknar sluttag och kallas således för tomma element. Html-taggen för att lägga in en bild, &lt; img&gt; är
-                                ett exempel på detta. Istället står information inuti taggen vilket kallas för ett elements
-                                attribut. För img-taggen måste man ange vilken bild man ska visa och var den ligger vilket
-                                man gör med attributet "src". Attributet "alt" anger en beskrivning av bilden.
+                            <h2 class="ui header"> &lt;header&gt;</h2>
+                            <p> &lt;header&gt;-taggen används för att markera webbsidans sidhuvud. D.v.s det som är början
+                                på webbsidan. Det kan innehålla en logotyp, en beskrivande bild, sidans titel eller meny.
                             </p>
-                            <div class="ui compact segment">
-                                <pre><code class="html">&lt;img src=“images/minbild.jpg" alt=“Min bild” &gt; </code></pre>
-                            </div>
+                            <h2 class="ui header"> &lt;nav&gt;</h2>
+                            <p>I nav lägger man webbsidans huvudsakliga navigering. Nav-taggen får bara användas en gång
+                                per html-dokument.</p>
+                            <h2 class="ui header"> &lt;main&gt;</h2>
+                            <p>Main är till för att rama inte det huvudsakliga innehållet på sidan. </p>
+                            <h2 class="ui header"> &lt;section&gt;</h2>
+                            <p> Sections används för att tydligt gruppera olika delar av innehåll på sidan. Man kan alltså
+                                ha flera section-element för att separera olika typer av information av innehåll på sidan.</p>
+                            <h2 class="ui header"> &lt;article&gt;</h2>
+                            <p>Om man har information som kan stå oberoende av vilken webbsida man är på ska acticle rama
+                                in denna. Det kan vara nyheter eller artikel som kan ha andra användningsområden.</p>
+                            <h2 class="ui header"> &lt;aside&gt;</h2>
+                            <p>Oftast finns det någon slags sidebar på en webbsida och det är det som aside-taggen är til
+                                för att gruppera. Här kan exempelvis nyheter stå, lista med länkar eller annan bakgrundsinformations</p>
+                            <h2 class="ui header"> &lt;footer&gt;</h2>
+                            <p>Denna del markerar information som finns längs ner på sidan. Innehållet i footer-elementet
+                                kan vara kontaktuppgifter, vem/vilka som är ägare till sidan eller länkar till facebook,
+                                instagram. </p>
+
+
+
 
                         </div>
-
                         <div class="ui vertical segment">
-
-
-
-
-                            <div class="ui message">
-
-                                <div class="ui header">Kuriosa</div>
-
-                                <i>Hur många html-taggar kommer jag behöva lära mig?</i>
-
-                                <br/>
-                                <br/> Det finns totalt omkring 100 st olika html-taggar. De finns alla listade på länken
-                                nedan (MDN referensguide). Kika in om du är nyfiken. Du kommer aldig att behöva lära dig
-                                alla dessa utantill. Ungefär endast 10-15 st räcker för grundläggande webbutveckling.
-
-                            </div>
-
+                            <p> Denna bild visar ett exempel hur de olika elementen kan markera vad som är vad på sidan.
+                                Så småningom kommer ni lära er att skapa en layout liknande denna.</p>
+                            <img class="ui fluid image" src="../../../assets/images/html5-structure.gif">
                         </div>
+                        <div class="ui vertical segment">
+                            <p> Det är inte lätt att skilja på dessa element för att skapa en struktur enligt HTML5-standard.
+                                Exempelvis skillnaden mellan section och article. De andra kan vara enklare att avgöra.
+                        </div>
+
 
                         <div class="ui segment link">
-                            <h4 class="ui header link">Länkar </h4>
-                            <a href="http://webbling.se/index.php/HTML-grunder" target="_blank">Webbling (på svenska) - HTML
-                                grunder
+                            <h4 class="ui header ">Länkar </h4>
+                            <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">W3schools
+                                - HTML5 Semantics
                             </a>
-                            <br>
+                            <br/>
+                            <a href="https://www.youtube.com/watch?v=-dQ2Big9ueg" target="_blank">Video - HTML5 Basics</a>
+                            <br/>
 
-                            <a href="https://developer.mozilla.org/sv-SE/docs/Web/HTML " target="_blank">MDN Nybörjarguide
-                                till HTML</a>
-                            <br>
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN Referensguide
-                                till samtliga html-element</a>
-                            <br>
-                            <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">W3 Schools introdution
-                                till HTML</a>
-                            <br>
-
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">MDN
+                                - HTML5</a>
+                            <br/>
 
                         </div>
 
                         <div class="ui hidden divider"></div>
 
-
-
-                        <a href="grundkodHTML.html">
-                            <button class="ui right floated labeled icon button">
-                                <i class="right arrow icon"></i>
-                                Grundkod för HTML
+                        <a href="linksHTML.html">
+                            <button class="ui left floated labeled icon button">
+                                <i class="left arrow icon"></i>
+                                Tillbaka
                             </button>
                         </a>
 
 
-                    </div>
-                    <div class="three wide column ">
-                        <!--  <div class="ui grey segment ">
+                        <a href="#">
+                            <button class="ui right floated labeled icon button">
+                                <i class="right arrow icon"></i>
+                                Nästa </button>
+                        </a>
+
+
+
+                        <div class="three wide column ">
+                            <!--  <div class="ui grey segment ">
               <p>three wide column</p>
             </div> -->
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
 
     </div>
 
