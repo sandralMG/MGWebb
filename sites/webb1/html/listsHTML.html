@@ -238,144 +238,83 @@
                         <div class="ui vertical segment">
 
                             <!-- Intro HTML-->
-                            <h1 class="ui header"> Länkar och navigering </h1>
+                            <h1 class="ui header"> Listor</h1>
                             <div class="ui hidden divider"></div>
-                            <p>
-
-                                Länkar är det som gör World Wide Webb (www) unikt. Utan dem skulle vi inte kunna surfa runt och upptäcka allt som finns på
-                                internet, d.v.s kunna navigera mellan webbsidor och inom en webbplats.
-                            </p>
-                            <p>När du skapar en länk använder du taggen &lt;a&gt;, där "a" står för "anchor". För att veta
-                                var man ska navigeras måste man ange attributet "href" som står för hyperlink reference.
-                            </p>
-                            <p>Det finns olika typer av länkar beroende på om om surfar vidare på den webbplats du besöker,
-                                navigera till annan webbplats eller navigera inom den sida du står på.</p>
-
-                        </div>
 
 
-                        <div class="ui vertical segment">
 
-                            <h2 class="ui header"> Interna länkar</h2>
+                            Det finns mycket innehåll på webbsidor som struktureras i listor. För att strukturera innehållet tydligt och i en viss ordning.
+                            Listor brukar också användas för att skapa navigationsmenyer. Det finns två olika typer av listor
+                            som är bra att kunna, oordnade och ordnade lister.
+                            <ul>
+                                <li> Ordnade listor använder &lt;ol&gt;-elementet och kan ordnas i siffer eller bokstavsordning
+                                    m.fl
+                                </li>
+                                <li>Oordnade listor använder &lt;ul&gt;-elementet, de har även en punkt framför sig.
+                                </li>
 
+                            </ul>
 
                             <p>
-                                Länkar till andra dokument på din webbsida. Det som är viktigt att tänka på är hur sökvägen skrivs. I exemplet är sökvägarna
-                                relativa, d.v.s de utgår från nuvarande position av html-dokumentet för att referera till
-                                en annan i mappstrukturen.
+                                Elementet &lt;li&gt; motsvarar varje element i listan.
                             </p>
+
+                            </p>
+
+                            <h3 class="ui header">Oordnad lista</h3>
 
                             <div class="ui compact segment">
-                                <pre><code class="html">&lt;!-- Intern länk inom webbplatsen--&gt;
-
-&lt;!-- När man klickar på länken dirigeras man om till 
-html-sidan som ligger i samma mapp--&gt;
-&lt;a href="about.html"&gt; Om oss &lt;/a&gt;
-
-
-&lt;!-- När man klickar på länken dirigeras man om till 
-html-sidan som ligger i en undermappp--&gt;
-&lt;a href="news/page_1.html"&gt; Nyheter &lt;/a&gt;
-
-&lt;!-- När man klickar på länken dirigeras man om till 
-html-sidan som ligger i en övermapp--&gt;
-&lt;a href="../contact.html"&gt; Kontakta oss &lt;/a&gt;
+                                <pre><code class="html">&lt;ul&gt;
+    &lt;li&gt;Mc Donalds&lt;/li&gt;      
+    &lt;li&gt;Subway&lt;/li&gt;                  
+    &lt;li&gt;Funky Chicken&lt;/li&gt;
+    &lt;li&gt;Cafeterian&lt;/li&gt;
+&lt;/ul&gt;
 </code></pre>
-
+                                <a href="../../../assets/examples/ul_list.html">
+                                    <div class="ui right floated small button">Visa sida</div>
+                                </a>
+                            </div>
+                            <h3 class="ui header">Ordnad lista</h3>
+                            <div class="ui compact segment">
+                                <pre><code class="html">&lt;ol&gt;
+    &lt;li&gt;Mata hunden&lt;/li&gt;
+    &lt;li&gt;Mata katten&lt;/li&gt;             
+    &lt;li&gt;Gå ut med hunden&lt;/li&gt;
+    &lt;li&gt;Gosa med katten&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+                                <a href="../../../assets/examples/ol_list.html">
+                                    <div class="ui right floated small button">Visa sida</div>
+                                </a>
                             </div>
 
-                            <p>Vi kommer att återkomma till hur man skapar relativa sökvägar och en tydlig mappstruktur.
-                                Det är även bra att kunna när man infogar bilder och andra filer.</p>
-
-                        </div>
-                        <div class="ui vertical segment">
-
-                            <h2 class="ui header"> Externa länkar</h2>
-
-                            <p>
-                                När du klickar på länken kommer du till mediagymnasiet hemsida. När du skriver externa länkar måste url:en vara fullständiga
-                                inklusive "http://". Ett bra attribut att lägga till är target="_blank" som gör att länken
-                                man klickar på öppnas i nytt fönster.
-                            </p>
 
 
 
-                            <div class="ui compact segment">
-                                <pre><code class="html">
-&lt;!-- Extern länk till MG:S hemsida--&gt;
-&lt;!-- Med attributet target="_blank" öpnnas sidan i ny flik--&gt;
-&lt;a href="https://www.mediagymnasiet.se" target="_blank">
-    Länk till MG:s webbsida 
-&lt;/a&gt;
-</code></pre>
+                            <div class="ui compact warning message">
+
+                                Obs! Det är viktigt att man märker upp allt innehåll, ingen text får stå utan taggar - “naken”.
 
 
                             </div>
 
                         </div>
-
-
-                        <div class="ui vertical segment">
-                            <h2 class="ui header"> Ankare/Bokmärke </h2>
-
-                            <p>
-
-                                En webbsida kan innehålla mycket information och man behöver scrolla för att kunna se allt innehåll. Då är det praktiskt
-                                att skapa en ankare som refererar till ett annat element på samma sida. Då man måste man
-                                ange ett "id" som attribut till det element man vill kunna navigera till.
-
-                            </p>
-
-
-                            <div class="ui compact segment">
-                                <pre><code class="html">&lt;!--- Ett ankare som refererar till id="kontakt"--&gt;
-&lt;a href="#kontakt">Kontakt&lt;/a&gt;
-
-&lt;!-- Denna sida har mycket text och man behöver scrolla --&gt;
-
-&lt;!-- När man klickar på länken scrollas man hit --&gt;
-&lt;p id="kontakt"> Här står kontaktupgifter &lt;/p&gt;
-</code></pre>
-                            </div>
-                        </div>
-                        <div class="ui vertical segment">
-
-                            <h2 class="ui header"> Länkar behöver inte bara vara text </h2>
-
-                            <p>
-                                I exemplen har vi endast visat hur vi markerar text som länkar. Men egentligen kan man skapa länkar av vilket html-element
-                                som helst, d.v.s omsluta med a-taggen. Förutom text är det väldigt vanligt att man använder
-                                bilder eller button-elementet som länkar.
-                            </p>
-
-
-                        </div>
-                        <div class="ui compact warning message">
-
-
-
-                            Per default, d.v.s en webbläsares grundinställningar, får alla länkar en blå färg. Detta kan man ändra på när vi kommer till
-                            delen om CSS och styla webbsidor.
-
-
-                        </div>
-
-
 
                         <div class="ui segment link">
                             <h4 class="ui header ">Länkar </h4>
-                            <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks" target="_blank">MDN
-                                What is a hyperlink?</a>
-                            <br/>
-                            <a href="http://webbling.se/index.php/Hyperl%C3%A4nkar_-_Att_l%C3%A4nka_till_en_annan_sidas" target="_blank">Webbling
-                                - Att länka till annan sida</a>
-                            <br/>
+
+
+                            <a href="https://www.w3schools.com/html/html_lists.asp" target="_blank">W3schools HTML Lists</a><br/>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank">MDN -
+                                The unordered list element</a>
+
 
                         </div>
 
                         <div class="ui hidden divider"></div>
 
-                        <a href="listsHTML.html">
+                        <a href="textHTML.html">
                             <button class="ui left floated labeled icon button">
                                 <i class="left arrow icon"></i>
                                 Tillbaka
@@ -383,10 +322,10 @@ html-sidan som ligger i en övermapp--&gt;
                         </a>
 
 
-                        <a href="imagesHTML.html">
+                        <a href="linksHTML.html">
                             <button class="ui right floated labeled icon button">
                                 <i class="right arrow icon"></i>
-                                Bilder
+                                Länkar
                             </button>
                         </a>
 
