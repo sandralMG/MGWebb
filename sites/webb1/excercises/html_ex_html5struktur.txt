@@ -1,9 +1,12 @@
 1.Skapa en html-sida med grundkoden. Kopiera innehållet nedan till din <body>
-2.Markera första delen av sidan som <header>. 
-3 Inuti din header, markera navigationen med <nav>. Inuti <nav skapar du en <ul>-lista med länkarna
-4. Markera "Summer Menu items" och "Low and Slow" som vardera <article>
-5. I din översta <article> markera den övre delen som <header>. I <header> ge en rubrik <h2> och textstycket till <p>
-6. Inuti den översta <article> markera "Apertizers" och Main coursers som var sin <section>. Inuti dessa ange vardera rubrik <h3>. Markera vardera textstycke med <p>
+2. Markera första delen av sidan som <header>. 
+3. Inuti din <header>, markera "The Black Goose Bistor News" som huvudrubrik, <h1>.
+4. Inuti din <header> markera navigationslänkarna ("Home", "Menu", "News", "Contact") som en <nav>
+5. Gör en <ul>-lista av navigationslänkarna
+4. Markera "Summer Menu items"-delen som en <article>. Markera även "Low and Slow" som <article>
+5. I den översta <article> markera den övre delen som <header>. I <header> ge en rubrik <h2> och textstycket till <p>
+6. Inuti den översta <article> markera "Apertizers" och Main coursers som var sin <section>. Inuti dessa 
+   ange vardera rubrik <h3>. Markera vardera textstycke med <p>
 7. Markera ett <span> med id="price" där det står ett dollarpris
 8. Skapa en <footer> för nedre delen av sidan
 9. Skapa en <div> med id="about" kring "Location" och "Hours"
@@ -38,8 +41,6 @@ Our chef has been busy putting together the perfect menu for the summer months.
 Stop by to try these appetizers and main courses while the days are still long.
 
 
-
-
 Appetizers
 
 
@@ -59,16 +60,15 @@ Layers of light lump crab meat, bean and corn salsa, and our handmade flour tort
 Main courses
 
 
-
 Shrimp sate kebabs with peanut sauce
 
 Skewers of shrimp marinated in lemongrass, garlic, and fish sauce then grilled to perfection. Served with spicy peanut sauce and jasmine rice. $12.95
 
 
-
 Jerk rotisserie chicken with fried plantains -- new item!
 Tender chicken slow-roasted on the rotisserie, 
 flavored with spicy and fragrant jerk sauce and served with fried plantains and fresh mango. $12.95
+
 
 
 
@@ -105,6 +105,9 @@ To reserve a seat at the chef table, contact us before
 
 Location: Baker's Corner, Seekonk, MA
 Hours: Tuesday to Saturday, 11am to 11pm
+
+
+
 
 
 
