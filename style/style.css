@@ -47,10 +47,6 @@ OVERRIDES
   margin-bottom: 30px !important;
 }
 
-.ui.main {
-  font-size: 2em;
-}
-
 .ui.main.header.link {
   margin-bottom: 20px !important;
 }
@@ -88,4 +84,9 @@ OVERRIDES
 
 #curriculum li {
   margin-bottom: 0.2em;
+}
+
+.ui.main ul {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
 }

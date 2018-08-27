@@ -306,8 +306,18 @@
                         <div class="ui vertical segment">
 
                             <h2 class="ui header">Exempel på HTML med stillmall (CSS)</h2>
-                            <p>Vi utgår från en uppmärkt HTML enligt exemplet nedan. Vi länkar till en css-fil i &lt;head&gt;-elementet,
-                                vilket kallas för att anävnda sig av en extern stilmall. </p>
+                            <p>Vi utgår från en uppmärkt HTML enligt exemplet nedan.
+                                <br/> Vi länkar till en css-fil i &lt;head&gt;-elementet med &lt;link&gt;-elementet.Här använder
+                                vi oss av extern stilmall (<a href="#internCSS">se andra sätt här
+                                </a>).
+                            </p>
+
+                            <div class="ui compact segment">
+
+                                <pre><code class="html">&lt;!-- En extern länk till en stilmall style.css --&gt;
+&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;</code></pre>
+
+                            </div>
                             <div class="ui compact segment">
 
                                 <pre><code class="html">
@@ -315,7 +325,6 @@
     &lt;html lang="sv"&gt;
         &lt;head&gt;
         &lt;meta charset="utf-8"&gt;
-        &lt;!-- En extern länk till min stilmall style.css (ligger i samma mapp) --&gt;
         &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
         &lt;title&gt;Min första stylade sida&lt;/title&gt;
         &lt;/head&gt;
@@ -418,27 +427,12 @@
                         </div>
                         <div class="ui vertical segment">
 
-                            <h2 class="ui header">3. Koppla CSS till HTML</h2>
+                            <h2 id="internCSS" class="ui header">Skriva intern eller inline CSS</h2>
 
-                            <h3 class="ui header">Extern CSS</h3>
-                            <h3 class="ui header">Intern CSS</h3>
-                            <h3 class="ui header">Inline</h3>
+                            <p> Mer info kommer. "Best practice" är att alltid använda sig av extern CSS som i exemlet ovan.</p>
 
                         </div>
 
-                        <div class="ui vertical segment">
-
-
-
-
-                            <div class="ui message">
-
-                                <div class="ui header">Kuriosa</div>
-
-
-                            </div>
-
-                        </div>
 
                         <div class="ui segment link">
                             <h4 class="ui header link">Länkar </h4>
