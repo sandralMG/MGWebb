@@ -58,28 +58,28 @@
                 HTML
             </div>
             <div class="menu">
-                <a class="item" href="introHTML.html">
+                <a class="item" href="../html/introHTML.html">
                     Intro till HTML
                 </a>
-                <a class="item" href="grundkodHTML.html">
+                <a class="item" href="../html/grundkodHTML.html">
                     En webbsidas struktur
                 </a>
-                <a class="item" href="textHTML.html">
+                <a class="item" href="../html/textHTML.html">
                     Paragrafer och rubriker
                 </a>
-                <a class="item" href="listsHTML.html">
+                <a class="item" href="../html/listsHTML.html">
                     Listor
                 </a>
-                <a class="item" href="linksHTML.html">
+                <a class="item" href="../html/linksHTML.html">
                     Länkar
                 </a>
-                <a class="item" href="imagesHTML.html">
+                <a class="item" href="../html/imagesHTML.html">
                     Bilder
                 </a>
-                <a class="item" href="divspan.html">
+                <a class="item" href="../html/divspan.html">
                     Div och span
                 </a>
-                <a class="item" href="html5structure.html">
+                <a class="item" href="../html/html5structure.html">
                     HTML5 Struktur
                 </a>
                 <a class="item">
@@ -114,13 +114,13 @@
                 <a class="item" href="colorbackgroundCSS.html">
                     Färger och bakgrund
                 </a>
-                <a class="item">
+                <a class="item" href="selectorsCSS.html">
                     CSS Selektorer
                 </a>
-                <a class="item">
+                <a class="item" href="floatpositionCSS.html">
                     Float och positionering
                 </a>
-                <a class="item">
+                <a class="item" href="flexbox_gridCSS.html">
                     CSS Flexbox och Grid (frivilligt)
                 </a>
 
@@ -240,21 +240,34 @@
                             <!-- Intro HTML-->
                             <h1 class="ui header"> Introduktion till CSS </h1>
                             <p>
-                                CSS är .. Hur en stilmall fungerar
+                                CSS är ett språk som sätter regler för hur HTML-element ska visas eller ha ett visst utseende, som exempelvis färg, typsnitt,
+                                storlek, layout m.m. Om HTML står för innehållet på webbsidan/webbplatsen, tillför CSS sidans
+                                utseende - den styr sidan design. CSS är en förkortning för Cascading Style Sheets och översatt
+                                till svenska kallas det för en sidan stilmall.
+                            </p>
+                            <p>
+                                Hur en stilmall fungerar:
                                 <ol>
-                                    <li> Ett html-dokuemt
-                                    </li>
-                                    <li> Skapa ett css-dokument med filändelsen .css</li>
-                                    <li>Skriv regler för ett eller flera element</li>
-                                    <li>Koppla stilmallen till html</li>
+                                    <li>Börja med ett html-dokument som är uppmärkt </li>
+                                    <li>Skapa ett nytt dokument med filändelsen .css (d.v.s en stilmall) </li>
+                                    <li>Skriv CSS-regler för ett eller flera element i din stilmall</li>
+                                    <li>Koppla stilmallen till ditt html-dokument</li>
                                 </ol>
-
+                                <br/>
+                                <i>Oftast arbetar man med endast en stillmall til sin webbplats. Ha som vana att döpa denn
+                                    stilmall till <b>style.css</b></i>
                             </p>
                         </div>
 
                         <div class="ui vertical segment">
 
-                            <h2 class="ui header">En CSS regel:</h2>
+                            <h2 class="ui header">Skriva en CSS-regel</h2>
+
+                            <p>
+                                En stilmall innehåller en eller flera instruktioner om hur html-element på sidan ska visas. Det första man bekantar sig med
+                                när man lär sig är hur man skriver instruktioner i en stillmall är följande:
+                            </p>
+
 
 
                             <div class="ui compact segment">
@@ -262,49 +275,147 @@
                             </div>
 
                             <p>
-                                bllabla...
+                                Följande regel säger att alla paragrafer <b>p</b> ska ha en blå färg på texten. Med andra
+                                ord är det selektorn som identifierar vilka html-element som kommer påverkas av regeln. Deklarationen
+                                innehåller vad som ska ändras med egenskap och tillhörande värde.
+
                             </p>
 
-                        </div>
-
-                        <div class="ui vertical segment">
-
-                            <h2 class="ui header"> Ett block med deklarationer för en CSS regel.</h2>
                             <p>
-                                blabl
+                                En deklaration kan även ha ett block av olika regler.
                             </p>
                             <div class="ui compact segment">
-                                <pre><code class="css">
-    p {
-            color: red;
-            font-family: Arial;
-            font-size: 18px;                                
-    }
-
-                                </code></pre>
+                                <pre><code class="css">p {
+    color: blue;
+    font-family: Arial;
+    font-size: 18px;                                
+}</code></pre>
                             </div>
-                            <p>blablabl
+                            <p>Här får även alla p-element på html-sodan typsnittet Arial samt teckenstorleken 18px.
+                                <br/>På engelska motsvarar selektor - selector, deklaration - declaration, egenskap - property,
+                                värde - value. Det är bra att kunna när ni läser i engelska guider om CSS.
                             </p>
 
 
-                        </div>
-
-                        <div class="ui vertical segment">
-
-                            <h2 class="ui header">1. Ett HMTL dokument </h2>
+                            <p> Nu har vi använt oss av den s.k element-selektorn. Men det finns flera sätt vi kan använda
+                                selektorer som är viktiga att kunna inom webbutveckling. <a href="selectorsCSS.html">Läs
+                                    mer här.</a></p>
 
                         </div>
 
                         <div class="ui vertical segment">
 
-                            <h2 class="ui header">2. Skriva CSS-regler </h2>
+                            <h2 class="ui header">Exempel på HTML med stillmall (CSS)</h2>
+                            <p>Vi utgår från en uppmärkt HTML enligt exemplet nedan. Vi länkar till en css-fil i &lt;head&gt;-elementet,
+                                vilket kallas för att anävnda sig av en extern stilmall. </p>
+                            <div class="ui compact segment">
 
-                            <h3 class="ui header">Selektorer</h3>
+                                <pre><code class="html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="sv"&gt;
+        &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;!-- En extern länk till min stilmall style.css (ligger i samma mapp) --&gt;
+        &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+        &lt;title&gt;Min första stylade sida&lt;/title&gt;
+        &lt;/head&gt;
+    &lt;body&gt;
 
-                            <p>Länk till fler selektorer</p>
+        &lt;h1&gt;En huvudrubrik&lt;/h1&gt;                     
+        &lt;p&gt;Det här är innehållet - en text jag vill
+        ha med på min sida &lt;/p&gt;
+        
+        &lt;div id="info"&gt;
+            &lt;h2&gt; En underrubrik&lt;/h2&gt;  
+            &lt;p&gt; Lite mer text&lt;/p&gt;
+        &lt;/div&gt; 
+
+        &lt;div class="gallery"&gt;                        
+            &lt;img src="minbild.jpg" alt="Min bild"&gt;  
+        &lt;/div&gt; 
+        
+    &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+                                <a href="../../../assets/examples/firstCSS/index.html">
+                                    <div class="ui right floated small button">Visa sida</div>
+                                </a>
+
+                            </div>
 
                         </div>
 
+                        <div class="ui vertical segment">
+
+                            <h2 class="ui header">Exempel på CSS-regler i stillmallen</h2>
+
+                            <p> I filen style.css har jag angett följande CSS-regler. Du kan visa HTML-sidan som stylad genom
+                                att trycka "Visa sida" i HTMl-exmplet ovan.</p>
+
+                            <div class="ui compact segment">
+                                <pre><code class="css">
+    body {
+        background-color: lightblue;
+    }
+    
+    h1, h2 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: green;
+    }
+    
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        color: purple;
+    }
+      
+    #info {
+        background-color: beige;
+        border: 2px solid #000000;
+        width: 30%;
+    }
+      
+    .gallery {
+        margin-top: 15px;
+        border: 2px solid yellow;
+    }
+      
+    .gallery img {
+        padding: 10px;
+    }
+               
+</code></pre>
+
+                            </div>
+                            <ul>
+                                <li>Hela sidan, d.v.s <b>&lt;body&gt;</b>-elementet har fått en ljusblå bakgrundsfärg</li>
+                                <li> Både rubrik <b>h1</b> och <b>h2</b> har fått ett nytt typsnitt som är Verdana, så länge
+                                    den finns installerad på användarens dator, annars Geneva o.s.v. Färgen på texten är
+                                    satt till grön. För att välja fler element, d.v.s en <b>gruppselektor</b>, separerar
+                                    man dem med ett kommatecken.
+                                </li>
+                                <li>Paragraferna <b>p</b> ges ett typsnytt Arial (i första hand) samt ökad texkenstorlek
+                                    till 22px. Texten får en färg lila.</li>
+                                <li>Här anropar vi vår <b>&lt;div&gt;</b>-element med <b>id="info"</b>. En <b>id</b> har
+                                    selektor
+                                    <b>#</b> framför namnet. Här ges alltså hela innehållet innanför <b>&lt;div&gt;</b>-elementet
+                                    en bakgrund beige samt en svart kantlinje på 2px bred. Området blir också 30% av hela
+                                    skärmbredden
+                                </li>
+                                <li>Här anropar vi vår <b>&lt;div&gt;</b>-element med class="gallery". En <b>class</b> har
+                                    selektor
+                                    <b>. </b>(punkt) framför namnet. Det området får en gul kant på 2px. Vi gör även lite
+                                    mellanrum till elementet ovan på 15px med egenskapen <b>margin-top</b></li>
+                                <li> Till sist anropar vi bilden inuti <b>&lt;div&gt;</b>-elementet med <b>class="gallery"</b>
+                                    och ger lite mellanrum inuti boxen med egenskapen <b>padding</b> på 10px</li>
+
+                            </ul>
+
+                            <p> I exemplet har vi alltså tagit upp några nya selektorer som <b>gruppselektor</b> och för
+                                <b></b>id</b> och <b></b>class</b>. Läs mer på <a href="selectorsCSS.html">CSS Selektorer</a>
+
+                                <br/>Egenskaperna <b>margin</b> och <b>padding</b> kommer vi även förjupa oss mer i i avsnittet
+                                <a href="boxmodelCSS.html">Boxmodellen</a>.</p>
+                        </div>
                         <div class="ui vertical segment">
 
                             <h2 class="ui header">3. Koppla CSS till HTML</h2>
