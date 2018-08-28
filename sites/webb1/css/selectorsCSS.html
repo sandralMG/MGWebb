@@ -241,12 +241,16 @@
 
                             <h1 class="ui header"> CSS Selektorer</h1>
 
-                            <p>Bla bla</p>
+                            <p></p>
 
                             <h2 class="ui header"> Nödvändiga att kunna i kursen </h2>
 
                             <h3 class="ui header">1. * </h3>
-                            <p>Universalselektorn - väljer alla element</p>
+                            <h4>Universalselektorn</h4>
+                            <p>Denna selektor väljer alla element på sidan - all textfärg blir grön.
+                            </p>
+
+
 
                             <div class="ui compact segment">
                                 <pre><code class="css">* {
@@ -256,18 +260,22 @@
 
 
                             <h3 class="ui header">2. X </h3>
-                            <p>Elementselektorn - alla element på sidan påverkas av vald selektor, i detta fall alla länkar
-                                och paragrafer</p>
+                            <h4>Elementselektorn</h4>
+                            <p>I detta fall blir alla länkar lila och alla paragrafer teckenstorlek 20px.
+                            </p>
 
                             <div class="ui compact segment">
                                 <pre><code class="css">a { color: purple; }
-p { margin-left: 20px; }
+p { font-size: 20px; }
 </code></pre>
                             </div>
 
                             <h3 class="ui header">3. X, Y</h3>
-                            <p>Gruppselektorn - alla element på sidan med selektor X men även Y kommer påverkas. Gruppselektorn
-                                kan inkludera fler än två selektorer.</p>
+                            <h4>Gruppselektorn</h4>
+                            <p>Separeras med ett kommatecken. Alla div's samt alla paragrafer får typsnittet Arial och storlek
+                                22px. Fler än två element kan väljas.
+                            </p>
+
                             <div class="ui compact segment">
                                 <pre><code class="css"> div, p {
         font-family: Arial;
@@ -276,7 +284,10 @@ p { margin-left: 20px; }
                             </div>
 
                             <h3 class="ui header">4. #X</h3>
-                            <p>Selektor för id</p>
+                            <h4>Selektor för id</h4>
+                            <p>Elementet med id="container" får färgen aqua som bakgrundsfärg. Id kan endast tillhör ett
+                                element.
+                            </p>
                             <div class="ui compact segment">
                                 <pre><code class="css"> #container {
             background-color: aqua;
@@ -285,7 +296,10 @@ p { margin-left: 20px; }
 
 
                             <h3 class="ui header">5 .X</h3>
-                            <p>Selektor för class</p>
+                            <h4>Selektor för class</h4>
+                            <p>Alla element med class="gallery" får bredd 50% utifrån upptaget område av elementet. Class
+                                kan till skillnad från id sättas på flera element än ett. element.
+                            </p>
                             <div class="ui compact segment">
                                 <pre><code class="css"> .gallery {
                 width: 50%;
@@ -293,6 +307,10 @@ p { margin-left: 20px; }
                             </div>
 
                             <h3 class="ui header">6. X Y </h3>
+                            <h4>Arvselektor</h4>
+                            <p>Du använder denna när du vill komma åt ett elemen som är underelement till ett annat (parent/child).
+                                I detta fall elementet li i ul-listan ska ha backgrundsfärg violet.
+                            </p>
                             <p>Arvselektor - för att nå ett element inuti ett annat</p>
                             <div class="ui compact segment">
                                 <pre><code class="css"> ul li {
@@ -305,36 +323,46 @@ p { margin-left: 20px; }
 
                             <h2 class="ui header"> Bra att kunna i kursen </h2>
 
-                            <h3 class="ui header">7. X:visited och X:link</h3>
-                            <p>Selektor för element som är bar</p>
-
-                            <h3 class="ui header">8. X:hover</h3>
-                            <p>Kallas för action pseudo class. När man gör mouse over element X aktiveras regeln.</p>
+                            <h3 class="ui header">7. X:visited</h3>
+                            <h4>Pseudo-klass för besökta länkar</h4>
+                            <p>Pseudo-klasser betecknas med symbolen : . I detta fall blir alla av användaren besökta länkar
+                                gråa.</p>
                             <div class="ui compact segment">
-                                <pre><code class="css"> a:hover {
-                background-color: yellow;
-            }</code></pre>
+                                <pre><code class="css">a:visited {
+            background-color: grey;
+        }</code></pre>
+                            </div>
+                            <h3 class="ui header">8. X:hover</h3>
+                            <p>Kallas för action pseudo class. När man gör mouse over element aktiveras regeln. I detta fall
+                                blir bakgrundfärgen lila när man "hovrar" över en länk. Bra att använd till knappar och menyer.</p>
+                            <div class="ui compact segment">
+                                <pre><code class="css">a:hover {
+            background-color: yellow;
+        }</code></pre>
                             </div>
                             <h3 class="ui header">9. X:focus</h3>
-                            <p>Selektor när ett element</p>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
-                            <h3 class="ui header">10. X[type]</h3>
-                            <p>Selektor för element som är bar</p>
+                            <h3 class="ui header">10. X:link</h3>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
-                            <h3 class="ui header">11. X[type="input"]</h3>
-                            <p>Selektor för element som är bar</p>
+                            <h3 class="ui header">11. X[type]</h3>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
-                            <h3 class="ui header">12. X > Y </h3>
-                            <p>Selektor för element som är bar</p>
+                            <h3 class="ui header">12. X[type="input"]</h3>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
                             <h3 class="ui header">13. X > Y </h3>
-                            <p>Selektor för element som är bar</p>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
-                            <h3 class="ui header">14. X + Y </h3>
-                            <p>Selektor för element som är bar</p>
+                            <h3 class="ui header">14. X > Y </h3>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
-                            <h3 class="ui header">15. X ~ Y </h3>
-                            <p>Selektor för element som är bar</p>
+                            <h3 class="ui header">15. X + Y </h3>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
+
+                            <h3 class="ui header">16. X ~ Y </h3>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
                         </div>
 
@@ -342,41 +370,34 @@ p { margin-left: 20px; }
 
                             <h2 class="ui header"> Du kanske använder någon gång i kursen</h2>
 
-                            <h3 class="ui header">15. X:before och X:after</h3>
-                            <p>Selektor för element som är bar</p>
+                            <h3 class="ui header">17. X:before och X:after</h3>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
-                            <h3 class="ui header">16. X:first-child</h3>
-                            <p>Selektor för element som är bar</p>
+                            <h3 class="ui header">18. X:first-child</h3>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
-                            <h3 class="ui header">17. X:nth-child(n)</h3>
-                            <p>Selektor för element som är bar</p>
+                            <h3 class="ui header">19. X:nth-child(n)</h3>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
-                            <h3 class="ui header">18. X:nth-last-child</h3>
-                            <p>Selektor för element som är bar</p>
+                            <h3 class="ui header">20. X:nth-last-child</h3>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
-                            <h3 class="ui header">19. X:nth-of-type(n)</h3>
-                            <p>Selektor för element som är bar</p>
-
-                        </div>
-
-
-                        <div class="ui vertical segment">
-
-                            <div class="ui message">
-
-                                <div class="ui header">Kuriosa</div>
-
-
-                            </div>
+                            <h3 class="ui header">21. X:nth-of-type(n)</h3>
+                            <p>Mer info kommer. Se annars länk nedan.</p>
 
                         </div>
+
+
+
 
                         <div class="ui segment link">
                             <h4 class="ui header link">Länkar </h4>
-                            <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">W3Schools CSS Selector Reference
+                            <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">W3Schools CSS Selector
+                                Reference
                             </a>
                             <br>
-                            <a href="hhttps://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048" target="_blank"> Envatotuts - The 30 CSS Selectors You Should Mememorize
+                            <a href="hhttps://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048" target="_blank"> Envatotuts
+                                - The 30 CSS Selectors You Should Mememorize
                             </a>
                             <br>
                         </div>
