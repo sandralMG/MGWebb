@@ -237,56 +237,103 @@ p { font-size: 20px; }
 
                             <h3 class="ui header">6. X Y </h3>
                             <h4>Arvselektor</h4>
-                            <p>Du använder denna när du vill komma åt ett elemen som är underelement till ett annat (parent/child).
-                                I detta fall elementet li i ul-listan ska ha backgrundsfärg violet.
+                            <p>Du använder denna när du vill komma åt ett element som är underelement till ett annat, d.v.s
+                                barn (child) till förälderelementet (parent).
+
                             </p>
-                            <p>Arvselektor - för att nå ett element inuti ett annat</p>
+                            <p>I detta fall får alla paragrafer med class="info" violet textfärg.</p>
                             <div class="ui compact segment">
-                                <pre><code class="css"> ul li {
-            background-color: violet;
+                                <pre><code class="css"> .info p {
+            color: violet;
         }</code></pre>
                             </div>
+                            <p>Här får alla länkar i varje list-element i en oordnad lista en grå bakgrund.</p>
+                            <div class="ui compact segment">
+                                <pre><code class="css"> ul li a {
+            background-color: grey;
+        }</code></pre>
+                            </div>
+
+                            <div class="ui vertical segment"></div>
+                            <h3>Pseudo-klasser</h3>
+                            <p>För psedo-klasser sätter man kolontecknet ( : ) efter selektorn. De används för applicera
+                                en regel för ett valt tillstånd, exempelvis när en användare drar musen över ett visst element.
+                            </p>
+
+                            <h3 class="ui header">8. X:hover</h3>
+                            <p> När man gör mouse over element aktiveras regeln. I detta fall blir bakgrundfärgen lila när
+                                man "hovrar" över en länk. Bra att använd till knappar och menyer.</p>
+                            <div class="ui compact segment">
+                                <pre><code class="css">a:hover {
+                background-color: yellow;
+            }</code></pre>
+                            </div>
+
+                            <h3 class="ui header">7. X:visited</h3>
+
+                            <p> I detta fall blir alla av användaren besökta länkar gråa.
+                            </p>
+                            <div class="ui compact segment">
+                                <pre><code class="css">a:visited {
+     color: grey;
+}</code></pre>
+                            </div>
+
+                            <h3 class="ui header">9. X:focus</h3>
+                            <p>När ett element klickas eller vid "tab"-tangenten når elementet. Användbart vid att styla
+                                textrutor (input) i formulär.</p>
+                            <div class="ui compact segment">
+                                <pre><code class="css">input:focus{
+     border: 2px solid green;
+}</code></pre>
+                            </div>
+
+
+                            <h3 class="ui header">10. X:link</h3>
+                            <p> Alla länkar som ännu inte blir besökt är röda
+                            </p>
+                            <div class="ui compact segment">
+                                <pre><code class="css">a:link{
+     color: red;
+}</code></pre>
+                            </div>
+
+
 
                         </div>
                         <div class="ui vertical segment">
 
                             <h2 class="ui header"> Bra att kunna i kursen </h2>
 
-                            <h3 class="ui header">7. X:visited</h3>
-                            <h4>Pseudo-klass för besökta länkar</h4>
-                            <p>Pseudo-klasser betecknas med symbolen : . I detta fall blir alla av användaren besökta länkar
-                                gråa.
-                            </p>
+                            <h3 class="ui header">12. X[type="value"]</h3>
+                            <p>Selektorn för att sätta en regel till ett visst attribut med ett visst värde. I detta fall
+                                får endast alla textrutor en grå bakgrund (inte andra som ex checkbox, m. fl.)</p>
                             <div class="ui compact segment">
-                                <pre><code class="css">a:visited {
-            background-color: grey;
-        }</code></pre>
+                                <pre><code class="css">input[type="text"] {
+     background-color: lightgrey;
+}</code></pre>
                             </div>
-                            <h3 class="ui header">8. X:hover</h3>
-                            <p>Kallas för action pseudo class. När man gör mouse over element aktiveras regeln. I detta fall
-                                blir bakgrundfärgen lila när man "hovrar" över en länk. Bra att använd till knappar och menyer.</p>
+
+                            <h3 class="ui header">21. X:nth-of-type(n)</h3>
+                            <p>Väljer det n:te elementet som finns inuti förälderelementet. I detta fall blir textfärgen
+                                grön för det andra p-elementet inuti det överordnade elementet.</p>
                             <div class="ui compact segment">
-                                <pre><code class="css">a:hover {
-            background-color: yellow;
-        }</code></pre>
+                                <pre><code class="css">p:nth-of-type(2) {
+     color: green;
+}</code></pre>
                             </div>
-                            <h3 class="ui header">9. X:focus</h3>
-                            <p>Mer info kommer. Se annars länk nedan.</p>
-
-                            <h3 class="ui header">10. X:link</h3>
-                            <p>Mer info kommer. Se annars länk nedan.</p>
-
-                            <h3 class="ui header">11. X[type]</h3>
-                            <p>Mer info kommer. Se annars länk nedan.</p>
-
-                            <h3 class="ui header">12. X[type="input"]</h3>
-                            <p>Mer info kommer. Se annars länk nedan.</p>
 
                             <h3 class="ui header">13. X > Y </h3>
-                            <p>Mer info kommer. Se annars länk nedan.</p>
+                            <p>Liknar arvselektor X . Skillnaden är att den endast väljder de element som är första barnet
+                                till föräldern. Här väljs alltså bara de p som har förälder div, inte de som är underornade
+                                p.
+                            </p>
+                            <div class="ui compact segment">
+                                <pre><code class="css">div > p {
+     background-color: blue;
+}</code></pre>
+                            </div>
 
-                            <h3 class="ui header">14. X > Y </h3>
-                            <p>Mer info kommer. Se annars länk nedan.</p>
 
                             <h3 class="ui header">15. X + Y </h3>
                             <p>Mer info kommer. Se annars länk nedan.</p>
@@ -312,8 +359,7 @@ p { font-size: 20px; }
                             <h3 class="ui header">20. X:nth-last-child</h3>
                             <p>Mer info kommer. Se annars länk nedan.</p>
 
-                            <h3 class="ui header">21. X:nth-of-type(n)</h3>
-                            <p>Mer info kommer. Se annars länk nedan.</p>
+
 
                         </div>
 
