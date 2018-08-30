@@ -1,5 +1,0 @@
-Övning 1 :1.php
-Övning 2 :2.php
-Övning 3 :3.php
-Övning 4 :4.php
-Övning 5 :5.php
