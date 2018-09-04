@@ -12,7 +12,7 @@
         hljs.initHighlightingOnLoad();
     </script>
     <link rel="stylesheet" type="text/css" href="../../../style/style.css">
-    <title>Webbutveckling 1</title>
+    <title>Webbutveckling 2</title>
 </head>
 
 <body>
@@ -123,7 +123,7 @@
                 <i class="icon big sidebar"></i>
             </a>
             <a class="item">
-                <div class="ui header">Webbutveckling 1</div>
+                <div class="ui header">Webbutveckling 2</div>
             </a>
             <div class="right menu">
                 <div class="right menu">
@@ -137,8 +137,8 @@
                         Kurser
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a class="item" href="../info/planering.html">Webbutveckling 1</a>
-                            <a class="item" href="../../webb2/info/kursplan.html">Webbutveckling 2</a>
+                            <a class="item" href="../../webb1/info/kursplan.html">Webbutveckling 1</a>
+                            <a class="item" href="../info/kursplan.html">Webbutveckling 2</a>
                             <a class="item" href="../../webbsev1/info/kursplan.html">Webbserverprogrammering 1</a>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
                             <i class="search link icon"></i>
                         </div>
                     </div>
-                    >
+
                 </div>
             </div>
             <!--end of top menu-->
@@ -170,26 +170,25 @@
 
                             <h1 class="ui header"> CSS Flexbox</h1>
 
-                            <p> Flexbox är ett modernare sätt att skapa layout på webbsidor. I Webbutveckling 1 använde vi
-                                oss av floats för att skapa layout. När vi exempelvis ville ha en vänsterkolumn eller att
-                                en bild skulle ligga till höger. Floats har funnits med sedan början av HTML/CSS, men för
-                                vissa situationer innebär det oänskade resultat som kräver omständig lösnign. Exempelvis
-                                att behöva använda clear på floats för att nästa element ska följa nedanför och "the clearfix-hack"
-                                eller att få kolumner bredvid varandra på samma höjd, etc <a href="https://css-tricks.com/all-about-floats/"
-                                    traget="_blank">
-                                    (läs mer här om du är nyfiken)</a>. Flexbox är inte till för att helt ersätta floats,
-                                men det ger oss bättre lösnignar på de "problem" som floats skapar och ger oss nya möjligheter
-                                till att skapa en flexibel layout på ett smidigare sätt. </p>
+                            <p> Flexbox är ett modernare sätt att skapa layout på webbsidor. Som man hör på namnet är flexbox
+                                ett flexibelt sätt att hantera boxar, både deras position och storlek, vilket ju är önskvärt
+                                för att kunna skapa layout. </p>
 
-
+                            <p>I Webbutveckling 1 använde vi oss av floats för att skapa layout. Floats har funnits med sedan
+                                början av HTML/CSS, men för vissa situationer innebär det oänskade resultat som kräver omständiga
+                                workarounds. Som exempelvis "the clearfix-hack" eller att få kolumner bredvid varandra på
+                                samma höjd, etc <a href="https://css-tricks.com/all-about-floats/" traget="_blank"> (läs
+                                    mer här om du är nyfiken)</a>. Det är fortfarande bra att ha kunskap om floats, men inom
+                                webbutveckling står vi inför ett skifte där de modernare formerna för layout som CSS Flexbox
+                                och Grids tar över allt mer. De når även tillräckligt stöd i olika webbläsare för kunna användas
+                                inom produktion.
+                            </p>
 
                             <p>
-
                                 Sidan <a href="https://caniuse.com/#search=flexbox">"Can I Use" visar hur Flexbox
                                 </a>
-                                supportas i olika webbläsare, vilket visar att felxbox har bra support i nuvarande webbbläsare. Det är endast för tidigare
-                                versioner av Internet Explorer som man bör implementera en fallback för.
-
+                                supportas i olika webbläsare. I dagsläget är det endast tidigare versioner av Internet Explorer som man bör implementera
+                                en fallback för.
                             </p>
 
                         </div>
@@ -201,11 +200,39 @@
                             <p>Flexbox är inget eget språk utan det handlar om nya egenskaper i CSS som vi kan applicera
                                 på våra element. Det är enkelt att komma igång med Flexbox, man använder egenskapen &nbsp;
                                 <code class="css" style="background-color: rgb(248, 243, 238)">display:flex;</code>&nbsp;
-                                på det element man vill applicera reglerna för Flexbox på, exempelvis en meny, ett bildgalleri
-                                o.s.v. Det svåra är inte att komma igång med flexbox utan att lära sig alla olika inställningar
-                                ett flexbox-element kan ha och vad de gör i sammanhanget.
+                                på det element man vill applicera reglerna för Flexbox på,. Det kan exempelvis vara en meny,
+                                ett bildgalleri eller tre-kolumns layout på en sida. Det svåra är inte att komma igång med
+                                flexbox utan att lära sig alla olika inställningar ett flexbox-element kan ha och vad de
+                                gör i sammanhanget.
                             </p>
+                            <div class="ui compact segment">
+                                <pre><code class="html"> &lt;div class="parent"&gt;
+    &lt;div class="item"&gt;1&lt;/div&gt;
+    &lt;div class="item"&gt;2&lt;/div&gt;
+    &lt;div class="item"&gt;3&lt;/div&gt;
+    &lt;div class="item"&gt;4&lt;/div&gt;
+    &lt;div class="item"&gt;5&lt;/div&gt;
+ &lt;/div&gt;
+    </code></pre>
+                            </div>
 
+                            <div class="ui compact segment">
+                                <pre><code class="css">.parent {
+    border: 5px solid lightcoral;
+    display: flex;
+}
+                                        
+.item {
+    margin: 5px;
+    background: DeepSkyBlue;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+}
+
+</code></pre>
+                            </div>
 
                         </div>
 
@@ -215,8 +242,8 @@
 
                             <p data-height="265" data-theme-id="dark" data-slug-hash="dqWdMm" data-default-tab="html,result" data-user="sandraMG" data-pen-title="CSS Flexbox Example Start"
                                 data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/sandraMG/pen/dqWdMm/">CSS
-                                    Flexbox Example Start</a> by Sandra (<a href="https://codepen.io/sandraMG">@sandraMG</a>)
-                                on <a href="https://codepen.io">CodePen</a>.</p>
+                                    Flexbox Example Start</a> by Sandra (
+                                <a href="https://codepen.io/sandraMG">@sandraMG</a>) on <a href="https://codepen.io">CodePen</a>.</p>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
                         </div>
