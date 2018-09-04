@@ -170,24 +170,34 @@
 
                             <h1 class="ui header"> CSS Flexbox</h1>
 
-                            <p> Flexbox är ett modernare sätt att skapa layout på webbsidor. Som man hör på namnet är flexbox
-                                ett flexibelt sätt att hantera boxar, både deras position och storlek, vilket ju är önskvärt
+                            <p> Flexbox är ett modernare sätt att skapa layout på webbsidor. Som man hör på namnet är
+                                flexbox
+                                ett flexibelt sätt att hantera boxar, både deras position och storlek, vilket ju är
+                                önskvärt
                                 för att kunna skapa layout. </p>
 
-                            <p>I Webbutveckling 1 använde vi oss av floats för att skapa layout. Floats har funnits med sedan
-                                början av HTML/CSS, men för vissa situationer innebär det oänskade resultat som kräver omständiga
-                                workarounds. Som exempelvis "the clearfix-hack" eller att få kolumner bredvid varandra på
-                                samma höjd, etc <a href="https://css-tricks.com/all-about-floats/" traget="_blank"> (läs
-                                    mer här om du är nyfiken)</a>. Det är fortfarande bra att ha kunskap om floats, men inom
-                                webbutveckling står vi inför ett skifte där de modernare formerna för layout som CSS Flexbox
-                                och Grids tar över allt mer. De når även tillräckligt stöd i olika webbläsare för kunna användas
+                            <p>I Webbutveckling 1 använde vi oss av floats för att skapa layout. Floats har funnits med
+                                sedan
+                                början av HTML/CSS, men för vissa situationer innebär det oänskade resultat som kräver
+                                omständiga
+                                workarounds. Som exempelvis "the clearfix-hack" eller att få kolumner bredvid varandra
+                                på
+                                samma höjd, etc <a href="https://css-tricks.com/all-about-floats/" traget="_blank">
+                                    (läs
+                                    mer här om du är nyfiken)</a>. Det är fortfarande bra att ha kunskap om floats, men
+                                inom
+                                webbutveckling står vi inför ett skifte där de modernare formerna för layout som CSS
+                                Flexbox
+                                och Grids tar över allt mer. De når även tillräckligt stöd i olika webbläsare för kunna
+                                användas
                                 inom produktion.
                             </p>
 
                             <p>
                                 Sidan <a href="https://caniuse.com/#search=flexbox">"Can I Use" visar hur Flexbox
                                 </a>
-                                supportas i olika webbläsare. I dagsläget är det endast tidigare versioner av Internet Explorer som man bör implementera
+                                supportas i olika webbläsare. I dagsläget är det endast tidigare versioner av Internet
+                                Explorer som man bör implementera
                                 en fallback för.
                             </p>
 
@@ -197,14 +207,38 @@
                             <h2 class="ui header"> Att lära sig Flexbox</h2>
 
 
-                            <p>Flexbox är inget eget språk utan det handlar om nya egenskaper i CSS som vi kan applicera
-                                på våra element. Det är enkelt att komma igång med Flexbox, man använder egenskapen &nbsp;
+                            <p>Flexbox är inget eget språk utan det handlar om nya egenskaper i CSS som vi kan
+                                applicera
+                                på våra element. Det är enkelt att komma igång med Flexbox, man använder egenskapen
+                                &nbsp;
                                 <code class="css" style="background-color: rgb(248, 243, 238)">display:flex;</code>&nbsp;
-                                på det element man vill applicera reglerna för Flexbox på,. Det kan exempelvis vara en meny,
-                                ett bildgalleri eller tre-kolumns layout på en sida. Det svåra är inte att komma igång med
-                                flexbox utan att lära sig alla olika inställningar ett flexbox-element kan ha och vad de
-                                gör i sammanhanget.
+                                på det element man vill applicera reglerna för Flexbox på,. Det kan exempelvis vara en
+                                meny,
+                                ett bildgalleri eller tre-kolumns layout på en sida. Det elementet som håller de olika
+                                elementen som ska "flexas" kallas för "flex container". "Flex container" är alltså den
+                                föräldraelement som innehåller olika "flex items" som skulle kunna vara
+                                navigationselement, bilder etc. I exemplet nedan är alltså div-elementet med
+                                class="parent" "flex containern" och varje div-element med class="item" är en "flex
+                                items"
+                                som kan ordnas efter olika regler i behållaren. Genom att sätta olika regler på vår
+                                "flex container" kan vi ordna boxarna så att de exempelvis blir centrerade i mitten,
+                                hamnar i en kolumn, får jämnt avstånd emellan o.s.v.
                             </p>
+
+
+                            <div class="ui compact segment">
+
+                                <img src="../../../assets/images/flexcontaineritems.png" alt="Flexbox" width="500px">
+                            </div>
+
+                            <p> Det är svårt att förklara allt inom flexbox med ord. Istället kommer ni få följa med
+                                den flexboxkod jag skriver och samtidigt testa själva. Vi utgår från nedanstående
+                                Codepen som har en startkod. I den kan ni editera direkt eller kopiera in i egen html
+                                och css-fil. Nedan ser ni HTML för "flex cointainer" innehålande "flex items" samt css
+                                för hur <code class="css" style="background-color: rgb(248, 243, 238)">display:flex;</code>&nbsp;
+                                sätts på "flex containern" samt hur egenskapen <code class="css" style="background-color: rgb(248, 243, 238)">justify:
+                                    content;</code>&nbsp; används.</p>
+
                             <div class="ui compact segment">
                                 <pre><code class="html"> &lt;div class="parent"&gt;
     &lt;div class="item"&gt;1&lt;/div&gt;
@@ -219,7 +253,10 @@
                             <div class="ui compact segment">
                                 <pre><code class="css">.parent {
     border: 5px solid lightcoral;
-    display: flex;
+    display: flex; /* Denna rad gör elementet till ett flex-element */
+    justify-content: center; /* Denna rad centerar alla flex-items 
+                                mot mitten. Det finns många olika 
+                                flexboxkommandeon än denna att tillämpa. */
 }
                                         
 .item {
@@ -233,15 +270,20 @@
 
 </code></pre>
                             </div>
+                            <p>
+                                Det svåra är inte att komma igång
+                                med
+                                flexbox utan att lära sig alla olika inställningar ett flexbox-element kan ha och vad
+                                de
+                                gör i sammanhanget.
+                            </p>
 
-                        </div>
-
-                        <div class="ui vertical segment">
 
                             <p> Vi utgår från denna startkod för att träna oss på flexbox-egenskaper</p>
 
-                            <p data-height="265" data-theme-id="dark" data-slug-hash="dqWdMm" data-default-tab="html,result" data-user="sandraMG" data-pen-title="CSS Flexbox Example Start"
-                                data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/sandraMG/pen/dqWdMm/">CSS
+                            <p data-height="265" data-theme-id="dark" data-slug-hash="dqWdMm" data-default-tab="html,result"
+                                data-user="sandraMG" data-pen-title="CSS Flexbox Example Start" data-preview="true"
+                                class="codepen">See the Pen <a href="https://codepen.io/sandraMG/pen/dqWdMm/">CSS
                                     Flexbox Example Start</a> by Sandra (
                                 <a href="https://codepen.io/sandraMG">@sandraMG</a>) on <a href="https://codepen.io">CodePen</a>.</p>
                             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -249,26 +291,41 @@
                         </div>
                         <div class="ui vertical segment">
 
-                            <p> För att lära sig Flexbox rekommenderar jag denna video. Den går igenom det vi gått igenom
-                                på lektion och lite till. Se även länkarna nedan för mer information kring Flexbox </p>
+                            <p> För att repetera/lära sig mer om Flexbox rekommenderar jag denna video. Den går igenom
+                                det vi gått
+                                igenom
+                                på lektion och lite till. </p>
 
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/G7EIAgfkhmg?rel=0" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/G7EIAgfkhmg?rel=0"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-                            <p> <a href="https://codepen.io/devtips/pen/JorKGm?editors=110" target="_blank">Denna Codepen
-                                    hör till videon CSS Flexbox Essentials </a></p>
+                            <p> <a href="https://codepen.io/devtips/pen/JorKGm?editors=110" target="_blank">Använd den
+                                    här startkoden (Codepen) för att följa instruktionerna i videon. </a></p>
                         </div>
 
+                        <div class="ui vertical segment">
+                            <p> Det finns många bra guider om Flexbox på internet. Nedan har jag samlat några som kan
+                                vara intressanta att titta på.</p>
 
+                        </div>
 
                         <div class="ui segment link">
                             <h4 class="ui header link">Länkar </h4>
-                            <a href="#" target="_blank">#
+                            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS
+                                Tricks: A
+                                Complete Guide to Flexbox
                             </a>
                             <br>
-                            <a href="#" target="_blank">
-                                #
+                            <a href="https://internetingishard.com/html-and-css/flexbox/" target="_blank">
+                                Interneting is hard: Flexbox
                             </a>
+                            <br>
+                            <a href="https://codepen.io/enxaneta/pen/adLPwv" target="_blank">
+                                Flexbox playground (Codepen)
+                            </a>
+                            <br>
+                            <a href="http://webbling.se/index.php/Flexbox_-_grunder" target="_blank">
+                                Webbling: Flexbox grunder </a>
                             <br>
                         </div>
 
