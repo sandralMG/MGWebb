@@ -109,20 +109,24 @@
                     Boxmodellen
                 </a>
                 <a class="item" href="../css/edittextCSS.html">
-                    Formatera text
-                </a>
+                    Typografi </a>
                 <a class="item" href="../css/colorbackgroundCSS.html">
                     Färger och bakgrund
                 </a>
                 <a class="item" href="../css/selectorsCSS.html">
                     CSS Selektorer
                 </a>
-                <a class="item" href="../css/floatpositionCSS.html">
-                    Float och positionering
+                <a class="item" href="../css/floatsCSS.html">
+                    Floats
                 </a>
+                <a class="item" href="../css/position_lagerCSS.html">
+                    Positionering och lager
+                </a>
+
                 <a class="item" href="../css/flexbox_gridCSS.html">
                     CSS Flexbox och Grid (frivilligt)
                 </a>
+
             </div>
         </div>
 
@@ -239,41 +243,59 @@
 
                             <h1 class="ui header"> Dokumentstrukur enligt HTML5-standard</h1>
 
-                            <p>För att strukturera upp innehållet finns det html-taggar som hjälper oss att gruppera innehållet.
-                                I föregående avsnitt introducerade vi &lt;div&gt;-taggen. Innan HTML5 introduserades så var
-                                &lt;div&gt; den vanligaste taggen för att gruppera innehåll. Problemet var att man fick stort
-                                antal &lt;div&gt; taggar och det var svårt som utvecklare att hålla koll på vilken &lt;div&gt;-tagg
-                                som gjorde vad. Det var även svårt för sökmotorer att förstå och tolka en webbsidas innehåll.
+                            <p>För att strukturera upp innehållet finns det html-taggar som hjälper oss att gruppera
+                                innehållet.
+                                I föregående avsnitt introducerade vi &lt;div&gt;-taggen. Innan HTML5 introduserades så
+                                var
+                                &lt;div&gt; den vanligaste taggen för att gruppera innehåll. Problemet var att man fick
+                                stort
+                                antal &lt;div&gt; taggar och det var svårt som utvecklare att hålla koll på vilken
+                                &lt;div&gt;-tagg
+                                som gjorde vad. Det var även svårt för sökmotorer att förstå och tolka en webbsidas
+                                innehåll.
 
                             </p>
-                            <p> I och med HTML5 så introducerades en uppsättning nya taggar som gav förutsättningar att skapa
-                                mer semantisk kod. Med det menas alltså en navigeringsmeny alltid ska ha det logiska namnet
-                                "nav" och att sidomeny ska a namnet "aside", m. fl. Följande taggar är därför bra att använda
+                            <p> I och med HTML5 så introducerades en uppsättning nya taggar som gav förutsättningar att
+                                skapa
+                                mer semantisk kod. Med det menas alltså en navigeringsmeny alltid ska ha det logiska
+                                namnet
+                                "nav" och att sidomeny ska a namnet "aside", m. fl. Följande taggar är därför bra att
+                                använda
                                 när man ska strukturera upp en sida.</p>
                         </div>
 
                         <div class="ui vertical segment">
                             <h2 class="ui header"> &lt;header&gt;</h2>
-                            <p> &lt;header&gt;-taggen används för att markera webbsidans sidhuvud. D.v.s det som är början
-                                på webbsidan. Det kan innehålla en logotyp, en beskrivande bild, sidans titel eller meny.
+                            <p> &lt;header&gt;-taggen används för att markera webbsidans sidhuvud. D.v.s det som är
+                                början
+                                på webbsidan. Det kan innehålla en logotyp, en beskrivande bild, sidans titel eller
+                                meny.
                             </p>
                             <h2 class="ui header"> &lt;nav&gt;</h2>
-                            <p>I nav lägger man webbsidans huvudsakliga navigering. Nav-taggen får bara användas en gång
+                            <p>I nav lägger man webbsidans huvudsakliga navigering. Nav-taggen får bara användas en
+                                gång
                                 per html-dokument.</p>
                             <h2 class="ui header"> &lt;main&gt;</h2>
                             <p>Main är till för att rama inte det huvudsakliga innehållet på sidan. </p>
                             <h2 class="ui header"> &lt;section&gt;</h2>
-                            <p> Sections används för att tydligt gruppera olika delar av innehåll på sidan. Man kan alltså
-                                ha flera section-element för att separera olika typer av information av innehåll på sidan.</p>
+                            <p> Sections används för att tydligt gruppera olika delar av innehåll på sidan. Man kan
+                                alltså
+                                ha flera section-element för att separera olika typer av information av innehåll på
+                                sidan.</p>
                             <h2 class="ui header"> &lt;article&gt;</h2>
-                            <p>Om man har information som kan stå oberoende av vilken webbsida man är på ska acticle rama
+                            <p>Om man har information som kan stå oberoende av vilken webbsida man är på ska acticle
+                                rama
                                 in denna. Det kan vara nyheter eller artikel som kan ha andra användningsområden.</p>
                             <h2 class="ui header"> &lt;aside&gt;</h2>
-                            <p>Oftast finns det någon slags sidebar på en webbsida och det är det som aside-taggen är til
-                                för att gruppera. Här kan exempelvis nyheter stå, lista med länkar eller annan bakgrundsinformations</p>
+                            <p>Oftast finns det någon slags sidebar på en webbsida och det är det som aside-taggen är
+                                til
+                                för att gruppera. Här kan exempelvis nyheter stå, lista med länkar eller annan
+                                bakgrundsinformations</p>
                             <h2 class="ui header"> &lt;footer&gt;</h2>
-                            <p>Denna del markerar information som finns längs ner på sidan. Innehållet i footer-elementet
-                                kan vara kontaktuppgifter, vem/vilka som är ägare till sidan eller länkar till facebook,
+                            <p>Denna del markerar information som finns längs ner på sidan. Innehållet i
+                                footer-elementet
+                                kan vara kontaktuppgifter, vem/vilka som är ägare till sidan eller länkar till
+                                facebook,
                                 instagram. </p>
 
 
@@ -281,12 +303,14 @@
 
                         </div>
                         <div class="ui vertical segment">
-                            <p> Denna bild visar ett exempel hur de olika elementen kan markera vad som är vad på sidan.
+                            <p> Denna bild visar ett exempel hur de olika elementen kan markera vad som är vad på
+                                sidan.
                                 Så småningom kommer ni lära er att skapa en layout liknande denna.</p>
                             <img class="ui fluid image" src="../../../assets/images/html5-structure.gif">
                         </div>
                         <div class="ui vertical segment">
-                            <p> Det är inte lätt att skilja på dessa element för att skapa en struktur enligt HTML5-standard.
+                            <p> Det är inte lätt att skilja på dessa element för att skapa en struktur enligt
+                                HTML5-standard.
                                 Exempelvis skillnaden mellan section och article. De andra kan vara enklare att avgöra.
                         </div>
 
@@ -296,13 +320,14 @@
                             <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">W3schools
                                 - HTML5 Semantics
                             </a>
-                            <br/>
+                            <br />
                             <a href="https://www.youtube.com/watch?v=-dQ2Big9ueg" target="_blank">Video - HTML5 Basics</a>
-                            <br/>
+                            <br />
 
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" target="_blank">MDN
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines"
+                                target="_blank">MDN
                                 - HTML5</a>
-                            <br/>
+                            <br />
 
                         </div>
 

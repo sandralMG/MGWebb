@@ -223,7 +223,7 @@
                             <i class="search link icon"></i>
                         </div>
                     </div>
-
+                    >
                 </div>
             </div>
             <!--end of top menu-->
@@ -243,13 +243,46 @@
                     <div class="ten wide column">
                         <div class="ui vertical segment">
                             <!-- Intro HTML-->
-                            <h1 class="ui header"> Mer om CSS </h1>
+                            <h1 class="ui header"> Floats</h1>
+
+
+
+
+
+                        </div>
+
+                        <div class="ui vertical segment">
+
+                            <h2 class="ui header"> Underrubrik</h2>
                             <p>
-                                När man arbetar med stilmallar behöver man ha några viktigt koncept i åtanke för att
-                                kunna förstå och använda sig av CSS
-                                regler på rätt sätt.
+                                blabl
                             </p>
 
+                        </div>
+
+
+
+
+                        <div class="ui vertical segment">
+
+                            <h2 class="ui header">Demo med olika typer av positionering</h2>
+
+                            <p data-height="265" data-theme-id="dark" data-slug-hash="PdbYyj" data-default-tab="css,result"
+                                data-user="sandraMG" data-pen-title="CSS Position Demo" data-preview="true" class="codepen">See
+                                the Pen <a href="https://codepen.io/sandraMG/pen/PdbYyj/">CSS Position Demo</a> by
+                                Sandra (<a href="https://codepen.io/sandraMG">@sandraMG</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                        </div>
+
+                        <div class="ui vertical segment">
+
+
+
+                        </div>
+
+                        <div class="ui vertical segment">
+                            <h2 class="ui header">Underrubrik</h2>
 
 
 
@@ -257,188 +290,29 @@
 
                         <div class="ui vertical segment">
 
-                            <h2 class="ui header"> Arv, föräldrar och barn</h2>
-                            <p>
-                                Vad är arv? <br /> Arv innebär att CSS-egenskaper <b>förs vidare</b> till underliggande
-                                element.<br /> Vi
-                                tittar på HTML-koden för att se hur arv fungerar. Lägg märke till att en del element
-                                ligger
-                                inuti ett element. <br />Exempelvis ligger hela sidan i &lt;body&gt;-elementet. <br />
-                                &lt;h1&gt;
-                                och &lt;nav&gt;-elementet ligger inuti &lt;header&gt;-elementet.<br /> På samma sätt
-                                har även
-                                &lt;article&gt;, &lt;p&gt; och &lt;footer&gt; underelement.
-                            </p>
 
 
-                            <div class="ui compact segment">
 
-                                <pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;/head&gt;
-&lt;body&gt;
-     &lt;div id="wrapper"&gt;                                  
-        &lt;header&gt;
-            &lt;h1&gt;En huvudrubrik&lt;/h1&gt;
-            &lt;nav&gt;En navigationsmeny&lt;/nav&gt;
-        &lt;/header&gt;
-        &lt;article&gt;
-            &lt;h2&gt;En underrubrik&lt;/h2&gt;
-            &lt;p&gt;
-              Lite text och en &lt;a href="#"&gt;länk&lt;/a&gt; . &lt;em&gt;Länkar är bra att ha&lt;/em&gt;. En till &lt;a href="#"&gt;länk&lt;/a&gt;.
-            &lt;/p&gt;
-        &lt;/article&gt;
-        &lt;footer&gt;
-            &lt;a href="#"&gt;Kontakt&lt;/a&gt;
-            &lt;a href="#"&gt;Här finns vi&lt;/a&gt;
-        &lt;/footer&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                            <div class="ui message">
+
+                                <div class="ui header">Kuriosa</div>
 
 
                             </div>
-
-
-
-                            <p> Vi kan även visa hur våra html-element är ordnade enligt en struktur enligt bilden.
-                                Bilden
-                                är till att vi ska förstå hur arv fungerar i CSS.</p>
-
-                            <div class="ui compact segment">
-
-                                <img src="../../../assets/images/inheritanceCSS.PNG" alt="Arv CSS" width="500px">
-                            </div>
-
-                            <div class="ui compact segment">
-                                <pre><code class="css">body {
- font-family: Arial;
- font-size: 18px;                                
-}</code></pre>
-
-
-                            </div>
-
-                            <p>Om vi använder ovanstående CSS-regel kommer den alltså att verka på alla underordnade
-                                element
-                                till &lt;body&gt;. Vi säger att alla element inuti &lt;body&gt; ärver egenskaperna till
-                                CSS-regeln.
-                            </p>
-
-                            <p>Om vi endast skulle ange en regel på footer skulle endast de underornade elementen till
-                                &lt;footer&gt;
-                                att påverkas.
-                            </p>
-                            <div class="ui compact segment">
-
-                                <img src="../../../assets/images/footerInhertitanceCSS.PNG" alt="Arv CSS" width="500px">
-                            </div>
-                            <div class="ui compact segment">
-                                <pre><code class="css">footer {
-         font-family: Verdana;
-         color: blue;                              
-        }</code></pre>
-
-
-                            </div>
-                            <p> Vi säger att alla element inuti &lt;footer&gt; <b>ärver</b> egenskaperna för
-                                CSS-regeln.</p>
-                        </div>
-                        <div class="ui vertical segment">
-
-                            <h2 class="ui header">Föräldrar och barn</h2>
-                            <p>Den bild med förgreningar till alla element kan vi kalla för dokumentträd. Vi kan
-                                åskadlidgöra
-                                det som ett familjeträd med relationer emellan. <br /> Ett underordnat element blir
-                                således
-                                <b>barn</b> till det överordnade <b>föräldern</b>. I engelska termer <b>parent</b> och
-                                <b>child</b>.
-                                Det här är viktiga begrepp att känna till inom webbutveckling.</p>
-
-                            <h2 class="ui header">Varför är arv användbart?</h2>
-                            <p>Det har skapats för att underlätta för webbutvecklare.</p>
-                            <ul>
-                                <li>Annars skulle vi behöva ange egenskaper för alla underliggande element.</li>
-                                <li>CSS-filerna skulle blir stora och svåra att underhålla.</li>
-                            </ul>
-
-                            <h2 class="ui header">Ärvs alla egenskaper i CSS?</h2>
-
-                            <p><b>NEJ.</b><br /> Det finns vissa egenskaper som inte ärvs - exempelvis <b>border</b> är
-                                inte
-                                en praktisk egenskap att ärvas. Om vi sätter en border på <b>p</b>-elementet vill vi ju
-                                inte
-                                att varje del av texten vi markerar ska ha kanter.</p>
-
-                            <p><b>Rent allmänt:</b> De egenskaper som gör jobbet lättare. Endast egenskaperna för:</p>
-                            <ul>
-                                <li>Text</li>
-                                <li>Listor</li>
-                                <li>Färg</li>
-                            </ul>
-
-                            <p> Egenskapen <b>font-size</b> har lite särskilda regler som vi <a href="edittextCSS.html">återkommer
-                                    till
-                                </a></p>
-
-
-
 
                         </div>
-
-
-
-                        <div class="ui vertical segment">
-                            <h2 class="ui header">Konflikt i stillmallsregler</h2>
-                            <p>Vad händer om ett element får en viss regel fast på två olika ställen i stilmallskoden?
-                                Ett
-                                html-dokument kan även referera till flera stilmallar.<br />Det finns särskilda regler
-                                som
-                                tar hänsyn till det - men vi kommer inte gå in på alla dessa i denna kurs. En regel som
-                                dock
-                                är viktig att känna till som gäller inom em och samma stilmall:
-                            </p>
-                            <h3 class="ui header">Regelordning</h3>
-                            <p>Det som kommer senare i CSS-dokumentet är den regel som gäller. </p>
-                            <div class="ui compact segment">
-                                <pre><code class="css">p {
-color: red;
-color: green;
-color: blue;                           
-}</code></pre>
-
-
-                            </div>
-                            <p>I det här exemplet kommer alltså texten i paragrafen få en blå färg - efter det "skrivs
-                                över"
-                                de tidigare. Eller det engelska begreppet "overrides" .<br> Detta är dock praktiskt när
-                                man
-                                vill skapa en "fallback" om den nya CSS-tekniken man vill använda inte stöds fultl ut i
-                                alla
-                                webbläsare.
-                            </p>
-
-                            <div class="ui compact segment">
-                                <pre><code class="css">h1 {
-/*Fallback first*/
-border: 25px solid #eee;
-/*Newer technique */
-border-image: url(fancy.png) 55 fill / 55px / 25px;                                       
-}</code></pre>
-
-
-                            </div>
-                            <p>D.v.s om webbläsaren har support för border-image kommer den använda sig av egenskapen
-                                border
-                                som fallback.</p>
-                        </div>
-
-
 
                         <div class="ui segment link">
                             <h4 class="ui header link">Länkar </h4>
                             <a href="#" target="_blank">CSS Länk
+                            </a>
+                            <br>
+                            <a href="#" target="_blank">CSS Länk
+                            </a>
+                            <br>
+                            <a href="https://www.smashingmagazine.com/2009/10/mastering-css-coding-getting-started/"
+                                target="_blank">Smashing Magazine - Mastering CSS Coding: Getting Started
+
                             </a>
                             <br>
 
@@ -447,18 +321,17 @@ border-image: url(fancy.png) 55 fill / 55px / 25px;
                         </div>
 
                         <div class="ui hidden divider"></div>
-
-                        <a href="introCSS.html">
+                        <a href="floatsCSS.html">
                             <button class="ui left floated labeled icon button">
                                 <i class="left arrow icon"></i>
-                                Introduktion CSS</button>
+                                Floats</button>
                         </a>
 
 
-                        <a href="boxmodelCSS.html">
+                        <a href="position_lagerCSS.html">
                             <button class="ui right floated labeled icon button">
                                 <i class="right arrow icon"></i>
-                                Boxmodellen </button>
+                                Position och lager </button>
                         </a>
 
 

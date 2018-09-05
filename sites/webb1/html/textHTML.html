@@ -109,20 +109,24 @@
                     Boxmodellen
                 </a>
                 <a class="item" href="../css/edittextCSS.html">
-                    Formatera text
-                </a>
+                    Typografi </a>
                 <a class="item" href="../css/colorbackgroundCSS.html">
                     Färger och bakgrund
                 </a>
                 <a class="item" href="../css/selectorsCSS.html">
                     CSS Selektorer
                 </a>
-                <a class="item" href="../css/floatpositionCSS.html">
-                    Float och positionering
+                <a class="item" href="../css/floatsCSS.html">
+                    Floats
                 </a>
+                <a class="item" href="../css/position_lagerCSS.html">
+                    Positionering och lager
+                </a>
+
                 <a class="item" href="../css/flexbox_gridCSS.html">
                     CSS Flexbox och Grid (frivilligt)
                 </a>
+
             </div>
         </div>
 
@@ -241,7 +245,8 @@
                             <h1 class="ui header"> Text och Rubriker </h1>
                             <div class="ui hidden divider"></div>
                             <p>
-                                I den här delen ska vi lära oss hur märker upp vi märker upp text och rubriker i HTML, men även olika typer av listor.
+                                I den här delen ska vi lära oss hur märker upp vi märker upp text och rubriker i HTML,
+                                men även olika typer av listor.
                             </p>
 
                         </div>
@@ -253,10 +258,14 @@
 
 
                             <p>
-                                Rubriker skrivs med &lt;h1&gt;, &lt;h2&gt;…, &lt;h6&gt; beroende på vilken nivå rubriken har. Precis som en bok har en huvudtitel,
-                                kapitelrubriker, underrubriker är det viktigt att en webbsida följer en logisk ordning i
-                                rubriken. Den rubrik som är störst, och som webbläsare ser som viktigast är &lt;h1&gt; och
-                                får förekomma endast en gång på webbsidan. Efter den får man fylla på med underrubriker &lt;h2&gt;.
+                                Rubriker skrivs med &lt;h1&gt;, &lt;h2&gt;…, &lt;h6&gt; beroende på vilken nivå
+                                rubriken har. Precis som en bok har en huvudtitel,
+                                kapitelrubriker, underrubriker är det viktigt att en webbsida följer en logisk ordning
+                                i
+                                rubriken. Den rubrik som är störst, och som webbläsare ser som viktigast är &lt;h1&gt;
+                                och
+                                får förekomma endast en gång på webbsidan. Efter den får man fylla på med underrubriker
+                                &lt;h2&gt;.
                                 &lt;h3&gt;, o.s.v
                             </p>
 
@@ -299,9 +308,12 @@
                                 <h2 class="ui header"> Textstycken </h2>
 
                                 <p>
-                                    Textstycken, eller även kallad brödtext märks upp i HTML med &lt;p&gt;-elementet. “p” är en förkortning av engelskans “paragraph".
-                                    Nedan ser ni två textstycken inom &lt;p&gt;-elementet. Webbläsaren förstår att all text
-                                    inom en paragraf är ett sammanhängande textstycke, men om ett ny paragraf anges börjar
+                                    Textstycken, eller även kallad brödtext märks upp i HTML med &lt;p&gt;-elementet.
+                                    “p” är en förkortning av engelskans “paragraph".
+                                    Nedan ser ni två textstycken inom &lt;p&gt;-elementet. Webbläsaren förstår att all
+                                    text
+                                    inom en paragraf är ett sammanhängande textstycke, men om ett ny paragraf anges
+                                    börjar
                                     det vanligtvis på en ny rad.
                                 </p>
 
@@ -328,12 +340,15 @@ Eu augue ut lectus arcu bibendum at varius vel pharetra.
 
 
                                 </div>
-                                <p>När man skapar webbsidor och ännu inte har tillgång till den text man vill publicera finns
-                                    det bra verktyg för att generera text. En klassisk approach inom web design är att använda
+                                <p>När man skapar webbsidor och ännu inte har tillgång till den text man vill publicera
+                                    finns
+                                    det bra verktyg för att generera text. En klassisk approach inom web design är att
+                                    använda
                                     en s.k.
-                                    <a href="https://loremipsum.io/" target="_blank">Lorem Ipsum generator</a> som ger text
+                                    <a href="https://loremipsum.io/" target="_blank">Lorem Ipsum generator</a> som ger
+                                    text
                                     på latin, där man kan välja antal ord, textstycken etc.
-                                    <br/> Eller varför inte någon roligare?
+                                    <br /> Eller varför inte någon roligare?
                                     <a href="https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/" target="_blank">Kika
                                         in här:-)</a>
 
@@ -346,8 +361,10 @@ Eu augue ut lectus arcu bibendum at varius vel pharetra.
 
                                 <p>
 
-                                    Ibland behöver man göra en radbrytning i texten vilket använder taggen &lt;br&gt; till. Elementet ska inte användas till
-                                    att skapa större utrymmen (vilket det ibland missvisande används för) utan bara för enstaka
+                                    Ibland behöver man göra en radbrytning i texten vilket använder taggen &lt;br&gt;
+                                    till. Elementet ska inte användas till
+                                    att skapa större utrymmen (vilket det ibland missvisande används för) utan bara för
+                                    enstaka
                                     radbrytningar, exempelvis till adresser eller några poesirader.
 
                                 </p>
@@ -373,14 +390,18 @@ HODOR! Hodor.
 
                                 <p>
 
-                                    Det finns mycket innehåll på webbsidor som struktureras i listor. För att strukturera innehållet tydligt och i en viss ordning.
-                                    Listor brukar också användas för att skapa navigationsmenyer. Det finns två olika typer
+                                    Det finns mycket innehåll på webbsidor som struktureras i listor. För att
+                                    strukturera innehållet tydligt och i en viss ordning.
+                                    Listor brukar också användas för att skapa navigationsmenyer. Det finns två olika
+                                    typer
                                     av listor som är bra att kunna, oordnade och ordnade lister.
                                     <ul>
-                                        <li> Ordnade listor använder &lt;ol&gt;-elementet och kan ordnas i siffer eller bokstavsordning
+                                        <li> Ordnade listor använder &lt;ol&gt;-elementet och kan ordnas i siffer eller
+                                            bokstavsordning
                                             m.fl
                                         </li>
-                                        <li>Oordnade listor använder &lt;ul&gt;-elementet, de har även en punkt framför sig.
+                                        <li>Oordnade listor använder &lt;ul&gt;-elementet, de har även en punkt framför
+                                            sig.
                                         </li>
 
                                     </ul>
@@ -428,13 +449,20 @@ HODOR! Hodor.
                                         <div class="ui header">Semantik betyder</div>
 
 
-                                        <br/> När det gäller semantik inom HTML så handlar det om att man ska använda rätt
-                                        element för rätt innehåll. Den handlar om att tilldela en huvudrubrik &lt;h1&gt;,
-                                        att en lista ska ligga i list-elementet eller att webbsidan ska ha en relevant titel.
-                                        Det handlar om att ge HTML-koden den struktur och den mening den representerar. En
-                                        sådan html-kod gör det lättare för sökmotorer att förstå vad som finns på webbsidan
-                                        men också för tillängligthetsanpassning (exempelvis skärmläsare för blinda). Varteftersom
-                                        i kursen kommer vi att försöka skriva så semantisk korrekta webbsidor som möjligt.
+                                        <br /> När det gäller semantik inom HTML så handlar det om att man ska använda
+                                        rätt
+                                        element för rätt innehåll. Den handlar om att tilldela en huvudrubrik
+                                        &lt;h1&gt;,
+                                        att en lista ska ligga i list-elementet eller att webbsidan ska ha en relevant
+                                        titel.
+                                        Det handlar om att ge HTML-koden den struktur och den mening den representerar.
+                                        En
+                                        sådan html-kod gör det lättare för sökmotorer att förstå vad som finns på
+                                        webbsidan
+                                        men också för tillängligthetsanpassning (exempelvis skärmläsare för blinda).
+                                        Varteftersom
+                                        i kursen kommer vi att försöka skriva så semantisk korrekta webbsidor som
+                                        möjligt.
 
 
                                     </div>
@@ -443,7 +471,8 @@ HODOR! Hodor.
 
                                 <div class="ui compact warning message">
 
-                                    Obs! Det är viktigt att man märker upp allt innehåll, ingen text får stå utan taggar - “naken”.
+                                    Obs! Det är viktigt att man märker upp allt innehåll, ingen text får stå utan
+                                    taggar - “naken”.
 
 
                                 </div>
@@ -452,20 +481,24 @@ HODOR! Hodor.
 
                             <div class="ui segment link">
                                 <h4 class="ui header ">Länkar </h4>
-                                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals" target="_blank">MDN
+                                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+                                    target="_blank">MDN
                                     The basics: Heading and paragraphs</a>
-                                <br/>
-                                <a href="https://www.w3schools.com/html/html_headings.asp" target="_blank">W3schools HTML
+                                <br />
+                                <a href="https://www.w3schools.com/html/html_headings.asp" target="_blank">W3schools
+                                    HTML
                                     Headings
                                 </a>
-                                <br/>
-                                <a href="https://www.w3schools.com/html/html_paragraphs.asp" target="_blank">W3schools HTML
+                                <br />
+                                <a href="https://www.w3schools.com/html/html_paragraphs.asp" target="_blank">W3schools
+                                    HTML
                                     Paragraphs
                                 </a>
-                                <br/>
+                                <br />
 
-                                <a href="https://www.w3schools.com/html/html_lists.asp" target="_blank">W3schools HTML Lists</a>
-                                <br/>
+                                <a href="https://www.w3schools.com/html/html_lists.asp" target="_blank">W3schools HTML
+                                    Lists</a>
+                                <br />
 
                                 <a href="http://blog.proliit.se/semantik/" target="_blank">Semantik inom HTML</a>
                             </div>
