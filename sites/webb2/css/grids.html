@@ -170,16 +170,17 @@
 
                             <h1 class="ui header"> CSS Grids</h1>
 
-                            <p> CSS Grid Layout är en modern webbstandard som gör det möjligt att arbeta med
-                                gridbaserad layout i ren css. Att fördela innehåll i rader och kolumner är i och för
-                                sig inget nytt sätt att arbeta på, men har antingen behövt stöd av ramverk såsom
+                            <p> CSS Grid Layout är en relativt ny webbteknik som gör det möjligt att arbeta med
+                                gridbaserad layout i ren CSS. Att fördela innehåll i rader och kolumner är i och för
+                                sig inget nytt sätt att arbeta på. Tidigare har man behövt använda stöd av ramverk
+                                såsom
                                 Boostrap eller egna definierade rader och kolumner. Att kunna skapa en flexibel och
                                 responsiv gridlayout i CSS har länge varit önskvärt och är möjlig i skrivande sekund
                                 om man ser till <a href="https://caniuse.com/#feat=css-grid" target="_blank"> CSS Grid
                                     support
                                     för de största webbläsarna som Chrome, Firefox, Safari och Edge.</a>
                                 <p> Till
-                                    skillnad från Flexbox, som ni bekantat er med i föregående avsnitt, kan CSS Grid
+                                    skillnad från Flexbox som ni bekantat er med i föregående avsnitt kan CSS Grid
                                     hantera både X-axel och Y-axel samtidigt - med andra ord en tvådimensionnell
                                     layoutteknik. Det innebär att man kan arbeta med rader och kolumner på ett mycket
                                     smidigare sätt än
@@ -199,18 +200,7 @@
                                     <img src="../../../assets/images/css-grid-layouts-grid-working.jpg" alt="CSS Grid"
                                         width="500px">
                                 </div>
-                                <p>Eftersom du har lärt dig grunderna i Flexbox kanske du undrar om CSS Grid helt
-                                    ersätter den andra layouttekniken? <br />
-                                    I huvudsak kan man säga att Flexbox är bra på endimensionell layout och CSS Grid
-                                    för
-                                    tvådimensionell layout. Det finns också en del egenskaper som både Flexbox och CSS
-                                    GRid kan göra. så vad ska man välja? Läs gärna <a href="https://css-tricks.com/css-grid-replace-flexbox/"
-                                        target="_blank">här</a>
-                                    eller <a href="https://tutorialzine.com/2017/03/css-grid-vs-flexbox" target="_blank">här</a>
-                                    om det
-                                    området. Generellt är vägledningen att använda CSS Grid för övergripande layout och
-                                    Flexbox när man ska ordna innehåll inom ett element. Exempelvis: ordna elementen
-                                    inom en header med flexbox, men göra hela layouten med CSS Grid.</p>
+
 
                         </div>
 
@@ -261,23 +251,25 @@
 
 
                         <div class="ui vertical segment">
-                            <p> Vi går igenom grundläggande CSS Grid för att skapa ett gridsystem enligt följande. Vi
-                                använder oss av <a href="https://learncssgrid.com/" target="_blank">denna källa</a>.
+                            <p> Vi går igenom grundläggande CSS Grid för att skapa ett gridsystem utifrån följande
+                                startkod (Codepen). I genomgången skapar vi en grid med 2 rader och 3 kolumner där vi
+                                placerar
+                                våra olika grid items i och över olika gridcells/gridareas.
+                                Vi använder oss av <a href="https://learncssgrid.com/" target="_blank">denna källa som
+                                    referensguide</a>.
                                 Flera andra guider till CSS Grid finns längst ner på sidan.</p>
 
-                            <p> Vi börjar med att skapa vårt första CSS Grid med denna codepen.
 
-                                <p data-height="265" data-theme-id="dark" data-slug-hash="JaeRvV" data-default-tab="css,result"
-                                    data-user="sandraMG" data-pen-title="Creating our first CSS Grid (starter)" class="codepen">See
-                                    the Pen <a href="https://codepen.io/sandraMG/pen/JaeRvV/">Creating our first CSS
-                                        Grid (starter)</a> by Sandra (<a href="https://codepen.io/sandraMG">@sandraMG</a>)
-                                    on <a href="https://codepen.io">CodePen</a>.</p>
-                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            <p data-height="265" data-theme-id="dark" data-slug-hash="JaeRvV" data-default-tab="css,result"
+                                data-user="sandraMG" data-pen-title="Creating our first CSS Grid (starter)" class="codepen">See
+                                the Pen <a href="https://codepen.io/sandraMG/pen/JaeRvV/">Creating our first CSS
+                                    Grid (starter)</a> by Sandra (<a href="https://codepen.io/sandraMG">@sandraMG</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                             </p>
 
                         </div>
-                        <p>För att lära dig mer om CSS Grid rekommenderar jag följande video (förutom guiderna längst
-                            ner på sidan).</p>
+                        <p>För att lära dig mer om CSS Grid rekommenderar jag följande tutorialserie. </p>
                         <div class="ui vertical segment">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/x7tLPhnA06w"
                                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -285,15 +277,31 @@
                         </div>
 
 
-
                         <div class="ui vertical segment">
+                            <h2 class="ui header"> CSS Grid vs Flexbox</h2>
+                            <p>Eftersom du har lärt dig grunderna i Flexbox kanske du undrar om CSS Grid helt
+                                ersätter den andra layouttekniken? <br />
+                                I huvudsak kan man säga att Flexbox är bra på endimensionell layout och CSS Grid
+                                för
+                                tvådimensionell layout. Det finns också en del egenskaper som både Flexbox och CSS
+                                Grid kan göra. så vad ska man välja? Läs gärna <a href="https://css-tricks.com/css-grid-replace-flexbox/"
+                                    target="_blank">här</a>
+                                eller <a href="https://tutorialzine.com/2017/03/css-grid-vs-flexbox" target="_blank">här</a>
+                                om det
+                                området. Generellt är vägledningen att använda CSS Grid för övergripande layout och
+                                Flexbox när man ska ordna innehåll inom ett element. Exempelvis: Ordna elementen
+                                inom en header med flexbox, men göra hela layouten med CSS Grid.</p>
+                        </div>
+
+
+                        <div class="ui vertical segment" id="grids_ex">
                             <h2 class="ui header"> Övningar</h2>
                             <div class="ui vertical segment">
                                 <h3 class="ui header"> 1. Övning 1 </h3>
-                                <p>Skapa följande layout med CSS Grids. Använd dig först av
-                                    specifika linjenummer med <code class="css" style="background-color: rgb(248, 243, 238)">grid-row:</code>
-                                    och <code class="css" style="background-color: rgb(248, 243, 238)">grid-column:</code>.
-                                    Byt sedan ut den metoden och använd dig av <code class="css" style="background-color: rgb(248, 243, 238)">grid-area:</code>
+                                <p>Skapa layout med CSS Grids enligt bild. Använd dig först av
+                                    specifika linjenummer med <code class="css" style="background-color: rgb(248, 243, 238)">grid-row</code>
+                                    och <code class="css" style="background-color: rgb(248, 243, 238)">grid-column</code>.
+                                    Byt sedan ut den metoden och använd dig av <code class="css" style="background-color: rgb(248, 243, 238)">grid-area</code>
                                     där du först har definerat dina <code class="css" style="background-color: rgb(248, 243, 238)">grid-template-areas</code>
                                 </p>
 
@@ -302,67 +310,77 @@
 
                                     <img src="../../../assets/images/css_grid_challande1.png" alt="CSS Grid" width="500px">
                                 </div>
+                                <h3 class="ui header"> 2. Övning 2 </h3>
+                                <p>Skapa layout med CSS Grids enligt bild. Använd dig av metoden med
+                                    specifika linjenummer, line names eller grid-areas - vilket du föredrar.
+                                </p>
+
+
+                                <div class="ui compact segment">
+
+                                    <img src="../../../assets/images/css_grid_challenge2.png" alt="CSS Grid" width="500px">
+                                </div>
                             </div>
+                        </div>
 
 
 
 
 
-
-                            <div class="ui segment link">
-                                <h4 class="ui header link">Länkar </h4>
-                                <a href="https://learncssgrid.com/" target="_blank">Learning CSS Grid
-                                </a>
-                                <br>
-                                <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">
-                                    CSS-Tricks: A complete guide to grid
-                                </a>
-                                <br>
-                                <a href="https://gridbyexample.com" target="_blank">
-                                    Grid by Example
-
-                                </a>
-                                <br>
-
-                                <a href="https://www.silocreativo.com/en/flexbox-vs-css-grid-practical-example/" target="_blank">
-                                    Flexbox vs CSS Grid: A practical example
-
-                                    <br>
-
-
-                                    <a href="http://cssgridgarden.com/#sv" target="_blank">
-                                        Grid Garden:Spel att träna på CSS Grid egenskaper
-                                    </a>
-                                    <br>
-
-                            </div>
-
-                            <div class="ui hidden divider"></div>
-                            <a href="flexbox.html">
-                                <button class="ui left floated labeled icon button">
-                                    <i class="left arrow icon"></i>
-                                    CSS Flexbox</button>
+                        <div class="ui segment link">
+                            <h4 class="ui header link">Länkar </h4>
+                            <a href="https://learncssgrid.com/" target="_blank">Learning CSS Grid
                             </a>
-
-
-                            <a href="rwd.html">
-                                <button class="ui right floated labeled icon button">
-                                    <i class="right arrow icon"></i>
-                                    Responsive Web Design</button>
+                            <br>
+                            <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">
+                                CSS-Tricks: A complete guide to grid
                             </a>
+                            <br>
+                            <a href="https://gridbyexample.com" target="_blank">
+                                Grid by Example
 
+                            </a>
+                            <br>
+
+                            <a href="https://www.silocreativo.com/en/flexbox-vs-css-grid-practical-example/" target="_blank">
+                                Flexbox vs CSS Grid: A practical example
+
+                                <br>
+
+
+                                <a href="http://cssgridgarden.com/#sv" target="_blank">
+                                    Grid Garden:Spel att träna på CSS Grid egenskaper
+                                </a>
+                                <br>
 
                         </div>
-                        <div class="three wide column ">
-                            <!--  <div class="ui grey segment ">
+
+                        <div class="ui hidden divider"></div>
+                        <a href="flexbox.html">
+                            <button class="ui left floated labeled icon button">
+                                <i class="left arrow icon"></i>
+                                CSS Flexbox</button>
+                        </a>
+
+
+                        <a href="rwd.html">
+                            <button class="ui right floated labeled icon button">
+                                <i class="right arrow icon"></i>
+                                Responsive Web Design</button>
+                        </a>
+
+
+                    </div>
+                    <div class="three wide column ">
+                        <!--  <div class="ui grey segment ">
               <p>three wide column</p>
             </div> -->
-                        </div>
                     </div>
                 </div>
-
             </div>
+
         </div>
+    </div>
 
     </div>
 
