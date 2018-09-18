@@ -245,63 +245,262 @@
                             <!-- Intro HTML-->
                             <h1 class="ui header"> Floats</h1>
 
-
-                            <p>Den klassiska metoden att skapa layout för webbsidor är att använda sig av <b>floats</b>.
-                                Idag finns det modernare alternativ somm CSS Flexbox och Grids, men floats är
-                                fortfarande vanligt förekommande och det är bra att kunna tillämpa den klassiska
-                                metoden för CSS layout. <br />
-                                I sitt urspringsläge visas alltid boxar i tur och ordning efter varandra, uppifrån till
-                                ner. I fallet då html-elementet är ett <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements"
-                                    target="_blank">block-element</a>, d.v.s de html-element som börjar på ny rad. En
-                                sådan layout blir inte särskilt spännande eller visuell. Med hjälp av <b>floats</b> kan
-                                element tas ut ur det "vanliga" layoutflödet och kunna placeras åt vänster (float:
-                                left;) eller höger (float: right).
-
+                            <p>Hittils har vi tittat på hur olika CSS egenskaper kan ändra utseendet på text, ge olika
+                                färger på förgrund och bakgrund men också hur man kan ändra de olika boxarnas inner-
+                                och yttermarginal, samt kantlinje. Vi har endast formaterat våra element såsom de
+                                befunnits sig i html-dokuments normala flöde. <br />
+                                I detta avsnitt ska vi titta på hur vi kan positionera våra element enligt önskemål.
+                                Dock innebär det att elementen måste "plockas ur" det normala flödet hur elementen
+                                visas på en sida.
                             </p>
+
+                            <h2 class="ui header">Vad menas med ett dokuments normala flöde? </h2>
+
+                            <p> Per default visas elementen uppifrån och ner efter hur de är specifierade i
+                                html-dokumentet. Det finns dock en skillnad mellan olika typer av element (se
+                                avsnitt Boxmodellen).<br />
+                                Block-element börjar alltid på ny rad. De
+                                tar samtidigt upp 100% bredd av sitt föräldraelement och höjden avgörs av elementens
+                                innehåll. Inline element ordnas efter varandra (ej ny rad) och har bredden och höjden
+                                av
+                                sitt innehåll. Vi demomonstrerar med ett litet exempel på det normala flödet där ingen
+                                positionering är gjord i stilmallen. </p>
+
+                            <div class="ui compact segment">
+
+                                <iframe src="../../../assets/examples/normalflow/normalflow.html" style="height:550px;width:500px"></iframe>
+
+                            </div>
+
+                            <div class="ui compact segment">
+                                <pre><code class="html">&lt;h1&gt;Det normala flödet&lt;/h1&gt;
+
+&lt;p&gt;
+Jag är ett block-level element. Närliggande 
+block-element är efter mig.
+&lt;/p&gt;
+                                
+&lt;p&gt;
+Jag tar upp 100% av mitt föräldraelement och min höjd 
+defineras av mitt innehåll. Min totala bredd/höjd enligt
+boxmodellen är content + padding + border width/height.
+&lt;/p&gt;
+                                
+&lt;p&gt;
+Vi block-element har mellanrum som är definerad av en 
+margin
+&lt;/p&gt;
+                                
+&lt;div&gt;
+Detta är ett div element och är också ett 
+block-element
+&lt;/div&gt;
+                                
+&lt;p&gt;
+Inlineelement&lt;span&gt;som den här&lt;/span&gt; 
+och &lt;span&gt;denna &lt;/span&gt; kommer på samma rad så 
+länge det finns utrymme.
+&lt;span&gt;Inline elements som inte får plats inom 
+föräldralementets bredd följer på ny rad&lt;/span&gt;eller
+kommer på en ny rad som bilder gör: 
+&lt;img src="https://picsum.photos/400/100/?random"&gt;
+&lt;/p&gt;
+     </code></pre>
+
+                            </div>
 
 
                         </div>
 
                         <div class="ui vertical segment">
 
-                            <h2 class="ui header"> Underrubrik</h2>
+                            <h2 class="ui header"> Att avända oss av Floats</h2>
                             <p>
-                                blabl
+                                Med hjälp av CSS egenskapen <code class="css" style="background-color: rgb(248, 243, 238)">float</code>
+                                kan ett element "plockas" ur det vanliga flödet och förflyttas enligt önskemål. Med
+                                värdet <code class="css" style="background-color: rgb(248, 243, 238)">left</code>
+                                föflyttas elementet så långt den kan till vänster i föräldralemenetet
+                                eller till höger med värdet <code class="css" style="background-color: rgb(248, 243, 238)">right</code>.
+                                Defaultvärdet till float är <code class="css" style="background-color: rgb(248, 243, 238)">none</code>,
+                                d.v.s att element ingår i det normala flödet.
+                                <br />
+                                Vi visar med ett exempel med ett p-element innehållande både text och bild.
+
                             </p>
 
+
+
+                            <h3 class="ui header">Ingen float - normala flödet</h3>
+                            <p> Bilden är ett inline-element där texten fortsätter på samma rad. Eftersom bilden är
+                                högre än texten blir det ett tomt uttryme ovan texten till höger om bilden.</p>
+                            <div class="ui compact segment">
+
+                                <iframe src="../../../assets/examples/floats/floatnone.html" style="height:200px;width:500px"></iframe>
+
+                            </div>
+                            <p>
+                                Detta är default-läget och samma sak som att sätta egenskapen float till <code class="css"
+                                    style="background-color: rgb(248, 243, 238)">none
+                                </code>.</p>
+
+                            <h3 class="ui header">Bilden till vänster</h3>
+                            <p>Bilden går så långt till vänster som den kan med float satt till <code class="css" style="background-color: rgb(248, 243, 238)">left</code>.
+                                Texten "wrappas"
+                                omrking bilden. För att få lite mellrum mellan text och bild är margin satt till
+                                1em.
+                            </p>
+
+
+
+                            <div class="ui compact segment">
+
+                                <iframe src="../../../assets/examples/floats/floatleft.html" style="height:200px;width:500px"></iframe>
+
+                            </div>
+
+                            <div class="ui compact segment">
+                                <pre><code class="css">img {
+    float: left;
+    font-size: .7em;
+    margin: 1em;
+}</code></pre>
+                            </div>
+
+                            <div class="ui message">
+
+                                <div class="ui header">Kuriosa: Analogi om floats</div>
+                                <p> Ett element har har tagits från sin normala position men fortsätter påverka sin
+                                    omgivning.
+                                    På samma sätt som en ö omgiven av ström kan du se ett element med egenskapen float
+                                    som en ö i strömmande vatten. Den är inte i flödet men strömmen runtomkring
+                                    påverkas av den.
+                                </p>
+                            </div>
+
+                            <h3 class="ui header">Bilden till höger</h3>
+                            <p>Vi får samma effekt om vi sätter float till <code class="css" style="background-color: rgb(248, 243, 238)">right</code>,
+                                d.v.s till bilden flyter till höger och texten runtomkring.
+                            </p>
+
+                            <div class="ui compact segment">
+
+                                <iframe src="../../../assets/examples/floats/floatright.html" style="height:200px;width:500px"></iframe>
+
+                            </div>
+
+                            <div class="ui compact segment">
+                                <pre><code class="css">img {
+        float: right;
+        font-size: .7em;
+        margin: 1em;
+}</code></pre>
+                            </div>
+                            <h3 class="ui header">Att använda Clear</h3>
+
+                            <p> Element som justerats med float ordnas i sidled till höger eller till vänster. För att
+                                komma
+                                tillbaka till normala födet kan man använda <code class="css" style="background-color: rgb(248, 243, 238)">clear</code>
+                                på elementet som kommer efter det som
+                                satts till float: left
+                                eller float: right.
+                                Nedan är ett exempel där bilden har satts till <code class="css" style="background-color: rgb(248, 243, 238)">float:
+                                    left;</code> och underrukbriken sätts till <code class="css" style="background-color: rgb(248, 243, 238)">clear:
+                                    left;</code> för att komma till ny rad, d.v.s återvända till normalflödet.</p>
+
+                            <div class="ui compact segment">
+
+                                <iframe src="../../../assets/examples/floats/floatclear.html" style="height:400px;width:500px"></iframe>
+
+                            </div>
+                            <p>Till egenskapen clear finns förutom left, även right och both. Om det finns flera
+                                element är är satt till float både till höger och vänster kan värdet<code class="css"
+                                    style="background-color: rgb(248, 243, 238)">both</code> användas. </p>
+
+
+
+
+                        </div>
+
+
+
+                        <div class="ui vertical segment">
+                            <h2 class="ui header">Problem med floats</h2>
+
+                            <p>Floats har funnits länge inom CSS och det är de som har tagit om hand hur man vill
+                                placera olika sektioner, d.v.s layout. Dock kan det dyka upp märkliga beteenden som det
+                                är bra att känna till och hur man kan komma tillrätta med dem. </p>
+
+                            <p> Vanligt försöker alla blockelement att sätta en höjd som täcker in allt innehåll som
+                                finns i dem - om inte height har angetts. När vi använder float på ett element
+                                "plockas" det ur det normala flödet och räknas inte med som en del i föräldraelementet.
+                                Det här blir ett problemt som vi kan se i följande exempel. </p>
+
+                            <div class="ui compact segment">
+
+                                <iframe src="../../../assets/examples/floats/collapsingheight.html" style="height:200px;width:500px"></iframe>
+
+                            </div>
+
+                            <p>Kantlinjen visar föräldraelementet innehållande texten och bilden. När bilden flyter
+                                räknas inte elementets mått med och kommer utanför föräldraelementet. Detta problem
+                                kallas för "the great collapse" och kan åtgärdas med det s.k clearfix-hack. Det
+                                clearfix-hack som rekommenderas som bästa lösning till de flesta siutaioner är
+                                följande: </p>
+
+                            <div class="ui compact segment">
+                                <pre><code class="css">.clearfix::after
+{
+        content: "";
+        clear: both;
+        display: table;
+}</code></pre>
+                            </div>
+
+                            <p>Denna teknik skapar ett s.k pseudoelement efter element som man anger som
+                                class="clearfix" med en clear: both. Om du vill veta mer om detaljer
+                                <a href="https://css-tricks.com/clearfix-a-lesson-in-web-development-evolution/">läs
+                                    mer på denna länk.</a></p>
+
+                            <div class="ui compact segment">
+
+                                <iframe src="../../../assets/examples/floats/clearfix.html" style="height:200px;width:500px"></iframe>
+
+                            </div>
+
+                            <p> Genom att sätta class="clearfix" på vårt föräldraelement, i detta fall
+                                &lt;p&gt;-elementet tar nu bilden plats i elementet och hamnar inte utanför. </p>
+
+                        </div>
+
+                        <div class="ui vertical segment">
+                            <h2 class="ui header">Användningsområden floats</h2>
+
+
                         </div>
 
 
 
 
                         <div class="ui vertical segment">
-
-                            <h2 class="ui header">Rubrik</h2>
-
-
-                        </div>
-
-                        <div class="ui vertical segment">
-
-
-
-                        </div>
-
-                        <div class="ui vertical segment">
-                            <h2 class="ui header">Underrubrik</h2>
-
-
-
-                        </div>
-
-                        <div class="ui vertical segment">
-
-
 
 
                             <div class="ui message">
 
                                 <div class="ui header">Kuriosa</div>
+
+
+                                <p>Den klassiska metoden att skapa layout för webbsidor är att använda sig
+                                    av
+                                    <b>floats</b>.
+                                    Idag finns det modernare alternativ somm CSS Flexbox och Grids, men
+                                    floats
+                                    är
+                                    fortfarande vanligt förekommande och det är bra att kunna tillämpa den
+                                    klassiska
+                                    metoden för CSS layout. <br />
+
+                                </p>
+
 
 
                             </div>
@@ -311,20 +510,28 @@
                         <div class="ui segment link">
                             <h4 class="ui header link">Länkar </h4>
                             <a href="https://www.smashingmagazine.com/2009/10/mastering-css-coding-getting-started/"
-                                target="_blank">Smashing Magazine - Mastering CSS Coding: Getting Started
+                                target="_blank">Smashing
+                                Magazine - Mastering CSS Coding: Getting Started
                             </a>
                             <br>
-                            <a href="https://www.w3schools.com/css/css_float.asp" target="_blank">W3Schools - CSS Float
+                            <a href="https://www.w3schools.com/css/css_float.asp" target="_blank">W3Schools
+                                -
+                                CSS
+                                Float
                             </a>
                             <br>
-                            <a href="http://webbling.se/index.php/Layout" target="_blank">Webbling - Layout med floats
+                            <a href="http://webbling.se/index.php/Layout" target="_blank">Webbling - Layout
+                                med
+                                floats
                             </a>
                             <br>
                             <a href="http://learnlayout.com/float.html" target="_blank">Learn CSS layout
                             </a>
                             <br>
 
-                            <a href="https://css-tricks.com/all-about-floats/" target="_blank">CSS Tricks - All about
+                            <a href="https://css-tricks.com/all-about-floats/" target="_blank">CSS Tricks -
+                                All
+                                about
                                 floats
                             </a>
                             <br>
