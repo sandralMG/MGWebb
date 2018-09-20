@@ -65,10 +65,6 @@
                 </a>
                 <a class="item">
                 </a>
-                <a class="item">
-                </a>
-                <a class="item">
-                </a>
             </div>
         </div>
 
@@ -174,74 +170,75 @@
                     <div class="ten wide column">
                         <div class="ui vertical segment">
                             <!-- Intro HTML-->
-                            <h1 class="ui header"> Introduktion</h1>
+                            <h1 class="ui header"> PHP Redirects (omdirigering)</h1>
 
-                            <p>
-                                PHP används till att bygga interaktiva webbapplikationer som till exempel forum,
-                                gästböcker, webbshoppar, CMS (Content Management
-                                System) och liknande. PHP skapades 1995 av Linus Lerdorf och då stod förkortningen för
-                                ”Personal
-                                Home Page”, men numera står det för ”Hypertext Preprocessor”. Statiska webbsidor som är
-                                skrivna
-                                i HTML tolkas av webbläsaren direkt. När du skriver serverbaserade skript så talar du
-                                om
-                                för webbservern vad du vill göra eller veta. Du vill kanske veta vilka menyval en
-                                användare
-                                gjort för att sedan dynamiskt bestämma vad som ska hända utifrån svaret från servern.
-                                För
-                                att förstå PHP behöver du ha grundläggande kunskap om HTML.
-                            </p>
+                            <div class="ui vertical segment">
 
 
+                                <p>
+                                    HTTP-protokollet, det som används för att visa webbsidor, innehåller en header-del
+                                    och en body-del. När vi visar en vanligt webbsida så sköter webbservern om att
+                                    skapa själva headern för svaret. Men om vi vill göra lite mer komplexa saker så
+                                    behöver vi själva skapa headern för HTTP-protokollet. Detta kan vi göra med
+                                    PHP-funktionen header().
 
-                            <h2 class="ui header">Installation av lokal utvecklingsmiljö</h2>
+                                    Med hjälp av header() kan vi skicka vidare till en svarssida. Det är ett vanligt
+                                    sätt att hantera processing av formulär, först processar man själva formuläret och
+                                    sparar i databasen, sedan skickar man vidare till en ny sida som visar resultatet.
+                                    Man gör en så kallad “redirect”.
+                                </p>
 
-                            <p>Vi kommer att använda oss av utvecklingsmiljön WAMP = Windows Apache MySQL PHP för vår
-                                back-end
-                                utveckling. Det finns olika alternativ för en såadn installation. I den här kursen
-                                kommer
-                                vi att använda oss av <a href="https://www.apachefriends.org/index.html">XAMPP</a>. Den
-                                är
-                                lätt att installera, är open-source, fungerar bra och är inte krävande för din dator.
-                                Den
-                                fungerar även bra både till Windows, Mac eller Linux. Vi går igenom det på lektionen,
-                                men
-                                om du missade något - se video nedan.</p>
+                                <div class="ui compact segment">
+                                    <pre><code>
+if (isset($_POST['logout'])) {
+    // Avslutar sessionen
+    session_destroy();
+    //Gör en omdirigering till annan sida
+    header('location: login.php');
 
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/67EEKGcLA5g"
-                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+}</code></pre>
+                                </div>
 
+
+
+
+                                <div class="ui segment link">
+                                    <h4 class="ui header link">Länkar </h4>
+                                    <a href="http://php.net/manual/en/function.header.php">PHP manualen om
+                                        omdirigering (redirects)</a>
+                                    <br>
+
+
+                                </div>
+
+
+                                <div class="ui hidden divider"></div>
+                                <a href="sessions.html">
+                                    <button class="ui left floated labeled icon button">
+                                        <i class="left arrow icon"></i>
+                                        Sessioner</button>
+                                </a>
+
+
+                                <a href="#">
+                                    <button class="ui right floated labeled icon button">
+                                        <i class="right arrow icon"></i>
+                                        ?</button>
+                                </a>
+
+
+                            </div>
                         </div>
-
-                        <div class="ui vertical segment">
-
-                            <h2 class="ui header">Komma igång med PHP</h2>
-
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/BcyPABXFo-A"
-                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        </div>
-
-                        <div class="ui hidden divider"></div>
-
-
-                        <a href="phpbasics.html">
-                            <button class="ui right floated labeled icon button">
-                                <i class="right arrow icon"></i>
-                                PHPGrunder</button>
-                        </a>
-
-
-                    </div>
-                    <div class="three wide column ">
-                        <!--  <div class="ui grey segment ">
+                        <div class="three wide column ">
+                            <!--  <div class="ui grey segment ">
               <p>three wide column</p>
             </div> -->
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
 
     </div>
 
