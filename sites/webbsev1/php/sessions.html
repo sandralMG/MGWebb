@@ -54,9 +54,6 @@
                     Filhantering
                 </a>
                 <a class="item">
-                    <a class="item" href="sessions.html">
-                        Sessioner
-                    </a>
                 </a>
                 <a class="item">
                 </a>
@@ -171,163 +168,97 @@
                     <div class="ten wide column">
                         <div class="ui vertical segment">
                             <!-- Intro HTML-->
-                            <h1 class="ui header"> PHP Filhantering</h1>
+                            <h1 class="ui header"> PHP Sessioner</h1>
 
                             <div class="ui vertical segment">
 
 
                                 <p>
-                                    För att ett program ska bli riktigt användbart behövs någon form av datalagring.
-                                    Ett sätt att göra detta är att lagra informationen i en eller flera filer.<br />
+
+                                    Sessioner är ett enkelt sätt att se
+                                    om en användare har rätt att komma åt vissa delar av sidorna. Är man inloggad
+                                    kan man t.ex. se medlemsinformatin, bilder eller ladda ner filer som en oinloggad
+                                    användare inte kan.<br />
+                                    Du kanske har hört talas om cookies? - vilket är en fil med information som lagras
+                                    på webbplatsbesökarens dator, så länge användaren har godkänt användningen av
+                                    cookies. <br />
+                                    Sessioner kan liknas vi temporära cookies som bara existerar medan användaren
+                                    besöker sidan.
 
                                 </p>
 
 
 
-                                <h2 class="ui header">Öppna och läsa från fil</h2>
+                                <h2 class="ui header">Sätta en sessionsvariabel</h2>
 
-                                <p>Metodiken är att:
-                                    man öppnar en fill med funktionen fopen som returner ett s.k. filhantag (
-                                    $handle i exemplet). Man använder
-                                    filhantaget för att sedan kunna skriva eller läsa till
-                                    filen. Medan filen är öppen
-                                    finns det en filpekare som håller reda på vart man är i filen. Funktionen börjar
-                                    läsa från början av filen.Slutligen är det viktigt att
-                                    stänga sin fil med funktion fclose.</p>
+                                <p>När man använder sig av sessioner är det viktigt att man alltid sätter in
+                                    session_start() allra överst i php-koden. Det för att PHP-tolken ska förstå att
+                                    sessioner kommer att användas på sidan.
+                                    Man kan sedan sätta en sessionvariabel genom den superglobala variabeln $_SESSION,
+                                    exempelvis.
+                                </p>
 
                                 <div class="ui compact segment">
                                     <pre><code class="php">&lt;?php
+    session_start();
+    //Om användarens matchar användarnamn/lösenord i datalagring, 
+    //sätt sätt variabeln till nuvarande användarnamn
+    $_SESSION['authenticated'] = $username;
+    $_SESSIOON['time'] = time();
+?&gt;</code></pre>
+                                </div>
+                                <h2 class="ui header">Använda en sessionsvariabel</h2>
 
-//Filen öppnas för läsning och ett s.k hanttag till filen skapas
-$handle = fopen("file.txt", "r");
-                                        
-//Läser tills filen nått sitt slut - feof (file end of file)
-while(!feof($handle)) {
-                                        
-        //Läsning görs från början av  filen med funktionen 
-        //fgets och läggs i en variabel $text
-        $text = fread($handle, filesize("file.txt"));
-                                        
-        //Innehållet i variabeln skrivs ut
-        echo $text , "&lt;br/&gt;";
-
-}
+                                <p>
+                                    När man sedan kallar på en session kan man göra det
+                                    som man kallar på en vanlig variabel (men en superglobal) ex
+                                    $_SESSION['authenticated']. Detta exempel visar med sessions om en användare är
+                                    inloggad eller inte.
+                                </p>
+                                <div class="ui compact segment">
+                                    <pre><code class="php">&lt;?php
+    session_start();
+    if(isset($_SESSION['authenticated])) {
+        $username = $_SESSION['authenticated'];
+        echo "Välkommen $username;
+    }
+    else {
+        echo "Tyvärr är du inte authentiserad till denna sida";
+    }
 ?&gt;</code></pre>
                                 </div>
 
 
 
-                                <p> Flaggan "r" står för read, d.v.s läsning av fil och en flagga som "w" står för
-                                    skrivning av fil.
-                                    Du kan läsa om fler alternativ till flaggor vid filhantering samt mer om fgets och
-                                    andra läsfunktioner <a href="https://www.w3schools.com/php/php_file_open.asp"
-                                        target="_blank">här</a>. Det finns ett flertal olika funktioner för att läsa
-                                    från fil i PHP som fgetc, fread, file_get_content som alla har sina olika
-                                    användningsområden. Mer info finns i <a href="http://php.net/manual/en/function.file.php"
-                                        target="_blank">PHP manualen</a>.
-
-                                </p>
-
-                                <p> En bra och robust funktion för att läsa ett användarnamn och lösenord på samma rad
-                                    är fgetcsv. <u>Jag rekommenderar denna metod till Uppgift 2 - Inloggningssystem </u>,
-                                    även om det är görbart på andra sätt.
-                                    Resultatet hamnar i en array där kommatecknet används för att separera
-                                    användarnnamn och lösenord.
-                                </p>
-
-                                <div class="ui compact segment">
-                                    En CSV-fil innehållande användaruppgifter:
-                                    <pre><code class="text">
-sandra, kanin2018
-mattias, rocknroll1978
-elev_x, pw_webdev
-</code></pre>
-                                </div>
-                                <div class="ui compact segment">
-                                    <pre><code class="php">&lt;?php
-//Definerar en fil att läsa ifrån
-$file = "userdata.csv";
-
-function readUser($file) {
-        //Öppnar en csv-fil för läsning
-        $handle = fopen("userdata.csv","r");
-
-        //Så länge det finns tecken att läsa från filen
-        while(!feof($handle))
-        {
-        //Varje rad i csv-filen hamnar i ett fack i arrayen.
-        //Max 100 tecken kan läsas och inläsningen separeras av komma
-        $userdata[] = fgetcsv($handle, 100, ",");
-        }
-        //Stänger filen
-        fclose($handle);
-
-        //Returner all data som läst in
-        return $userdata;
-}
-
-    //Anropar funktionen readUser
-    $userdata = readUser($file);
-
-    //Skriver ut innehållet
-    for($i = 0; $i &lt; sizeof($userdata); $i++) { 
-        print_r($userdata[$i]); 
-        echo "&lt;br/&gt;";
-       } 
-    ?&gt; </code> </pre>
-                                </div>
-
-                                <div class="ui compact segment">
-                                    Utskriften blir således följande
-                                    <pre><code class="text">
-Array ( [0] => sandra [1] => kanin2018 ) 
-Array ( [0] => mattias [1] => rocknroll1978 ) 
-Array ( [0] => elev_c [1] => pwwebdev ) 
-                                </code></pre>
-
-                                </div>
                                 <div class="ui vertical segment">
 
-                                    <h2 class="ui header">Skriva till fil</h2>
+                                    <h2 class="ui header">Avsluta en session</h2>
                                     <p>
-                                        På samma sätt kan vi skriva till fil med funktionen fputcsv. Det finns även
-                                        andra funktion för att skriva till fil, men vi använder då den passar bra in i
-                                        vårt sammanhang. Här är istället flaggan satt till "w". Koden nedan skriver
-                                        alltså in texten "username, password" till filen userdata.csv på allra första
-                                        raden. Ett problem som
-                                        kan
-                                        uppstå är att man inte har rättigheter att skriva till en fil i en viss mapp.
-                                        Du kan enkelt ändra detta genom att högerklicka på filen och ändra skriv- och
-                                        läs rättigheter.
+                                        Funktionen session_destroy() tar bort hela sessionen och dess värden. Den
+                                        kan vara användbar när en användare loggar ut från en sida.
+
                                     </p>
 
                                     <div class="ui compact segment">
-                                        <pre><code class="php">&lt;?php
+                                        <pre><code>
+if (isset($_POST['logout'])) {
+    // Avslutar sessionen
+    session_destroy();
+    //Gör en omdirigering till annan sida
+    header('location: login.php');
 
-$userdata = array("username", "password");
-$handle = fopen("userdata.csv","w");
-fputcsv($handle, $userdata);
-fclose($handle);
-?&gt;</code></pre>
+}</code></pre>
                                     </div>
 
-                                    <div class="ui vertical segment">
 
-                                        <h2 class="ui header">Felhantering vid filhantering</h2>
-
-                                        <p>Mer info kommer</p>
-
-
-                                    </div>
-
-                                    <div id="superglobals" class="ui vertical segment">
-
-                                        <h2 class="ui header">Att spara och ladda upp filer (bilder)</h2>
-
+                                    <div class="ui segment link">
+                                        <h4 class="ui header link">Länkar </h4>
+                                        <a href="https://www.w3schools.com/php/php_sessions.asp">W3 Schools om
+                                            Sessioner</a>
+                                        <br>
 
 
                                     </div>
-
 
                                 </div>
                                 <div class="three wide column ">
