@@ -204,8 +204,9 @@
                                     <pre><code class="php">&lt;?php
     session_start();
     //Om användarens matchar användarnamn/lösenord i datalagring, 
-    //sätt sätt variabeln till nuvarande användarnamn
+    //tilldela variabeln till angivet användarnamn
     $_SESSION['authenticated'] = $username;
+    //Loggar vilken tid användaren loggade in det och lägger den i sessionsvariablen 'time'
     $_SESSIOON['time'] = time();
 ?&gt;</code></pre>
                                 </div>
@@ -220,9 +221,9 @@
                                 <div class="ui compact segment">
                                     <pre><code class="php">&lt;?php
     session_start();
-    if(isset($_SESSION['authenticated])) {
+    if(isset($_SESSION['authenticated'])) {
         $username = $_SESSION['authenticated'];
-        echo "Välkommen $username;
+        echo "Välkommen $username";
     }
     else {
         echo "Tyvärr är du inte authentiserad till denna sida";
