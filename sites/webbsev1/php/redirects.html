@@ -176,16 +176,14 @@
 
 
                                 <p>
-                                    HTTP-protokollet, det som används för att visa webbsidor, innehåller en header-del
-                                    och en body-del. När vi visar en vanligt webbsida så sköter webbservern om att
-                                    skapa själva headern för svaret. Men om vi vill göra lite mer komplexa saker så
-                                    behöver vi själva skapa headern för HTTP-protokollet. Detta kan vi göra med
-                                    PHP-funktionen header().
 
-                                    Med hjälp av header() kan vi skicka vidare till en svarssida. Det är ett vanligt
-                                    sätt att hantera processing av formulär, först processar man själva formuläret och
-                                    sparar i databasen, sedan skickar man vidare till en ny sida som visar resultatet.
-                                    Man gör en så kallad “redirect”.
+
+                                    Med hjälp av PHP-funktionen header(). kan vi skicka vidare till en svarssida. Det
+                                    är ett vanligt
+                                    sätt vid inloggning i formulär. Om användaren finns i datalagringen/databasen
+                                    skickas man vidare till den sida man vill ha åtkomst.
+                                    Man gör en så kallad “redirect”. På samma sätt om man vill logga ut, då omdirigeras
+                                    man till inloggningssidan.
                                 </p>
 
                                 <div class="ui compact segment">
