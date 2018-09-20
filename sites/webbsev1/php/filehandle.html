@@ -213,6 +213,8 @@ while(!feof($handle)) {
         echo $text , "&lt;br/&gt;";
 
 }
+//Stänger filen
+fclose($handle);
 ?&gt;</code></pre>
                                 </div>
 
@@ -222,7 +224,9 @@ while(!feof($handle)) {
                                     skrivning av fil.
                                     Du kan läsa om fler alternativ till flaggor vid filhantering samt mer om fgets och
                                     andra läsfunktioner <a href="https://www.w3schools.com/php/php_file_open.asp"
-                                        target="_blank">här</a>. Det finns ett flertal olika funktioner för att läsa
+                                        target="_blank">här</a>. I exemplet används funktion fread() där det först
+                                    argumentet innehåller filhandtaget och den andra den maximala storlek i bytes som
+                                    går att läsa. Det finns ett flertal olika funktioner för att läsa
                                     från fil i PHP som fgetc, fread, file_get_content som alla har sina olika
                                     användningsområden. Mer info finns i <a href="http://php.net/manual/en/function.file.php"
                                         target="_blank">PHP manualen</a>.
@@ -231,9 +235,11 @@ while(!feof($handle)) {
 
                                 <p> En bra och robust funktion för att läsa ett användarnamn och lösenord på samma rad
                                     är fgetcsv. <u>Jag rekommenderar denna metod till Uppgift 2 - Inloggningssystem </u>,
-                                    även om det är görbart på andra sätt.
-                                    Resultatet hamnar i en array där kommatecknet används för att separera
-                                    användarnnamn och lösenord.
+                                    även om det är görbart på andra sätt. Den läser in en rad i taget från en fil som
+                                    man avgränsar exempelvis med "," eller ny rad "\n". Resultatet lagras i en ny
+                                    array. Du kan läsa mer om <a href="http://php.net/manual/en/function.fgetcsv.php"
+                                        target="_blank">fgetcsv i php manualen</a>.
+
                                 </p>
 
                                 <div class="ui compact segment">
@@ -277,7 +283,8 @@ function readUser($file) {
        } 
     ?&gt; </code> </pre>
                                 </div>
-
+                                <p> Funktionen feof() kollar om "end-of-file" har nåtts. Så länge den inte har den
+                                    fortsätter fgetcsv att läsa från filen.</p>
                                 <div class="ui compact segment">
                                     Utskriften blir således följande
                                     <pre><code class="text">
@@ -292,10 +299,12 @@ Array ( [0] => elev_c [1] => pwwebdev )
                                     <h2 class="ui header">Skriva till fil</h2>
                                     <p>
                                         På samma sätt kan vi skriva till fil med funktionen fputcsv. Det finns även
-                                        andra funktion för att skriva till fil, men vi använder då den passar bra in i
+                                        andra funktion för att skriva till fil som fwrite(), men vi använder då den
+                                        passar bra in i
                                         vårt sammanhang. Här är istället flaggan satt till "w". Koden nedan skriver
-                                        alltså in texten "username, password" till filen userdata.csv på allra första
-                                        raden. Ett problem som
+                                        alltså in arrayen med texten "username" och "password" till filen userdata.csv.
+                                        De båda separeares med ett komm ",". Om fler arrayposter skulle skrivas in
+                                        skulle de hamna på en ny rad. <br /> Ett problem som
                                         kan
                                         uppstå är att man inte har rättigheter att skriva till en fil i en viss mapp.
                                         Du kan enkelt ändra detta genom att högerklicka på filen och ändra skriv- och
@@ -304,7 +313,6 @@ Array ( [0] => elev_c [1] => pwwebdev )
 
                                     <div class="ui compact segment">
                                         <pre><code class="php">&lt;?php
-
 $userdata = array("username", "password");
 $handle = fopen("userdata.csv","w");
 fputcsv($handle, $userdata);
