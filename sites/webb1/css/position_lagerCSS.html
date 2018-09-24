@@ -242,20 +242,46 @@
                     <div class="ten wide column">
                         <div class="ui vertical segment">
                             <!-- Intro HTML-->
-                            <h1 class="ui header"> Positionering och float</h1>
+                            <h1 class="ui header"> Positionering och lager</h1>
 
 
-
-
-
-                        </div>
-
-                        <div class="ui vertical segment">
-
-                            <h2 class="ui header"> Underrubrik</h2>
-                            <p>
-                                blabl
+                            <p>Vi har lärt oss att element/boxar ordnas utifrån det ursprunliga normala flödet. Med
+                                egenskapen <b>float</b> kan element frångå det normala flödet och flyta till vänster
+                                eller höger. Dock är relationen mellan dem i layoutflödet bevarad.
                             </p>
+
+
+                            <p> Genom positionering och egenskapen <b>position</b> kan elementen plockas ur det normala
+                                flödet och placera dem exakt där vi vill. det är s.k positionerade element och man
+                                skiljer mellan <b>aboslut</b> och <b>relativ</b> positionering.</p>
+
+                            <h2 class="ui header red">position: static</h2>
+
+                            <p>Om ingen positionering anges är <b>static</b> det som är defaultvärdet.. D.v.s elementet
+                                visas i det normala layout flödet.</p>
+
+                            <h2 class="ui header red"> position: relative</h2>
+                            <p> Elementet/boxen kan förflyttas med relativt till positionen i det normala flödet, d.v.s
+                                static. Utifrån det kan man ange positionsangivelserna <b>top</b>, <b>bottom</b>, <b>right</b>,
+                                <b>left</b>. Utrymmet från det elementet förflyttas blir tomrum.</p>
+
+                            <h2 class="ui header red"> position: absolute</h2>
+
+                            <p> Absolut positionering innebär till skillnad från realtiv positionering att
+                                elementet/boxen tas helt ur det normala flödet. Det efterlämnar inget tomrum och andra
+                                element kan ta upp utrymmet. Absolutpositionering använder på samma sätt
+                                positionsangivelserna <b>top</b>, <b>bottom</b>, <b>right</b>,
+                                <b>left</b>. I detta fall kan även elementet placeras ovanpå varandra och dölja det
+                                underliggande innehållet. Vilken ordning som visas stys av <b>z-index</b> som vi
+                                förklarar närmare under Lager </p>
+
+                            <h2 class="ui header red"> position: fixed</h2>
+                            <p> Precis som med <b>absolute</b> tas elementet ur det normala flödet.
+                                Positionsangivelserna utgår från webbläsarfönstret. När webbläsaren scrollar så ligger
+                                elementet kvar i sin positon. Denna teknik används ofta som en fixerad meny vid toppen
+                                eller sidfot vid botten av sidan.</p>
+
+
 
                         </div>
 
@@ -281,7 +307,7 @@
                         </div>
 
                         <div class="ui vertical segment">
-                            <h2 class="ui header">Underrubrik</h2>
+                            <h2 class="ui header">Lager med z-index</h2>
 
 
 
@@ -303,11 +329,17 @@
 
                         <div class="ui segment link">
                             <h4 class="ui header link">Länkar </h4>
-                            <a href="#" target="_blank">CSS Länk
+                            <a href="https://webdesignskolan.se/css_position/css_position.php" target="_blank">Webdesignskolan
+                                CSS Positionering
                             </a>
                             <br>
-                            <a href="#" target="_blank">CSS Länk
+                            <a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank">W3Schools - CSS
+                                Position
                             </a>
+                            <a href=" https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank">MDN -
+                                CSS Position
+                            </a>
+
                             <br>
                             <a href="https://www.smashingmagazine.com/2009/10/mastering-css-coding-getting-started/"
                                 target="_blank">Smashing Magazine - Mastering CSS Coding: Getting Started
