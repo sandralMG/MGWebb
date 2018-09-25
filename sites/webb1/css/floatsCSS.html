@@ -249,8 +249,9 @@
                                 färger på förgrund och bakgrund men också hur man kan ändra de olika boxarnas inner-
                                 och yttermarginal, samt kantlinje. Vi har endast formaterat våra element såsom de
                                 befunnits sig i html-dokuments normala flöde. <br />
-                                I detta avsnitt ska vi titta på hur vi kan positionera våra element enligt önskemål.
-                                Dock innebär det att elementen måste "plockas ur" det normala flödet hur elementen
+                                I detta avsnitt ska vi titta på hur vi kan positionera våra element enligt andra
+                                önskemål.
+                                Dock innebär det att elementen måste frångås det normala flödet hur elementen
                                 visas på en sida.
                             </p>
 
@@ -297,7 +298,7 @@ block-element
 &lt;/div&gt;
                                 
 &lt;p&gt;
-Inlineelement&lt;span&gt;som den här&lt;/span&gt; 
+Inlineelement &lt;span&gt;som den här&lt;/span&gt; 
 och &lt;span&gt;denna &lt;/span&gt; kommer på samma rad så 
 länge det finns utrymme.
 &lt;span&gt;Inline elements som inte får plats inom 
@@ -319,11 +320,11 @@ kommer på en ny rad som bilder gör:
                                 Med hjälp av CSS egenskapen <code class="css" style="background-color: rgb(248, 243, 238)">float</code>
                                 kan ett element "plockas" ur det vanliga flödet och förflyttas enligt önskemål. Med
                                 värdet <code class="css" style="background-color: rgb(248, 243, 238)">left</code>
-                                föflyttas elementet så långt den kan till vänster i föräldralemenetet
+                                förflyttas elementet så långt den kan till vänster i föräldralemenetet
                                 eller till höger med värdet <code class="css" style="background-color: rgb(248, 243, 238)">right</code>.
                                 Defaultvärdet till float är <code class="css" style="background-color: rgb(248, 243, 238)">none</code>,
                                 d.v.s att element ingår i det normala flödet.
-                                <br />
+
                                 Vi visar med ett exempel med ett p-element innehållande både text och bild.
 
                             </p>
@@ -368,8 +369,9 @@ kommer på en ny rad som bilder gör:
 
                             <div class="ui message">
 
-                                <div class="ui header">Kuriosa: Analogi om floats</div>
-                                <p> Ett element har har tagits från sin normala position men fortsätter påverka sin
+                                <h4 class="ui header">Kuriosa: Analogi om floats</h4>
+                                <p> <br />Ett element har har tagits från sin normala position men fortsätter påverka
+                                    sin
                                     omgivning.
                                     På samma sätt som en ö omgiven av ström kan du se ett element med egenskapen float
                                     som en ö i strömmande vatten. Den är inte i flödet men strömmen runtomkring
@@ -412,8 +414,11 @@ kommer på en ny rad som bilder gör:
                                 <iframe src="../../../assets/examples/floats/floatclear.html" style="height:400px;width:500px"></iframe>
 
                             </div>
-                            <p>Till egenskapen clear finns förutom left, även right och both. Om det finns flera
-                                element är är satt till float både till höger och vänster kan värdet<code class="css"
+                            <p>Till egenskapen clear finns förutom <code class="css" style="background-color: rgb(248, 243, 238)">left</code>,
+                                även <code class="css" style="background-color: rgb(248, 243, 238)">right</code> och
+                                <code class="css" style="background-color: rgb(248, 243, 238)">both</code>. Om
+                                flera
+                                element är satta till float både till höger och vänster kan värdet<code class="css"
                                     style="background-color: rgb(248, 243, 238)">both</code> användas. </p>
 
 
@@ -457,7 +462,8 @@ kommer på en ny rad som bilder gör:
                             </div>
 
                             <p>Denna teknik skapar ett s.k pseudoelement efter element som man anger som
-                                class="clearfix" med en clear: both. Om du vill veta mer om detaljer
+                                <code class="css" style="background-color: rgb(248, 243, 238)">class="clearfix"</code>
+                                med en clear: both. Om du vill veta mer om detaljer
                                 <a href="https://css-tricks.com/clearfix-a-lesson-in-web-development-evolution/">läs
                                     mer på denna länk.</a></p>
 
@@ -467,17 +473,18 @@ kommer på en ny rad som bilder gör:
 
                             </div>
 
-                            <p> Genom att sätta class="clearfix" på vårt föräldraelement, i detta fall
+                            <p> Genom att sätta <code class="css" style="background-color: rgb(248, 243, 238)">class="clearfix"</code>
+                                på vårt föräldraelement, i detta fall
                                 &lt;p&gt;-elementet tar nu bilden plats i elementet och hamnar inte utanför. </p>
 
                         </div>
-
+                        <!-- 
                         <div class="ui vertical segment">
                             <h2 class="ui header">Användningsområden floats</h2>
 
 
                         </div>
-
+ -->
 
 
 
@@ -505,6 +512,47 @@ kommer på en ny rad som bilder gör:
 
                             </div>
 
+                        </div>
+
+                        <div class="ui vertical segment" id="flexbox_ex">
+                            <h2 class="ui header"> Övningar</h2>
+                            <div class="ui vertical segment">
+                                <h3 class="ui header"> 1. Använda float på bilder med text</h3>
+                                <p> Skapa et html-dokument och en tillhörande stilmall (css). I &lt;body&gt; skapa en
+                                    &lt;div&gt;
+                                    som
+                                    innehåller två bilder och ett par stycken text. För att lätt använda dig av bilder
+                                    kan du länka bilder från en tjänst som heter <a href="https://picsum.photos/"
+                                        target="_blank">Lorem
+                                        Picsum</a>. Prova att använda <code class="css" style="background-color: rgb(248, 243, 238)">float: left</code>
+                                    och <code class="css" style="background-color: rgb(248, 243, 238)">float: right</code>
+                                    på vardera bild så
+                                    att text och bild visas snyggt tillsammans. Tycker du att en del text ska hamna på
+                                    ny rad? Prova då att omsluta den texten med en &lt;div&gt; och använd sedan <code
+                                        class="css" style="background-color: rgb(248, 243, 238)">clear: both</code> på
+                                    det elementet. </p>
+                            </div>
+                            <div class="ui vertical segment">
+                                <h3 class="ui header"> 2. Enkelt bildgalleri</h3>
+
+                                <p> Skapa et html-dokument och en tillhörande stilmall (css). I &lt;body&gt; skapa en
+                                    &lt;div&gt; som innehåller sex stycken bilder. Målet är att få bilder efter
+                                    varandra på två rader med tre bilder i vardera. Använd tjänsten Lorem Picsum här -
+                                    eller om du hellre vill använda dina egna bilder. Varje bild ska sättas till <code
+                                        class="css" style="background-color: rgb(248, 243, 238)">float: left</code> och
+                                    ha en <code class="css" style="background-color: rgb(248, 243, 238)">width: 33.33%</code>,
+                                    d.v.s en en fjärdedel var av ytan. Tänk på att du måste använda dig av
+                                    "clearfix-hack" för att de flytande elementen ska befinna sig inom
+                                    föräldraelementet.
+
+                                </p>
+
+
+                            </div>
+                            <div class="ui vertical segment">
+                                <h3 class="ui header"> </h3>
+
+                            </div>
                         </div>
 
                         <div class="ui segment link">
