@@ -187,8 +187,8 @@
 
                                 <h2 class="ui header">Öppna och läsa från fil</h2>
 
-                                <p>Metodiken är att:
-                                    man öppnar en fill med funktionen fopen som returner ett s.k. filhantag (
+                                <p>Metodiken är: <br />
+                                    Man öppnar en fil med funktionen fopen som returner ett s.k. filhantag (
                                     $handle i exemplet). Man använder
                                     filhantaget för att sedan kunna skriva eller läsa till
                                     filen. Medan filen är öppen
@@ -198,52 +198,97 @@
 
                                 <div class="ui compact segment">
                                     <pre><code class="php">&lt;?php
+//Filnamnet läggs i en variabel
+$filename = "file.txt";
 
 //Filen öppnas för läsning och ett s.k hanttag till filen skapas
-$handle = fopen("file.txt", "r");
-                                        
-//Läser tills filen nått sitt slut - feof (file end of file)
-while(!feof($handle)) {
-                                        
-        //Läsning görs från början av  filen med funktionen 
-        //fgets och läggs i en variabel $text
-        $text = fread($handle, filesize("file.txt"));
-                                        
-        //Innehållet i variabeln skrivs ut
-        echo $text , "&lt;br/&gt;";
+$handle = fopen($filename, "r");
+                                                                  
+//Läsning görs från början av  filen med funktionen 
+//fread och läggs i en variabel $text och läser till filens storlek är nådd
+$text = fread($handle, filesize("file.txt"));
+                                
+//Innehållet i variabeln skrivs ut
+echo $text;
 
-}
 //Stänger filen
 fclose($handle);
 ?&gt;</code></pre>
                                 </div>
-
-
-
                                 <p> Flaggan "r" står för read, d.v.s läsning av fil och en flagga som "w" står för
                                     skrivning av fil.
                                     Du kan läsa om fler alternativ till flaggor vid filhantering samt mer om fgets och
                                     andra läsfunktioner <a href="https://www.w3schools.com/php/php_file_open.asp"
-                                        target="_blank">här</a>. I exemplet används funktion fread() där det först
+                                        target="_blank">här</a>.
+                                    I exemplet används funktion fread() där det först
                                     argumentet innehåller filhandtaget och den andra den maximala storlek i bytes som
-                                    går att läsa. Det finns ett flertal olika funktioner för att läsa
-                                    från fil i PHP som fgetc, fread, file_get_content som alla har sina olika
-                                    användningsområden. Mer info finns i <a href="http://php.net/manual/en/function.file.php"
-                                        target="_blank">PHP manualen</a>.
+                                    går att läsa.
 
                                 </p>
+                            </div>
+                            <div class="ui vertical segment">
+
+                                <h2 class="ui header">Skriva till fil</h2>
+                                <p>
+                                    På samma sätt kan vi skriva till fil med funktionen fwrite. Här är istället flaggan
+                                    satt till "w". Koden nedan skriver
+                                    alltså in texten till filen file.txt.
+                                    <br /> Ett problem som
+                                    kan
+                                    uppstå är att man inte har rättigheter att skriva till en fil i en viss mapp.
+                                    Du kan enkelt ändra detta genom att högerklicka på filen och ändra skriv- och
+                                    läs rättigheter.
+                                </p>
+
+                                <div class="ui compact segment">
+
+                                    <pre><code class="php">&lt;?php
+$filename = "file.txt";
+$handle = fopen($filename,"w");
+fwrite($handle, "Hello file! Test to write to file file.txt");
+fclose($handle);
+?&gt;</code></pre>
+                                </div>
+                            </div>
+                            <div class="ui vertical segment" id="filhandle_ex">
+                                <h2 class="ui header"> Övning</h2>
+                                <div class="ui vertical segment">
+                                    <h3 class="ui header"> 1. Skriva och läsa till fil med fread och fwrite</h3>
+                                    <p> Använd förs fwrite för att skriva till en .txt fil. Använd sedan fread för att
+                                        läsa från samma fil och skriv ut sedan ut innehållet med echo.</p>
+
+
+                                </div>
+                            </div>
+
+                            <div class="ui vertical segment">
+
+                                <h2 class="ui header">Använda funktioner för att läsa/skriva till fil</h2>
+
+                                <p>Det finns ett flertal olika funktioner för att läsa
+                                    från fil i PHP som fgetc, fread, file_get_content som alla har sina olika
+                                    användningsområden. Mer info finns i <a href="http://php.net/manual/en/function.file.php"
+                                        target="_blank">PHP manualen</a>.</p>
 
                                 <p> En bra och robust funktion för att läsa ett användarnamn och lösenord på samma rad
                                     är fgetcsv. <u>Jag rekommenderar denna metod till Uppgift 2 - Inloggningssystem </u>,
                                     även om det är görbart på andra sätt. Den läser in en rad i taget från en fil som
                                     man avgränsar exempelvis med "," eller ny rad "\n". Resultatet lagras i en ny
                                     array. Du kan läsa mer om <a href="http://php.net/manual/en/function.fgetcsv.php"
-                                        target="_blank">fgetcsv i php manualen</a>.
+                                        target="_blank">fgetcsv i php manualen</a>. En <a href="https://sv.wikipedia.org/wiki/Comma-separated_value"
+                                        target="_blank">csv-fil är ett textfilsformat</a>
+                                    som används för att spara och överföra tabelldata där det är ordnat med
+                                    kommaseparerade värden.
 
                                 </p>
 
+
+
+
+
+
                                 <div class="ui compact segment">
-                                    En CSV-fil innehållande användaruppgifter:
+                                    En CSV-fil som innehåller användaruppgifter:
                                     <pre><code class="text">
 sandra, kanin2018
 mattias, rocknroll1978
@@ -294,108 +339,115 @@ Array ( [0] => elev_c [1] => pwwebdev )
                                 </code></pre>
 
                                 </div>
-                                <div class="ui vertical segment">
-
-                                    <h2 class="ui header">Skriva till fil</h2>
-                                    <p>
-                                        På samma sätt kan vi skriva till fil med funktionen fputcsv. Det finns även
-                                        andra funktion för att skriva till fil som fwrite(), men vi använder då den
-                                        passar bra in i
-                                        vårt sammanhang. Här är istället flaggan satt till "w". Koden nedan skriver
-                                        alltså in arrayen med texten "username" och "password" till filen userdata.csv.
-                                        De båda separeares med ett komm ",". Om fler arrayposter skulle skrivas in
-                                        skulle de hamna på en ny rad. <br /> Ett problem som
-                                        kan
-                                        uppstå är att man inte har rättigheter att skriva till en fil i en viss mapp.
-                                        Du kan enkelt ändra detta genom att högerklicka på filen och ändra skriv- och
-                                        läs rättigheter.
-                                    </p>
-
-                                    <div class="ui compact segment">
-                                        <pre><code class="php">&lt;?php
+                                <p>
+                                    På samma sätt kan vi skriva till fil med funktionen fputcsv. Här är istället
+                                    flaggan satt till "w". Koden nedan skriver
+                                    alltså in arrayen med texten "username" och "password" till filen userdata.csv.
+                                    De båda separeares med ett komma ",". Om fler arrayposter skulle skrivas in
+                                    skulle de hamna på en ny rad. <br /> Ett problem som
+                                    kan
+                                    uppstå är att man inte har rättigheter att skriva till en fil i en viss mapp.
+                                    Du kan enkelt ändra detta genom att högerklicka på filen och ändra skriv- och
+                                    läs rättigheter.
+                                </p>
+                                <div class="ui compact segment">
+                                    <pre><code class="php">&lt;?php
 $userdata = array("username", "password");
 $handle = fopen("userdata.csv","w");
 fputcsv($handle, $userdata);
 fclose($handle);
 ?&gt;</code></pre>
-                                    </div>
-
-                                    <div class="ui vertical segment">
-
-                                        <h2 class="ui header">Felhantering vid filhantering</h2>
-
-                                        <p>Mer info kommer</p>
-
-
-                                    </div>
-
-                                    <div id="superglobals" class="ui vertical segment">
-
-                                        <h2 class="ui header">Att spara och ladda upp filer (bilder)</h2>
-
-
-
-                                    </div>
-                                    <div class="ui segment link">
-                                        <h4 class="ui header link">Länkar </h4>
-                                        <a href="https://webdesignskolan.se/php/php_mysql_apache_wds-member/php_forts.php">Webbdesignskolan
-                                            om
-                                            filhantering</a>
-                                        <br>
-
-
-                                    </div>
-                                    <div class="ui hidden divider"></div>
-                                    <a href="phpbasics.html">
-                                        <button class="ui left floated labeled icon button">
-                                            <i class="left arrow icon"></i>
-                                            PHP Grunder</button>
-                                    </a>
-
-
-                                    <a href="sessions.html">
-                                        <button class="ui right floated labeled icon button">
-                                            <i class="right arrow icon"></i>
-                                            Sessioner</button>
-                                    </a>
+                                </div>
+                            </div>
+                            <div class="ui vertical segment" id="filhandle_ex">
+                                <h2 class="ui header"> Övning</h2>
+                                <div class="ui vertical segment">
+                                    <h3 class="ui header">Använda filhantering för kommaseparerade värden</h3>
+                                    <p>2. Använd nu istället av fputcsv för att skriva in ett
+                                        fiktivt användarnamn och lösenord sepererade med komma på en rad. Använd
+                                        fgetcsv för att läsa in raden och skriv ut användarnamn och lösenordet var
+                                        för
+                                        sig.</p>
 
 
                                 </div>
                             </div>
+                            <div class="ui vertical segment">
 
-                            <div class="three wide column ">
-                                <!--  <div class="ui grey segment ">
-              <p>three wide column</p>
-            </div> -->
+                                <h2 class="ui header">Felhantering vid filhantering</h2>
+
+                                <p>Mer info kommer</p>
+
+
                             </div>
+
+                            <div id="superglobals" class="ui vertical segment">
+
+                                <h2 class="ui header">Att spara och ladda upp filer (bilder)</h2>
+
+
+
+                            </div>
+                            <div class="ui segment link">
+                                <h4 class="ui header link">Länkar </h4>
+                                <a href="https://webdesignskolan.se/php/php_mysql_apache_wds-member/php_forts.php">Webbdesignskolan
+                                    om
+                                    filhantering</a>
+                                <br>
+
+
+                            </div>
+                            <div class="ui hidden divider"></div>
+                            <a href="phpbasics.html">
+                                <button class="ui left floated labeled icon button">
+                                    <i class="left arrow icon"></i>
+                                    PHP Grunder</button>
+                            </a>
+
+
+                            <a href="sessions.html">
+                                <button class="ui right floated labeled icon button">
+                                    <i class="right arrow icon"></i>
+                                    Sessioner</button>
+                            </a>
+
+
                         </div>
                     </div>
 
+                    <div class="three wide column ">
+                        <!--  <div class="ui grey segment ">
+              <p>three wide column</p>
+            </div> -->
+                    </div>
                 </div>
             </div>
 
         </div>
+    </div>
 
-        <!--Footer-->
-        <div class="ui inverted vertical center aligned footer segment">
-            <div class="ui container">
+    </div>
 
-                <!-- <h4 class="ui inverted header">Footer Header</h4> -->
-                <p>&copy; &nbsp; Sandra Larsson, Mediagymnasiet Nacka Strand</p>
+    <!--Footer-->
+    <div class="ui inverted vertical center aligned footer segment">
+        <div class="ui container">
 
-            </div>
+            <!-- <h4 class="ui inverted header">Footer Header</h4> -->
+            <p>&copy; &nbsp; Sandra Larsson, Mediagymnasiet Nacka Strand</p>
+
         </div>
-        <!--end of footer-->
-        <!--Code syntax highlightning-->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js "></script>
-        <!--jQuery include -->
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js " integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin=" anonymous "></script>
-        <!-- Semantic UI include script-->
-        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js "></script>
-        <!--Local script-->
-        <script src="../../../src/script.js "></script>
+    </div>
+    <!--end of footer-->
+    <!--Code syntax highlightning-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js "></script>
+    <!--jQuery include -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js " integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin=" anonymous "></script>
+    <!-- Semantic UI include script-->
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js "></script>
+    <!--Local script-->
+    <script src="../../../src/script.js "></script>
 </body>
 
 </html>
