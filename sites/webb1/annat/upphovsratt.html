@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
     <link rel="stylesheet" type="text/css" href="../../../style/style.css">
     <title>Webbutveckling 1</title>
 </head>
@@ -18,12 +23,11 @@
             <div class="header">
                 Webbutveckling 1
             </div>
-
             <div class="menu">
-                <a class="item" href="planering.html">
+                <a class="item" href="../info/planering.html">
                     Planering
                 </a>
-                <a class="item" href="kursplan.html">
+                <a class="item" href="../info/kursplan.html">
                     Kursens innehåll
                 </a>
 
@@ -76,8 +80,7 @@
                     Div och span
                 </a>
                 <a class="item" href="../html/html5structure.html">
-                    HTML5 struktur
-
+                    HTML5 Struktur
                 </a>
                 <a class="item">
                     Tabeller och formulär
@@ -126,6 +129,9 @@
                 <a class="item" href="../css/flexbox_gridCSS.html">
                     CSS Flexbox och Grid (frivilligt)
                 </a>
+
+
+
 
             </div>
         </div>
@@ -182,7 +188,6 @@
                 </a>
 
             </div>
-
         </div>
 
     </div>
@@ -210,7 +215,7 @@
                         Kurser
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a class="item" href="planering.html">Webbutveckling 1</a>
+                            <a class="item" href="../info/planering.html">Webbutveckling 1</a>
                             <a class="item" href="../../webb2/info/kursplan.html">Webbutveckling 2</a>
                             <a class="item" href="../../webbsev1/info/kursplan.html">Webbserverprogrammering 1</a>
                         </div>
@@ -221,44 +226,172 @@
                             <i class="search link icon"></i>
                         </div>
                     </div>
-
-
+                    >
                 </div>
             </div>
             <!--end of top menu-->
 
         </div>
         <!--end of pusher-->
-        <div class="ui main text container">
+
+        <div id="introCSS" class="ui main container">
+
+            <div class="ui  grid">
+                <div class="row">
+                    <div class="three wide column">
+                        <!--   <div class="ui grey segment">
+              <p>three wide column</p>
+            </div> -->
+                    </div>
+                    <div class="ten wide column">
+                        <div class="ui vertical segment">
+                            <!-- Intro Upphovsrätt-->
+                            <h1 class="ui header"> Uppphovsrätt</h1>
 
 
+                            <p> Du som skapar webbsidor måste veta vad som gäller när du använder bilder, texter, eller
+                                annat material som någon annan skapat. Upphovsrättslagen ger fotografer, författare,
+                                kompositörer, konstnärer, m. fl rätt att bestämma hur deras verk ska användas</p>
 
-            <h1 class="ui header"> Upphovsrätt och lagar</h1>
+                            <p> Denna korta film ger en bra introduktion till upphovsrätt. </p>
+                            <div class="ui compact segment">
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/hz_agK8bd4Y"
+                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                                Inbäddad film, Kristina Alexandersson, Jesper Wallber,
+                                Göran Thorén och Webbstjärnan.
+                            </div>
+                        </div>
+
+                        <a href="https://www.skolverket.se/skolutveckling/inspiration-och-stod-i-arbetet/stod-i-arbetet/upphovsratten-for-bilder-i-skola"
+                            target="_blank">
+                            Fakta om upphovsrätt för bilder (Skolverket)
+                        </a>
+                        <a href="https://sv.wikipedia.org/wiki/Upphovsr%C3%A4tt" target="_blank">
+                            Upphovsrättslagen (Wikipedia)
+                        </a>
+
+                        <h2 class="ui header"> Bilder man har rätt att använda och publicera</h2>
+
+                        <div class="ui compact segment">
+                            <b>Så hittar du och använder du bilder på nätet</b>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/cqBgPy1l1sQ"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                            Inbäddad film, Mattias Östmar, Internetkunskap.se
+                        </div>
+
+                        <h2 class="ui header"> Creative Commons</h2>
+
+                        <div class="ui compact segment">
+                            <b>Vad är Creative Commons (CC)?</b>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yd9dP3vlOyk"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                            Inbäddad film, Kristina Alexandersson, Jesper Wallerborg, Göran Thorén och Webbstjärnan
+                        </div>
+
+                        <div class="ui compact segment">
+                            <b>Hur använder man Creative Commons (CC)?</b>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/T7ZjudT7u_M"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                            Inbäddad film, Kristina Alexandersson, Jesper Wallerborg, Göran Thorén och Webbstjärnan
+                        </div>
+
+                        <a href=" http://www.creativecommons.se/" target="_blank">
+                            Creative Commons Sverige
+                        </a>
+                        <h2 class="ui header"> Använda &lt;figure&gt; och &lt;figcaption&gt; vid CC-reeferens</h2>
+                        <div class="ui compact segment">
+                            <pre><code class="html">&lt;figure&gt;
+                                    
+&lt;figcaption&gt; &lt;/figcaption&gt;                           
+&lt;/figure&gt;</code></pre>
+                        </div>
+
+                        <h2 class="ui header"> Sökinställnigar på Google för bilder du har rätt att använda</h2>
+                        <div class="ui compact segment">
+
+                        </div>
+
+                        <div class="three wide column ">
+                            <!--  <div class="ui grey segment ">
+              <p>three wide column</p>
+            </div> -->
+                        </div>
+
+                        <div class="ui segment link">
+                            <h4 class="ui header link">Länkar till fria bilder eller Creative Commons</h4>
+                            <a href="https://unsplash.com/" target="_blank">Unsplash
+                            </a>
+                            <br>
+
+                            <a href="https://www.flickr.com/" target="_blank">Flickr
+                            </a>
+                            <br>
+
+                            <a href="http://thestocks.im/" target="_blank">The Stocks
+                            </a>
+                            <br>
+
+                            <a href="https://isorepublic.com/" target="_blank">ISO Republic
+                            </a>
+                            <br>
+
+                            <a href="https://pixabay.com/en/" target="_blank">Pixabay
+                            </a>
+                            <br>
+
+                            <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Subtle Patterns
+                            </a>
+                            <br>
+                            <a href="https://fontawesome.com/?from=io" target="_blank">Font Awesome (ikoner)
+                            </a>
+                            <br>
+                            <a href=https://ionicons.com/ target="_blank">Ionicons
+                            </a>
+                            <br>
 
 
+                        </div>
+                        <!-- 
+                        <div class="ui hidden divider"></div>
+                        <a href="#">
+                            <button class="ui left floated labeled icon button">
+                                <i class="left arrow icon"></i>
+                            </button>
+                        </a> -->
 
 
+                        <a href="integritetetik.html">
+                            <button class="ui right floated labeled icon button">
+                                <i class="right arrow icon"></i>
+                                Integritet och etik </button>
+                        </a>
 
+                    </div>
+                </div>
 
+            </div>
         </div>
-
-    </div>
-    </div>
 
     </div>
 
     <!--Footer-->
-    <div class="ui inverted vertical center aligned footer segment ">
-        <div class="ui container ">
+    <div class="ui inverted vertical center aligned footer segment">
+        <div class="ui container">
 
-            <!-- <h4 class="ui inverted header ">Footer Header</h4> -->
+            <!-- <h4 class="ui inverted header">Footer Header</h4> -->
             <p>&copy; &nbsp; Sandra Larsson, Mediagymnasiet Nacka Strand</p>
 
         </div>
     </div>
     <!--end of footer-->
-
-
+    <!--Code syntax highlightning-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js "></script>
     <!--jQuery include -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js " integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin=" anonymous "></script>
