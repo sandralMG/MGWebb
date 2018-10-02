@@ -246,7 +246,7 @@
                     <div class="ten wide column">
                         <div class="ui vertical segment">
                             <!-- Intro Upphovsrätt-->
-                            <h1 class="ui header"> Uppphovsrätt</h1>
+                            <h1 class="ui header"> Upphovsrätt</h1>
 
 
                             <p> Du som skapar webbsidor måste veta vad som gäller när du använder bilder, texter, eller
@@ -254,13 +254,15 @@
                                 kompositörer, konstnärer, m. fl rätt att bestämma hur deras verk ska användas</p>
 
                             <p> Denna korta film ger en bra introduktion till upphovsrätt. </p>
-                            <div class="ui compact segment">
-
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/hz_agK8bd4Y"
-                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-                                Inbäddad film, Kristina Alexandersson, Jesper Wallber,
-                                Göran Thorén och Webbstjärnan.
+                            <div class="ui segments">
+                                <div class="ui center aligned segment">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hz_agK8bd4Y"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="ui secondary segment">
+                                    Inbäddad film, Kristina Alexandersson, Jesper Wallber,
+                                    Göran Thorén och Webbstjärnan.
+                                </div>
                             </div>
                         </div>
 
@@ -273,43 +275,87 @@
                         </a>
 
                         <h2 class="ui header"> Bilder man har rätt att använda och publicera</h2>
+                        <b>Om att använda Creative Commons och hitta andra bilder:</b>
+                        <div class="ui segments">
+                            <div class="ui center aligned segment">
 
-                        <div class="ui compact segment">
-                            <b>Så hittar du och använder du bilder på nätet</b>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/cqBgPy1l1sQ"
-                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-                            Inbäddad film, Mattias Östmar, Internetkunskap.se
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/cqBgPy1l1sQ"
+                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                            <div class="ui secondary segment">
+                                Inbäddad film, Mattias Östmar, Internetkunskap.se
+                            </div>
                         </div>
 
-                        <h2 class="ui header"> Creative Commons</h2>
+                        <div class="ui hidden divider"></div>
 
-                        <div class="ui compact segment">
-                            <b>Vad är Creative Commons (CC)?</b>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yd9dP3vlOyk"
-                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <div class="ui vertical segment">
 
-                            Inbäddad film, Kristina Alexandersson, Jesper Wallerborg, Göran Thorén och Webbstjärnan
-                        </div>
 
-                        <div class="ui compact segment">
+                            <h2 class="ui header"> Creative Commons</h2>
+                            <p>Creative Commons är en idéell organisation som vill verka för att verk ska kunna
+                                användas helt eller delvis. Det är en samling av licenser som upphovsmannen kan
+                                tillämpa för att låta andra använda, sprida, göra om eller bygga vidare på sina verk.
+                                Den som använder ett verk som faller under Creative Commons måste ange referens till
+                                upphovsmannen och vilken typ av CC-licens som verket faller under. Nedan finns mer
+                                information och hur du kan referera till en bild som är en Creative Comomons licens.
+                            </p>
+                            <div class="ui compact segment">
+                                <div class="ui segments">
+                                    <div class="ui center aligned segment">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Yd9dP3vlOyk"
+                                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="ui secondary segment">
+                                        Inbäddad film, Kristina Alexandersson, Jesper Wallerborg, Göran Thorén och
+                                        Webbstjärnan
+                                    </div>
+                                </div>
+                            </div>
                             <b>Hur använder man Creative Commons (CC)?</b>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/T7ZjudT7u_M"
-                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <div class="ui compact segment">
+                                <div class="ui segments">
+                                    <div class="ui center aligned segment">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/T7ZjudT7u_M"
+                                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="ui secondary segment">
+                                        Inbäddad film, Kristina Alexandersson, Jesper Wallerborg, Göran Thorén och
+                                        Webbstjärnan
+                                    </div>
+                                </div>
+                            </div>
 
-                            Inbäddad film, Kristina Alexandersson, Jesper Wallerborg, Göran Thorén och Webbstjärnan
+                            <a href=" http://www.creativecommons.se/" target="_blank">
+                                Creative Commons Sverige
+                            </a>
                         </div>
-
-                        <a href=" http://www.creativecommons.se/" target="_blank">
-                            Creative Commons Sverige
-                        </a>
                         <h2 class="ui header"> Använda &lt;figure&gt; och &lt;figcaption&gt; vid CC-reeferens</h2>
+                        <p>Om bilden har en Creative Commons licens ska följande anges under bilden:
+                        </p>
+                        <ul>
+                            <li> Titel på verket</li>
+                            <li> Upphovsperson</li>
+                            <li> CC-licensen</li>
+                        </ul>
+
+                        <p>Om du ska lägga in en bild med beskrivning använder du figure- och figcaptionelementet </p>
+
                         <div class="ui compact segment">
                             <pre><code class="html">&lt;figure&gt;
-                                    
-&lt;figcaption&gt; &lt;/figcaption&gt;                           
+
+    &lt;img src="flamingpos.png"&gt;
+
+    &lt;figcaption&gt;Flamingos Partying, 
+    by Pedro Szekelly, CC BY-SA 2.0)
+    &lt;/figcaption&gt;      
+
 &lt;/figure&gt;</code></pre>
+                            <a href="../../../assets/examples/cc-licens/cc.html">
+                                <div class="ui right floated small button">Visa sida</div>
+                            </a>
                         </div>
+
 
                         <h2 class="ui header"> Sökinställnigar på Google för bilder du har rätt att använda</h2>
                         <div class="ui compact segment">
@@ -328,9 +374,15 @@
                             </a>
                             <br>
 
-                            <a href="https://www.flickr.com/" target="_blank">Flickr
+                            <a href="https://www.flickr.com/search/advanced/" target="_blank">Flickr (Klicka i att söka
+                                efter CC-licens under advanced)
                             </a>
                             <br>
+
+                            <a href="http://commons.wikimedia.org" target="_blank">Wikimedia Commons (Creatice Commons)
+                            </a>
+                            <br>
+
 
                             <a href="http://thestocks.im/" target="_blank">The Stocks
                             </a>
@@ -344,7 +396,8 @@
                             </a>
                             <br>
 
-                            <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Subtle Patterns
+                            <a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">Subtle
+                                Patterns
                             </a>
                             <br>
                             <a href="https://fontawesome.com/?from=io" target="_blank">Font Awesome (ikoner)
