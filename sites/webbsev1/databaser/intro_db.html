@@ -47,16 +47,16 @@
                 <a class="item" href="../php/gettingstarted.html">
                     Komma igång
                 </a>
-                <a class="item" href="phpbasics.html">
+                <a class="item" href="../php/phpbasics.html">
                     PHP Grunder
                 </a>
-                <a class="item" href="filehandle.html">
+                <a class="item" href="../php/filehandle.html">
                     Filhantering
                 </a>
-                <a class="item" href="sessions.html">
+                <a class="item" href="../php/sessions.html">
                     Sessioner
                 </a>
-                <a class="item" href="redirects.html">
+                <a class="item" href="../php/redirects.html">
                     Omdirigering
                 </a>
                 <a class="item">
@@ -73,7 +73,7 @@
                 Databaser
             </div>
             <div class="menu">
-                <a class="item">
+                <a class="item" href="intro_db.html">
                 </a>
                 <a class="item">
                 </a>
@@ -170,73 +170,48 @@
                     <div class="ten wide column">
                         <div class="ui vertical segment">
                             <!-- Intro HTML-->
-                            <h1 class="ui header"> PHP Redirects (omdirigering)</h1>
-
-                            <div class="ui vertical segment">
-
-
-                                <p>
-
-
-                                    Med hjälp av PHP-funktionen header(). kan vi skicka vidare till en svarssida. Det
-                                    är ett vanligt
-                                    sätt vid inloggning i formulär. Om användaren finns i datalagringen/databasen
-                                    skickas man vidare till den sida man vill ha åtkomst.
-                                    Man gör en så kallad “redirect”. På samma sätt om man vill logga ut, då omdirigeras
-                                    man till inloggningssidan.
-                                </p>
-
-                                <div class="ui compact segment">
-                                    <pre><code>
-if (isset($_POST['logout'])) {
-    // Avslutar sessionen
-    session_destroy();
-    //Gör en omdirigering till annan sida
-    header('location: login.php');
-
-}</code></pre>
-                                </div>
+                            <h1 class="ui header"> Databaser</h1>
 
 
 
 
-                                <div class="ui segment link">
-                                    <h4 class="ui header link">Länkar </h4>
-                                    <a href="http://php.net/manual/en/function.header.php">PHP manualen om
-                                        omdirigering (redirects)</a>
-                                    <br>
-
-
-                                </div>
-
-
-                                <div class="ui hidden divider"></div>
-                                <a href="sessions.html">
-                                    <button class="ui left floated labeled icon button">
-                                        <i class="left arrow icon"></i>
-                                        Sessioner</button>
-                                </a>
-
-
-                                <a href="#">
-                                    <button class="ui right floated labeled icon button">
-                                        <i class="right arrow icon"></i>
-                                        ?</button>
-                                </a>
+                            <div class="ui segment link">
+                                <h4 class="ui header link">Länkar </h4>
+                                <a href="https://www.w3schools.com/php/php_sessions.asp">W3 Schools om
+                                    Sessioner</a>
+                                <br>
 
 
                             </div>
-                        </div>
-                        <div class="three wide column ">
-                            <!--  <div class="ui grey segment ">
-              <p>three wide column</p>
-            </div> -->
+
+
+                            <div class="ui hidden divider"></div>
+                            <a href="filehandle.html">
+                                <button class="ui left floated labeled icon button">
+                                    <i class="left arrow icon"></i>
+                                    Filhantering</button>
+                            </a>
+
+
+                            <a href="redirects.html">
+                                <button class="ui right floated labeled icon button">
+                                    <i class="right arrow icon"></i>
+                                    Omdirigering</button>
+                            </a>
+
+
                         </div>
                     </div>
+                    <div class="three wide column ">
+                        <!--  <div class="ui grey segment ">
+              <p>three wide column</p>
+            </div> -->
+                    </div>
                 </div>
-
             </div>
+
         </div>
+    </div>
 
     </div>
 
