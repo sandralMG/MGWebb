@@ -191,24 +191,52 @@
                         <div class="ui vertical segment">
                             <h2 class="ui header">2. Fluid layout</h2>
 
-                            <div class="ui compact segment">
-                                <div class="ui segments">
-                                    <div class="ui center aligned segment">
-                                        <img src="../../../assets/images/fluid_layout.png" alt="Fluid layout" width="500px">
-                                    </div>
-                                    <div class="ui secondary segment">
-                                        Bildresultat för target context
-                                        Beginner's Guide to Responsive Web Design | Tayloe/Gray
-                                        tayloegray.com
-                                    </div>
-                                </div>
-                            </div>
+                            <p>I en fluid layout varierar storleken på en layout i förhållande till skärmstorleken. Det
+                                nås genom att använda relativa enheter, som % m.fl istället för pixlar. Det innebär
+                                både att layout, sin grid, samt att bilder och text kan variera i förhållande till
+                                skärmstorleken och anpassas till den enhet man använder (desktop, mobil, etc. ).<br />
+                                I de nya teknikerna som CSS Grid och Flexbox följer många anpassningar till responsiv
+                                web design. I CSS Grid finns exempelvis enheten <b>fr</b> och <b>minmax()</b>. I
+                                Flexbox är mycket "flexbilt" och boxar fyller det specificerade utrymmet i layouten.
+
+                            </p>
+
+                            <p> Vid de situationer du måste omvandla pixlar till % gäller följande regel:</p>
+                            <figure>
+                                <img src="../../../assets/images/fluid_layout.png" alt="Fluid layout" width="70%">
+
+                                <figcaption>
+                                    Bildresultat för target context
+                                    Beginner's Guide to Responsive Web Design | Tayloe/Gray
+                                    tayloegray.com
+                                </figcaption>
+                            </figure>
+
+                            <h3 class="ui header">Ändra storlek på text responsivt</h3>
+
+                            <p> Best practice för att ändra storlek på olika text element är att använda sig av
+                                enheterna <b>%</b>, <b>em</b>, <b>rem</b>. Det finns lite olika angreppsätt om vilken
+                                som är bäst. I detta exempel visar jag hur man kan
+                                använda rem som baseras på font-size relativt till rot-elementet, d.v.s html. Genom att
+                                sätta all text samt margin/rem baserade på denna kan man förändra alla element genom
+                                att endast förändra font-size i roten. <br>
+                                <a href="https://gregrickaby.com/2013/05/using-the-golden-ratio-and-rems/" target="_blank">Se
+                                    denna
+                                    sida för hur detta kan göras</a>
+
+
+                            </p>
+                            <p>REM Units in Responsive Design</p>
+                            <p data-height="265" data-theme-id="dark" data-slug-hash="oaBrep" data-default-tab="html,result"
+                                data-user="sandraMG" data-pen-title="REM Units in Responsive Design" class="codepen">See
+                                the Pen <a href="https://codepen.io/sandraMG/pen/oaBrep/">REM Units in Responsive
+                                    Design</a> by Sandra (<a href="https://codepen.io/sandraMG">@sandraMG</a>) on <a
+                                    href="https://codepen.io">CodePen</a>.</p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                            <h3 class="ui header">Göra bilder flexibla</h3>
 
                         </div>
-
-
-
-
                         <div class="ui vertical segment">
                             <h2 class="ui header"> 3. Mediaqueries</h2>
 
@@ -217,8 +245,83 @@
 
 
                         <div class="ui vertical segment">
-                            <h2 class="ui header">4. Desktop vs Mobile-first</h2>
+                            <h2 class="ui header">Desktop vs Mobile-first</h2>
+                            <p><a href="https://www.lukew.com/presos/preso.asp?26" target="_blank">Inspiration från
+                                    första förespråkaren till mobile-first </a> </p>
 
+                            <div class="ui compact segment">
+                                <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;link rel="stylesheet" href="style.css"&gt;
+
+&lt;title>Desktop first vs. Mobile first&lt;/title&gt;
+&lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt; INNEHÅLL&lt;/h1&gt;
+    &lt;p&gt; Mer innehåll...&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                            </div>
+
+                            <div class="ui compact segment">
+                                <pre><code class="css">/*DESKTOP LAYOUT*/
+/*  Fråm 600px och uppåt */
+
+body {
+    background-color: #ccf;
+}
+
+h1 {
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*FÖRÄNDRAD LAYOUT FÖR MOBIL*/
+/*Från 0px till 600px*/
+@media screen and (max-width: 600px) {
+    body {
+    background-color: #cfc;
+    }
+    h1 {
+    font-size: 16px;
+    }
+}</code></pre>
+                            </div>
+                            <div class="ui compact segment">
+
+                                <pre><code class="css">/*LAYOUT FÖR MOBIL */
+/*Från 0px till 600px*/
+body {
+background-color: #cfc;
+}
+
+h1 {
+font-size: 16px;
+
+}
+
+
+
+/*FÖRÄNDRAD LAYOUT FÖR DESKTOP*/
+/* Från 600px och uppåt */
+@media screen and (min-width: 600px) {
+body {
+    background-color: #ccf;
+}
+
+h1 {
+    font-size: 22px;
+}
+}                               
+                            </code></pre>
+                            </div>
 
                         </div>
 
