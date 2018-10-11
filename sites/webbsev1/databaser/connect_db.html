@@ -170,50 +170,10 @@
                     <div class="ten wide column">
                         <div class="ui vertical segment">
                             <!-- Intro HTML-->
-                            <h1 class="ui header"> Hur fungerar en databas?</h1>
-
-
-                            <p>Data som användare ser och behöver skicka in till webbplatser behöver lagras.
-                                För stora webbplatser kan det röra sig om ofantliga mängder, som ex Facebook, där det
-                                behövs sofistikerade system för datalagring. För enklare webbsidor kan det räcka med
-                                endast en databas för sin datalagring. . En databas lagras alltså
-                                data på ett ordnast och strukturat sätt, den är persistent och försvinner inte
-                                om strömmen slås av.
-                            </p>
+                            <h1 class="ui header"> Databasuppkoppling</h1>
 
 
 
-                            <div class="ui vertical center aligned segment">
-
-                                <img src="../../../assets/images/about_db.PNG" alt="Om databaser" width="600px">
-                            </div>
-                            <p>PHP som programmeringsspråk är väl anpassat för
-                                databaser och särskilt bra för sin "partner" - MySQL. Den miljö vi arbetar i, d.v.s
-                                WAMP, står alltså M för MySQL. I den här kursen fokuserar
-                                vi främst på hur vi interagerar med en databas för att hämta och lagra data för vår
-                                webbplats. MySQL är en
-                                s.k relationsdatabas och vi kommer inte gå in på hur gör själva tabelldesignen. För
-                                projektarbetet kommer ni att utgå från denna tabelldesign med tabellen user, post och
-                                image. MySQL är en s.k relationsdatabas. Relationer i sådan databas kan förenklat
-                                defineras som en mängd poster i en tabell vars data kan länkas ihop med en data i en
-                                annan tabell. I denna finns det en relation att ett inlägg, tabellen post, har en länk
-                                till
-                                den som skapade den, d.v.s en userId. På samma sätt har en image en relation till en
-                                en postId.
-
-                            </p>
-                            <div class="ui vertical center aligned segment">
-
-                                <img src="../../../assets/images/tabelldesign.PNG" alt="Tabelldesign" width="600px">
-                            </div>
-
-                            <p> Eftersom vi inte går närmare in på hur vi designar en databas i MySQL får ni <a href="../../../assets/files/blog.sql">utifrån
-                                    ovanstående tabelldesign en befintlig som är lagrad i denna .sql-fil</a>. <br />
-                                För att
-                                administrera och se dess innehåll importerar vi den i gränsnittet phpMyadmin som finns
-                                i er installation i XAMPP. I denna video går jag igenom hur ni importerar er databas
-                                lokalt i phpMyAdmin. Vi återkommer till hur vi använder vår databas på servern, d.v.s
-                                webdev. </p>
 
                             <div class="ui segment link">
                                 <h4 class="ui header link">Länkar </h4>
@@ -224,18 +184,19 @@
                             </div>
 
 
-                            <!--   <div class="ui hidden divider"></div>
-                            <a href="#">
+                            <div class="ui hidden divider"></div>
+                            <a href="intro_db.html">
                                 <button class="ui left floated labeled icon button">
                                     <i class="left arrow icon"></i>
-                                    </button>
+                                    Introduktion
+                                </button>
                             </a>
- -->
 
-                            <a href="connect_db.html">
+
+                            <a href="query_db.html">
                                 <button class="ui right floated labeled icon button">
                                     <i class="right arrow icon"></i>
-                                    Databasuppkoppling</button>
+                                    Databasförfrågningar</button>
                             </a>
 
 
