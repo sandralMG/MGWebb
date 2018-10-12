@@ -303,33 +303,25 @@ elev_x, pw_webdev
 //Definerar en fil att läsa ifrån
 $file = "userdata.csv";
 
-function readUser($file) {
-        //Öppnar en csv-fil för läsning
-        $handle = fopen("userdata.csv","r");
 
-        //Så länge det finns tecken att läsa från filen
-        while(!feof($handle))
-        {
-        //Varje rad i csv-filen hamnar i ett fack i arrayen.
-        //Max 100 tecken kan läsas och inläsningen separeras av komma
-        $userdata[] = fgetcsv($handle, 100, ",");
-        }
-        //Stänger filen
-        fclose($handle);
+//Öppnar en csv-fil för läsning
+$handle = fopen("userdata.csv","r");
 
-        //Returner all data som läst in
-        return $userdata;
+//Så länge det finns tecken att läsa från filen
+while(!feof($handle))
+{
+//Varje rad i csv-filen hamnar i ett fack i arrayen.
+//Max 100 tecken kan läsas och inläsningen separeras av komma
+$row = fgetcsv($handle, 100, ",");
+
+print_r($row);
+echo "<br/>";
+
 }
-
-    //Anropar funktionen readUser
-    $userdata = readUser($file);
-
-    //Skriver ut innehållet
-    for($i = 0; $i &lt; sizeof($userdata); $i++) { 
-        print_r($userdata[$i]); 
-        echo "&lt;br/&gt;";
-       } 
-    ?&gt; </code> </pre>
+//Stänger filen
+fclose($handle);
+                                        
+?&gt; </code> </pre>
                                 </div>
                                 <p> Funktionen feof() kollar om "end-of-file" har nåtts. Så länge den inte har den
                                     fortsätter fgetcsv att läsa från filen.</p>
