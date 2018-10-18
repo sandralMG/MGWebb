@@ -82,6 +82,9 @@
                 <a class="item" href="query_db.html">
                     Databasförfrågningar
                 </a>
+                <a class="item" href="url_parameter.html">
+                    Använda url-parametrar
+                </a>
             </div>
         </div>
 
@@ -187,17 +190,88 @@
                                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
 
+                            <div class="ui compact segment">
+                                <pre><code class="php">//Uppkoppling mot databas....
+        
+//LAGRA DATA MED SQL-FÖRFRÅGAN INSERT
+$query = "INSERT * INTO user(username, password) VALUES ('$username', '$password')";
+
+$result = mysqli_query($connection, $query);
+
+if(!$result) {
+    die("Query failed" . mysqli_error($connection))
+} else {
+    echo "User aded to db";
+}
+        
+//Koppla ner mot databas....
+        </code></pre>
+                            </div>
+
                             <h3 class="ui header">2. Read- hämta data med SQL-förfrågan SELECT</h3>
                             <div class="ui compact segment">
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ugV9ZBLuP-k"
                                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
                             </div>
+                            <div class="ui compact segment">
+                                <pre><code class="php">//Uppkoppling mot databas....
+    
+//HÄMTA DATA MED SQL-FÖRFRÅGAN SELECT 
+$query = "SELECT * FROM user WHERE username='$username'";
 
+$result = mysqli_query($connection, $query);
+
+if(!$result) {
+    die("Query failed" . mysqli_error($connection))
+}
+
+$row = mysqli_fetch_assoc($result);
+
+$db_username = $row['username'];
+$db_password = $row['password'];
+
+//Koppla ner mot databas....
+</code></pre>
+                            </div>
                             <h3 class="ui header">3. Update - uppdatera data med SQL-förfrågan UPDATE</h3>
-                            <p>Kommer...</p>
+                            <div class="ui compact segment">
+                                <pre><code class="php">//Uppkoppling mot databas....
+        
+    //UPPDATERA DATA MED SQL-FÖRFRÅGAN UPDATE
+    $query = "UPDATE post SET title='$title', content='$content' WHERE id='$postId';
+    
+    $result = mysqli_query($connection, $query);
+    
+    if(!$result) {
+        die("Query failed" . mysqli_error($connection))
+    } else {
+        echo "Post updated";
+    }
+    
+ 
+    
+    //Koppla ner mot databas....
+    </code></pre>
+                            </div>
                             <h3 class="ui header">4. Delete - radera data med SQL-förfrågan DELETE</h3>
-                            <p>Kommer...</p>
+                            <div class="ui compact segment">
+                                <pre><code class="php">//Uppkoppling mot databas....
+        
+    //RADERA DATA MED SQL-FÖRFRÅGAN DELETE
+    $query = "DELETE FROM post WHERE id='$postId'";
+    
+    $result = mysqli_query($connection, $query);
+    
+    if(!$result) {
+        die("Query failed" . mysqli_error($connection))
+    } else {
+        echo "Post deleted";
+    }
+    
+    //Koppla ner mot databas....
+    </code></pre>
+                            </div>
 
                             <div class="ui segment link">
                                 <h4 class="ui header link">Länkar </h4>
@@ -217,10 +291,10 @@
                             </a>
 
 
-                            <a href="#">
+                            <a href="url_parameter.html">
                                 <button class="ui right floated labeled icon button">
                                     <i class="right arrow icon"></i>
-                                    ?</button>
+                                    Använda url-parametrar</button>
                             </a>
 
 
