@@ -189,6 +189,45 @@
                                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
 
+                            <div class="ui compact segment">
+                                <pre><code class="php">
+&lt;?php
+
+//require_once "db_credentials.php";
+
+$connection = mysqli_connect('localhost', 'root', '', 'blog');
+
+if($connection) {
+    echo "We are connected!";
+} else {
+    die("Database connection failed: " . mysqli_connect_error());
+}
+
+
+mysqli_close($connection);
+
+?&gt; </code></pre>
+                            </div>
+                            <p> För att inte behöva ändra databasuppgifter i varje fil du kopplar upp dig mot
+                                databased, så spara uppgifterna som konstanter i egen fil och inkludera sedan med
+                                require_once.</p>
+                            <div class="ui compact segment">
+                                <pre><code class="php">
+// I egen file exempelvis db_credentials.php
+&lt;?php
+
+define("DB_SERVER", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "");
+define("DB_NAME", "blog");
+
+?&gt;
+
+//Anropa denna rad i din databasuppkopling
+require_once "db_credentials.php";
+</code></pre>
+                            </div>
+
                             <div class="ui segment link">
                                 <h4 class="ui header link">Länkar </h4>
                                 <a href="https://www.w3schools.com/php/php_ref_mysqli.asp">W3 Schools - PHP mysqli</a>
