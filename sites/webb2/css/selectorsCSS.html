@@ -57,7 +57,37 @@
             </div>
 
         </div>
+        <div class="item">
+            <div class="header">
+                Bilder och Grafik
 
+            </div>
+            <div class="menu">
+                <a class="item" href="../webgraphics/image_gallery.html">
+                    Bildgalleri med Flexbox/CSS Grid
+                </a>
+                <a class="item" href="../webgraphics/responsive_images.html">
+                    Responsiva bilder
+                </a>
+
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="header">
+                Test
+            </div>
+            <div class="menu">
+                <a class="item" href="../testing/validation.html">
+                    Validering
+                </a>
+                <a class="item" href="../testing/web_support.html">
+                    Webbläsarstöd
+                </a>
+
+            </div>
+
+        </div>
 
         <div class="item">
             <div class="header">
@@ -201,7 +231,8 @@ p { font-size: 20px; }
 
                             <h3 class="ui header">3. X, Y</h3>
                             <h4>Gruppselektorn</h4>
-                            <p>Separeras med ett kommatecken. Alla div's samt alla paragrafer får typsnittet Arial och storlek
+                            <p>Separeras med ett kommatecken. Alla div's samt alla paragrafer får typsnittet Arial och
+                                storlek
                                 22px. Fler än två element kan väljas.
                             </p>
 
@@ -214,7 +245,8 @@ p { font-size: 20px; }
 
                             <h3 class="ui header">4. #X</h3>
                             <h4>Selektor för id</h4>
-                            <p>Elementet med id="container" får färgen aqua som bakgrundsfärg. Id kan endast tillhör ett
+                            <p>Elementet med id="container" får färgen aqua som bakgrundsfärg. Id kan endast tillhör
+                                ett
                                 element.
                             </p>
                             <div class="ui compact segment">
@@ -226,7 +258,8 @@ p { font-size: 20px; }
 
                             <h3 class="ui header">5 .X</h3>
                             <h4>Selektor för class</h4>
-                            <p>Alla element med class="gallery" får bredd 50% utifrån upptaget område av elementet. Class
+                            <p>Alla element med class="gallery" får bredd 50% utifrån upptaget område av elementet.
+                                Class
                                 kan till skillnad från id sättas på flera element än ett. element.
                             </p>
                             <div class="ui compact segment">
@@ -237,7 +270,8 @@ p { font-size: 20px; }
 
                             <h3 class="ui header">6. X Y </h3>
                             <h4>Arvselektor</h4>
-                            <p>Du använder denna när du vill komma åt ett element som är underelement till ett annat, d.v.s
+                            <p>Du använder denna när du vill komma åt ett element som är underelement till ett annat,
+                                d.v.s
                                 barn (child) till förälderelementet (parent).
 
                             </p>
@@ -256,12 +290,15 @@ p { font-size: 20px; }
 
                             <div class="ui vertical segment"></div>
                             <h3>Pseudo-klasser</h3>
-                            <p>För psedo-klasser sätter man kolontecknet ( : ) efter selektorn. De används för applicera
-                                en regel för ett valt tillstånd, exempelvis när en användare drar musen över ett visst element.
+                            <p>För psedo-klasser sätter man kolontecknet ( : ) efter selektorn. De används för
+                                applicera
+                                en regel för ett valt tillstånd, exempelvis när en användare drar musen över ett visst
+                                element.
                             </p>
 
                             <h3 class="ui header">8. X:hover</h3>
-                            <p> När man gör mouse over element aktiveras regeln. I detta fall blir bakgrundfärgen lila när
+                            <p> När man gör mouse over element aktiveras regeln. I detta fall blir bakgrundfärgen lila
+                                när
                                 man "hovrar" över en länk. Bra att använd till knappar och menyer.</p>
                             <div class="ui compact segment">
                                 <pre><code class="css">a:hover {
@@ -280,7 +317,8 @@ p { font-size: 20px; }
                             </div>
 
                             <h3 class="ui header">9. X:focus</h3>
-                            <p>När ett element klickas eller vid "tab"-tangenten når elementet. Användbart vid att styla
+                            <p>När ett element klickas eller vid "tab"-tangenten når elementet. Användbart vid att
+                                styla
                                 textrutor (input) i formulär.</p>
                             <div class="ui compact segment">
                                 <pre><code class="css">input:focus{
@@ -306,7 +344,8 @@ p { font-size: 20px; }
                             <h2 class="ui header"> Bra att kunna i kursen </h2>
 
                             <h3 class="ui header">12. X[type="value"]</h3>
-                            <p>Selektorn för att sätta en regel till ett visst attribut med ett visst värde. I detta fall
+                            <p>Selektorn för att sätta en regel till ett visst attribut med ett visst värde. I detta
+                                fall
                                 får endast alla textrutor en grå bakgrund (inte andra som ex checkbox, m. fl.)</p>
                             <div class="ui compact segment">
                                 <pre><code class="css">input[type="text"] {
@@ -315,7 +354,8 @@ p { font-size: 20px; }
                             </div>
 
                             <h3 class="ui header">21. X:nth-of-type(n)</h3>
-                            <p>Väljer det n:te elementet som finns inuti förälderelementet. I detta fall blir textfärgen
+                            <p>Väljer det n:te elementet som finns inuti förälderelementet. I detta fall blir
+                                textfärgen
                                 grön för det andra p-elementet inuti det överordnade elementet.</p>
                             <div class="ui compact segment">
                                 <pre><code class="css">p:nth-of-type(2) {
@@ -324,8 +364,10 @@ p { font-size: 20px; }
                             </div>
 
                             <h3 class="ui header">13. X > Y </h3>
-                            <p>Liknar arvselektor X . Skillnaden är att den endast väljder de element som är första barnet
-                                till föräldern. Här väljs alltså bara de p som har förälder div, inte de som är underornade
+                            <p>Liknar arvselektor X . Skillnaden är att den endast väljder de element som är första
+                                barnet
+                                till föräldern. Här väljs alltså bara de p som har förälder div, inte de som är
+                                underornade
                                 p.
                             </p>
                             <div class="ui compact segment">
@@ -368,11 +410,13 @@ p { font-size: 20px; }
 
                         <div class="ui segment link">
                             <h4 class="ui header link">Länkar </h4>
-                            <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">W3Schools CSS Selector
+                            <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">W3Schools CSS
+                                Selector
                                 Reference
                             </a>
                             <br>
-                            <a href="hhttps://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048" target="_blank"> Envatotuts
+                            <a href="hhttps://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048"
+                                target="_blank"> Envatotuts
                                 - The 30 CSS Selectors You Should Mememorize
                             </a>
                             <br>
