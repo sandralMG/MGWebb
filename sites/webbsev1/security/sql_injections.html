@@ -179,13 +179,95 @@
                     <div class="ten wide column">
                         <div class="ui vertical segment">
 
-                            <h1 class="ui header"> Injektioner av olika slag</h1>
+                            <h1 class="ui header"> SQL Injektioner</h1>
 
                             <p>
+                                SQL-injektioner är en av de vanligaste säkerhetsluckorna som förekommer i PHP. Det är
+                                ett direkt resultat av att inte ha filtrerat och ”escapat” data korrekt. En illasinnad
+                                användare kan utnyttja dessa säkerhetsluckor till att få kontroll över databasen. Det
+                                kan innebära allt ifrån att logga in på andra användare och komma åt eventuell
+                                konfidentiell information till att ta bort hela databasen. SQL injektion är alltså en
+                                teknik fär att komma åt databasen
 
+                                Den här typen av hackningsteknik utnyttjar felaktig kodning av webbplatser genom att
+                                injicera SQL-kommandon i inmatningsfält, såsom inloggningsformulär, för att få tillgång
+                                till databaser.
+
+                                I huvudsak har inmatningsfältet på din webbplats som syfte att tillåta användare att
+                                skriva in information till din databas. Hackers utnyttjar den här funktionen genom att
+                                skriva in SQL-satser i sådana fält och därigenom få direktkontakt med databasen.
+                                I stället för att ange ett lösenord vid inloggning kan man därför, om man har de
+                                kunskaper som krävs, i fältet för lösenord mata in en instruktion som gör att databasen
+                                antingen lämnar ifrån sig rätt lösen­ord eller tror att lösenordet redan är inmatat.
+
+                                En angripare avsiktligt kan bädda in en " DROP TABLE " uttalande , eller någon annan ,
+                                lika skadlig uttalande i ett textfält , så programmerare måste se till att program
+                                beter sig lämpligt under sådana omständigheter .
+
+                                Funktioner som kontaktformulär, login-sidor, söksidor, shoppingvagnar, användarprofiler
+                                och andra former av dynamiskt innehåll är integrerade på moderna webbplatser för att de
+                                ger företag möjligheten att kommunicera med sina kunder. Men de här funktionerna är
+                                sårbara för SQL-injektionsattacker så länge inmatningsfälten kan utnyttjas av hackers
+                                med SQL-satser för att ta sig genom nätverkssäkerheten direkt in till databasen
                             </p>
 
-                            <p> </p>
+                            <h3 class="ui header"> Ett exempel på SQL injektion </h3>
+                            <p>Ett inloggningssystem skulle kunna ha följande SQL-fråga för att undersöka om ett
+                                lösenord är korrekt mot användarnamnet där man exempelvos hämtar $user och
+                                $password
+                                via $_POST:</p>
+                            <div class="ui compact segment">
+                                <pre><code class="sql">$query = "SELECT * FROM users WHERE user = '" + $user + "' and password = '" + $password + "'";</code></pre>
+                            </div>
+                            <p> Med användarnamnet kalle och lösenordet abc123 skulle SQL-frågan bli:</p>
+                            <div class="ui compact segment">
+                                <pre><code class="sql">SELECT * FROM users WHERE user = 'kalle' and password = 'abc123'</code></pre>
+                            </div>
+                            <p>Om en illasinnad användare som lösenord skriver in</p>
+                            <div class="ui compact segment">
+                                <pre><code class="sql">' OR '' = '</code></pre>
+                            </div>
+                            <p> Så blir SQL-frågan följande:</p>
+                            <div class="ui compact segment">
+                                <pre><code class="sql">SELECT * FROM users WHERE user = 'kalle' and password = '' OR '' = ''</code></pre>
+                            </div>
+                            <p>Jämförelsen längst till höger mellan två tomma strängar kommer alltid att leda till
+                                att
+                                resultatet blir sant, och användaren kommer alltid att loggas in.</p>
+
+                            <p>Ett annat exempel på hur en hel tabell kan raderas genom att utöka med DROP som är
+                                kommandot för att radera en tabell </p>
+                            Om följande text matas in i ett formulärfält som tar emot indata med $_POST och matas in i
+                            databasen.<br />
+                            <div class="ui compact segment">
+                                <pre><code class="sql">kalle; DROP TABLE Students</code></pre>
+                            </div>
+
+                            <p>Indatat skulle kunna bli:</p>
+                            <div class="ui compact segment">
+                                <pre><code class="sql">SELECT * FROM users WHERE user = 'kalle'; DROP TABLE Students</code></pre>
+                            </div>
+
+                            <h3 class="ui header"> Hur skyddar man sig mot SQL- injektioner?</h3>
+
+                            <p>Vi behöver rensa indata på farliga tecken som saboterar vårt SQL-anrop.
+                                Det gör vi genom att anropa en php-funktion som heter
+                                mysqli_real_escape_string($databaskoppling, $indata);
+                                Funktionen rensar textsträngen från speciella tecken så att det blir säkert att köra
+                                strängen i ett mysql_query()-anrop.</p>
+
+                            <div class="ui compact segment">
+                                <pre><code class="php">$user = mysqli_real_escape_string($dbconn, $_POST[user]);
+                                        $password=mysqli_real_escape_string($dbconn, $_POST[password]);</code></pre>
+                            </div>
+                            <a href="https://stackoverflow.com/questions/332365/how-does-the-sql-injection-from-the-bobby-tables-xkcd-comic-work/332367#332367">Här
+                                finns en mer nogrann förklaring till seriestripen och de försvunna tabellerna i
+                                seriestrippen <i>Bobby Tables</i> </a>
+
+                            <div class="ui vertical center aligned segment">
+
+                                <img src="../../../assets/images/sql_injection_strip.jpg" alt="Om databaser" width="600px">
+                            </div>
 
 
                             <h2 class="ui header">SQL Injektioner</h2>
