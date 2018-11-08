@@ -92,15 +92,16 @@
             </div>
         </div>
 
-
         <div class="item">
             <div class="header">
                 Säkerhet
             </div>
             <div class="menu">
-                <a class="item" href="about.html">
+                <a class="item" href="about.html">Om säkerhet
                 </a>
-                <a class="item">
+                <a class="item" href="sql_injections.html">SQL Injektioner
+                </a>
+                <a class="item" href="crypt_password.html">Kryptera lösenord
                 </a>
 
             </div>
@@ -269,7 +270,7 @@
 $username = $_POST['username'];
 $password= $_POST['password'];
 
-$username = mysqli_real_escape_string($conenction, $username);
+$username = mysqli_real_escape_string($connection, $username);
 $password = mysqli_real_escape_string($connection, $password);</code></pre>
                         </div>
 
@@ -290,10 +291,10 @@ $password = mysqli_real_escape_string($connection, $password);</code></pre>
                         <div class="ui hidden divider"></div>
 
 
-                        <a href="filter_input.html">
+                        <a href="about.html">
                             <button class="ui left floated labeled icon button">
                                 <i class="left arrow icon"></i>
-                                Filtering av data</button>
+                                Om säkerhet</button>
                         </a>
 
                         <a href="crypt_password.html">
