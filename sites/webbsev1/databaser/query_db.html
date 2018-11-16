@@ -194,7 +194,7 @@
                                 <pre><code class="php">//Uppkoppling mot databas....
         
 //LAGRA DATA MED SQL-FÖRFRÅGAN INSERT
-$query = "INSERT * INTO user(username, password) VALUES ('$username', '$password')";
+$query = "INSERT INTO user(username, password) VALUES ('$username', '$password')";
 
 $result = mysqli_query($connection, $query);
 
@@ -268,7 +268,7 @@ while($row = mysqli_fetch_assoc($result)) {
                                 <pre><code class="php">//Uppkoppling mot databas....
         
 //UPPDATERA DATA MED SQL-FÖRFRÅGAN UPDATE
-$query = "UPDATE post SET title='$title', content='$content' WHERE id='$postId';
+$query = "UPDATE post SET title='$title', content='$content' WHERE id='$postId'";
 
 $result = mysqli_query($connection, $query);
 
