@@ -251,29 +251,72 @@
                         <div class="ui vertical segment">
 
                             <h1 class="ui header"> Dokumentsobjektsmodellen</h1>
+<p>Webbläsaren tolkar koden den får från servern och ritar upp strukturen internt för att veta hur den 
+    ska visa innehållet på webbsidan. DOM-strukturen håller ordning på hur olika delar som head, body, 
+    divar, texter, bilder med mera ska förhålla sig till varandra och hur de ska visas. Såväl HTML-koden 
+    som CSS-koden och skript (t.ex. JavaScript) som körs kan påverka strukturen. Detta sätt att beskriva 
+    sidan kallas <i>dokumentobjektsmodellen</i>, men förkortas oftast DOM.
 
+        Ibland vill man att något ska förändras efter att sidan byggts upp i webbläsaren, 
+        till exempel när besökaren håller muspekaren över något eller klickar på en knapp. 
+        Då kan man använda till exempel JavaScript för att göra ändringar i DOM-strukturen 
+        i den befintliga webbsidan.</p>
                          
                         </div>
 
                         <div class="ui vertical segment">
+
+                                <div class="ui compact segment">
+
+                                        <img src="../../../assets/images/dom3.PNG" alt="Arv CSS" width="500px">
+                                </div>
                          
                         </div>
 
                         <div class="ui vertical segment">
-                    
+                                <div class="ui compact segment">
+
+                                        <img src="../../../assets/images/dom2.PNG" alt="Arv CSS" width="500px">
+                                </div>
                         </div>
 
 
 
 
                         <div class="ui vertical segment">
-                        
+                                <div class="ui compact segment">
+
+                                        <img src="../../../assets/images/dom.png" alt="Arv CSS" width="500px">
+                                </div>
 
                         </div>
 
 
                         <div class="ui vertical segment">
-                            
+                                <h2 class="ui header"> Diskreta domskript</h2>
+                                <p>Tänk dig tillbaka till dokumentobjektsmodellen och trädet med alla noderna. 
+                                    Om man väljer en nod, till exempel ett textstycke, och lägger till egenskapen 
+                                    id och ett unikt värde till taggen, kan man påverka den med ett DOM-skript. 
+                                    Ett DOM-skript kan till exempel vara ett JavaScript.</p>
+                                <div class="ui compact segment">
+                                        <pre><code class=js">HTML:
+&lt;p id="demo"&gt;Jag har provat göra ett javaskript&lt;/p&gt;
+&lt;button onclick="myFunction()"&gt;Click Me!&lt;/button&gt;
+
+Javascript:
+//Byter text i paragrafen
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Och det fungerar!";
+
+    //Byter färg på paragrafen
+    document.getElementById("demo").style.color = ”blue”;
+}
+
+</code></pre>
+
+</div>
+
+
                         </div>
 
 
@@ -287,29 +330,13 @@
 
                         <div class="ui segment link">
                             <h4 class="ui header link">Länkar </h4>
-                            <a href="https://learncssgrid.com/" target="_blank">Learning CSS Grid
+                            <a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank">W3 Schools DOM
                             </a>
                             <br>
-                            <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">
-                                CSS-Tricks: A complete guide to grid
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">MDN Introduction to the DOM
                             </a>
                             <br>
-                            <a href="https://gridbyexample.com" target="_blank">
-                                Grid by Example
-
-                            </a>
-                            <br>
-
-                            <a href="https://www.silocreativo.com/en/flexbox-vs-css-grid-practical-example/" target="_blank">
-                                Flexbox vs CSS Grid: A practical example
-
-                                <br>
-
-
-                                <a href="http://cssgridgarden.com/#sv" target="_blank">
-                                    Grid Garden:Spel att träna på CSS Grid egenskaper
-                                </a>
-                                <br>
+                         
 
                         </div>
 

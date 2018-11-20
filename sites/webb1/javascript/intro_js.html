@@ -295,7 +295,7 @@
                         <div class="ui vertical segment">
                                 <h2 class="ui header"> Placering av Javascript</h2>
 
-                                <p>Javascriptkoden ska ligga i separata js-filer. Den kan ligga lokalt på webbsidan innanför script-taggar men vi strävar efter att ha separerade filer med olika innehåll, html, css, javascript.
+                                <p>Javascriptkoden ska helst ligga i separata js-filer. Den kan ligga lokalt på webbsidan innanför script-taggar men vi strävar efter att ha separerade filer med olika innehåll, html, css, javascript.
                                         Vi länkar till filen på följande sätt: </p>
 
                                             <div class="ui compact segment">
@@ -322,30 +322,11 @@
 
                         <div class="ui vertical segment">
                                 <h2 class="ui header"> Exempel på Javascript</h2>
-                                <p> Ett exempel på ett Javascript där en pop-up ruta med texten "Hello World" kommer upp när sidan laddats. Scriptet är inline, d.v.s. inbäddat i html-koden. </p>
-                                <div class="ui compact segment">
-                                        <pre><code class="html">&lt;!DOCTYPE HTML>
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title>Javascript exempel&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;p&gt;Some text..&lt;/p&gt;
-
-    &lt;script&gt;
-    alert( 'Hello, world!' );
-    &lt;/script&gt;
-    &lt;/body&gt;
-
-&lt;/html&gt;</code></pre>
-        
-                                        </div>
+         
 
                         </div>
 
-<p></p>
+                        <p> Ett exempel på ett Javascript där en pop-up ruta med texten "I'm a Javascript" kommer upp när sidan laddats. </p>
                         <div class="ui compact segment">
                                 <pre><code class="html">&lt;!DOCTYPE HTML>
 &lt;html&gt;
@@ -362,11 +343,32 @@
 &lt;/html&gt;</code></pre>
 
                                 </div>
-<p> I filen script.js kan Javascript koden anropas som körs på sidan. Även här en pop-ruta fast med texten "I'm Javascript!".:</p>
+                                <p> Javascriptkoden ligger i en separat js-fil.</p>
                                 <div class="ui compact segment">
                                         <pre><code class="js">alert("I'm JavaScript!");</code></pre>
         
                                     </div>
+
+                                    <p>Ett exempel där scriptet ligger inline,  d.v.s. inbäddat i html-koden. </p>
+                                    <div class="ui compact segment">
+                                            <pre><code class="html">&lt;!DOCTYPE HTML>
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title>Javascript exempel&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+        &lt;p&gt;Some text..&lt;/p&gt;
+    
+        &lt;script&gt;
+        alert( 'Hello, world!' );
+        &lt;/script&gt;
+        &lt;/body&gt;
+    
+    &lt;/html&gt;</code></pre>
+            
+                                            </div>
 <!-- 
 
                         <div class="ui vertical segment">
