@@ -47,16 +47,16 @@
                 <a class="item" href="../php/gettingstarted.html">
                     Komma igång
                 </a>
-                <a class="item" href="../php/phpbasics.html">
+                <a class="item" href="phpbasics.html">
                     PHP Grunder
                 </a>
-                <a class="item" href="../php/filehandle.html">
+                <a class="item" href="filehandle.html">
                     Filhantering
                 </a>
-                <a class="item" href="../php/sessions.html">
+                <a class="item" href="sessions.html">
                     Sessioner
                 </a>
-                <a class="item" href="../php/redirects.html">
+                <a class="item" href="redirects.html">
                     Omdirigering
                 </a>
                 <a class="item">
@@ -73,16 +73,16 @@
                 Databaser
             </div>
             <div class="menu">
-                <a class="item" href="intro_db.html">
+                <a class="item" href="../databaser/intro_db.html">
                     Introduktion
                 </a>
-                <a class="item" href="connect_db.html">
+                <a class="item" href="../databaser/connect_db.html">
                     Databasuppkoppling
                 </a>
-                <a class="item" href="query_db.html">
+                <a class="item" href="../databaser/query_db.html">
                     Databasförfrågningar
                 </a>
-                <a class="item" href="url_parameter.html">
+                <a class="item" href="../databaser/url_parameter.html">
                     Använda url-parametrar
                 </a>
 
@@ -109,13 +109,13 @@
                 Projektarbete
             </div>
             <div class="menu">
-                <a class="item">
+                <a class="item" href="about_project.html"> Om projektarbete
                 </a>
-                <a class="item">
+                <a class="item" href="project_planning.html"> Projektplanering & rapport
                 </a>
-                <a class="item">
+                <a class="item" href="using_git.html"> Använda Git (frivilligt)
                 </a>
-                <a class="item">
+                <a class="item" href="project_ideas.html"> Valbara projektmoment
                 </a>
 
             </div>
@@ -178,89 +178,47 @@
                     <div class="ten wide column">
                         <div class="ui vertical segment">
                             <!-- Intro HTML-->
-                            <h1 class="ui header">Använda url-parametrar</h1>
+                            <h1 class="ui header">Använda Git</h1>
 
-                            <p>Vi lägger till url parametrar till en länk på följande sätt: </p>
+                            <div class="ui vertical segment">
 
-
-                            <div class="ui compact segment">
-                                <pre><code class="html">&lt;a href="somepage.php?id=2"&gt;en länk till en sida&lt;/a&gt;             </code></pre>
-                            </div>
-                            <p>Vi kan lägga till flera url parametrar genom att separera dem med ett &-tecken:</p>
-                            <div class="ui compact segment">
-                                <pre><code class="html">&lt;a href="somepage.php?post=7&id=2"&gt;en länk till en sida&lt;/a&gt;             </code></pre>
-                            </div>
-                            <p>URL parametrarna hamnar i superglobala arrayen $_GET, och vi kan hämta ut värden:</p>
-                            <div class="ui compact segment">
-                                <pre><code class="php">$id = $_GET[id];</code></pre>
                             </div>
 
-                            <p>Värdet som hämtas ut kommer alltid att vara en sträng.</p>
-
-                            <p>Denna teknik används för att sidan ska kunna visa rätt innehåll beroende på användarens
-                                val.
-
-                                Exempelvis: <br />
-                                Låt säga att vi vill visa en lista på alla registrerade användare i bloggen, vi vill
-                                dessutom att man ska kunna klicka på en användare för att besöka just den användarens
-                                blogg. Sidan kallar vi för view.php.<br />
-
-                                Vi hämtar ut användarna från databastabellen user, vi stegar igenom resultatet och för
-                                varje användare så genererar vi en länk där vi skickar med värdet för id. Bloggens
-                                titel används till länkens text i detta exempel, vi kapar dessutom titeln, så att den
-                                inte blir mer än 30 tecken lång.</p>
+                            <div class="ui segment link">
+                                <h4 class="ui header link">Länkar </h4>
+                                <a href="h#">?</a>
+                                <br>
 
 
-                            <div class="ui compact segment">
-                                <pre><code class="php">//Uppkoppling mot databas....
-
-$query = 'SELECT id, title FROM user';
-$result = mysqli_query($connection, $query);
-foreach ($result as $value)
-{
-    $id = $value['id']; // Hämtar bloggarens id
-    $title = substr($value['title'], 0, 30); // Hämtar titel på bloggen, max 30 tecken ska visas
-    echo "&lt;a href='view.php?id=$id'&gt;$title&lt;/a&gt;&lt;br&gt;"; // Skriver ut länken
-}
-
-//Koppla ner mot databas....
-                                </code></pre>
                             </div>
 
-                            <p>Samma teknik används för att till exempel visa en lista med inlägg, när man klickar på
-                                ett inlägg så skickar man med bloggarens id och inläggets id, på så viss kan man hämta
-                                och visa rätt inlägg. Om inget inlägg är valt så visas det senast skrivna inlägget. </p>
+
+                            <div class="ui hidden divider"></div>
+                            <a href="#">
+                                <button class="ui left floated labeled icon button">
+                                    <i class="left arrow icon"></i>
+                                    ?</button>
+                            </a>
+
+
+                            <a href="#">
+                                <button class="ui right floated labeled icon button">
+                                    <i class="right arrow icon"></i>
+                                    ?</button>
+                            </a>
+
 
                         </div>
-
-
-                        <div class="ui hidden divider"></div>
-                        <a href="query_db.html">
-                            <button class="ui left floated labeled icon button">
-                                <i class="left arrow icon"></i>
-                                Databasförfrågnignar
-                            </button>
-                        </a>
-
-
-                        <a href="#">
-                            <button class="ui right floated labeled icon button">
-                                <i class="right arrow icon"></i>
-                                ?</button>
-                        </a>
-
-
                     </div>
-                </div>
-                <div class="three wide column ">
-                    <!--  <div class="ui grey segment ">
+                    <div class="three wide column ">
+                        <!--  <div class="ui grey segment ">
               <p>three wide column</p>
             </div> -->
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+        </div>
     </div>
 
     </div>
