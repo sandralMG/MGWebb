@@ -1,85 +1,87 @@
-- <!DOCTYPE html>
+-
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css"
-    />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
-    <script>
-      hljs.initHighlightingOnLoad();
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
+  <script>
+    hljs.initHighlightingOnLoad();
     </script>
-    <link rel="stylesheet" type="text/css" href="../../../style/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../../style/style.css" />
 
-    <title>Webbserverprogrammering 1</title>
-  </head>
+  <title>Webbserverprogrammering 1</title>
+</head>
 
-  <body>
-    <!-- Sidebar -->
-    <div class="ui sidebar vertical menu">
-      <div class="item">
-        <div class="header">Webbserverprogrammering 1</div>
-        <div class="menu">
-          <a class="item" href="../info/planering.html"> Planering </a>
-          <a class="item" href="../info/kursplan.html"> Kursens innehåll </a>
-        </div>
+<body>
+  <!-- Sidebar -->
+  <div class="ui sidebar vertical menu">
+    <div class="item">
+      <div class="header">Webbserverprogrammering 1</div>
+      <div class="menu">
+        <a class="item" href="../info/planering.html"> Planering </a>
+        <a class="item" href="../info/kursplan.html"> Kursens innehåll </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="header">PHP</div>
+      <div class="menu">
+        <a class="item" href="../php/gettingstarted.html"> Komma igång </a>
+        <a class="item" href="phpbasics.html"> PHP Grunder </a>
+        <a class="item" href="filehandle.html"> Filhantering </a>
+        <a class="item" href="sessions.html"> Sessioner </a>
+        <a class="item" href="redirects.html"> Omdirigering </a>
+        <a class="item"> </a> <a class="item"> </a> <a class="item"> </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="header">Databaser</div>
+      <div class="menu">
+        <a class="item" href="../databaser/intro_db.html"> Introduktion </a>
+        <a class="item" href="../databaser/connect_db.html">
+          Databasuppkoppling
+        </a>
+        <a class="item" href="../databaser/query_db.html">
+          Databasförfrågningar
+        </a>
+        <a class="item" href="../databaser/url_parameter.html">
+          Använda url-parametrar
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="header">Säkerhet</div>
+      <div class="menu">
+        <a class="item" href="../security/about.html">Om säkerhet </a>
+        <a class="item" href="../security/sql_injections.html">SQL Injektioner
+        </a>
+        <a class="item" href="../security/crypt_password.html">Kryptera lösenord
+        </a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="header">
+        Projektarbete
+      </div>
+      <div class="menu">
+        <a class="item" href="../project/about_project.html"> Om projektarbetet
+        </a>
+        <a class="item" href="../project/project_planning.html"> Projektplanering & rapport
+        </a>
+        <a class="item" href="../project/using_git.html"> Använda Git (frivilligt)
+        </a>
+        <a class="item" href="../project/project_ideas.html"> Valbara projektmoment
+        </a>
+
       </div>
 
-      <div class="item">
-        <div class="header">PHP</div>
-        <div class="menu">
-          <a class="item" href="../php/gettingstarted.html"> Komma igång </a>
-          <a class="item" href="phpbasics.html"> PHP Grunder </a>
-          <a class="item" href="filehandle.html"> Filhantering </a>
-          <a class="item" href="sessions.html"> Sessioner </a>
-          <a class="item" href="redirects.html"> Omdirigering </a>
-          <a class="item"> </a> <a class="item"> </a> <a class="item"> </a>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="header">Databaser</div>
-        <div class="menu">
-          <a class="item" href="../databaser/intro_db.html"> Introduktion </a>
-          <a class="item" href="../databaser/connect_db.html">
-            Databasuppkoppling
-          </a>
-          <a class="item" href="../databaser/query_db.html">
-            Databasförfrågningar
-          </a>
-          <a class="item" href="../databaser/url_parameter.html">
-            Använda url-parametrar
-          </a>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="header">Säkerhet</div>
-        <div class="menu">
-          <a class="item" href="../security/about.html">Om säkerhet </a>
-          <a class="item" href="../security/sql_injections.html"
-            >SQL Injektioner
-          </a>
-          <a class="item" href="../security/crypt_password.html"
-            >Kryptera lösenord
-          </a>
-        </div>
-      </div>
-      <div class="item">
-        <div class="header">Projektarbete</div>
-        <div class="menu">
-          <a class="item"> </a> <a class="item"> </a> <a class="item"> </a>
-          <a class="item"> </a>
-        </div>
-      </div>
     </div>
     <!-- end of sidebar -->
     <!-- Pusher -->
@@ -100,15 +102,9 @@
             <div class="ui dropdown item">
               Kurser <i class="dropdown icon"></i>
               <div class="menu">
-                <a class="item" href="../../webb1/info/kursplan.html"
-                  >Webbutveckling 1</a
-                >
-                <a class="item" href="../../webb2/info/kursplan.html"
-                  >Webbutveckling 2</a
-                >
-                <a class="item" href="../../webbsev1/info/kursplan.html"
-                  >Webbserverprogrammering 1</a
-                >
+                <a class="item" href="../../webb1/info/kursplan.html">Webbutveckling 1</a>
+                <a class="item" href="../../webb2/info/kursplan.html">Webbutveckling 2</a>
+                <a class="item" href="../../webbsev1/info/kursplan.html">Webbserverprogrammering 1</a>
               </div>
             </div>
             <div class="item">
@@ -161,9 +157,7 @@ if (isset($_POST['logout'])) {
 
                   <div class="ui segment link">
                     <h4 class="ui header link">Länkar</h4>
-                    <a href="http://php.net/manual/en/function.header.php"
-                      >PHP manualen om omdirigering (redirects)</a
-                    >
+                    <a href="http://php.net/manual/en/function.header.php">PHP manualen om omdirigering (redirects)</a>
                     <br />
                   </div>
 
@@ -207,14 +201,12 @@ if (isset($_POST['logout'])) {
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js "></script>
     <!-- jQuery include -->
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js "
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin=" anonymous "
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js " integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin=" anonymous "></script>
     <!-- Semantic UI include script -->
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js "></script>
     <!-- Local script -->
     <script src="../../../src/script.js "></script>
-  </body>
+</body>
+
 </html>
