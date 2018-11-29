@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="sv">
 <?php
-// Följande definition kan med fördel ligga i en separat config-fil.
+
+//Array med felbskrivningar för respektive felkod 
 $upload_errors = array(
     // http://www.php.net/manual/en/features.file-upload.errors.php
     UPLOAD_ERR_OK          => "Inga fel.",
