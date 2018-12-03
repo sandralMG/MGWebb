@@ -251,14 +251,25 @@
                             <!-- Intro HTML-->
                             <h1 class="ui header">Responsiv Web Design</h1>
                             <p>Vad är Responsive Web Design? Detta koncept kan kort förklaras som det tillvägagångssätt
-                                vi använder oss av för att anpassa en webbplats för olika enheter. I kursen
-                                fokuserar vi främst på att anpassa för olika skärmbredder som mobiler, surfplattor och
-                                vanlig dator (desktop). Man kan även anpassa till flera format såsom skrivare,
-                                skärmupplösning, landskaps- och porträttvy. <br />
-                                Historik: Termen Responsive Web Design (förkortat RWD) myntades mer eller mindre av
+                                vi använder oss av för att anpassa en webbplats för olika enheter.
+                                Denna del av webbutveckling speglar vårt sätt att surfa idag. Mobilsurfandet ökar,
+                                samtidigt som vi använder surfplattor. Därför behöver webbsidor utvecklas för såval
+                                dator (desktop) som övriga enheter.</p>
+
+
+
+                            <p>Termen Responsive Web Design (förkortat RWD) myntades mer eller mindre av
                                 Ethan Marcotte år 2010 i <a href="https://alistapart.com/article/responsive-web-design/">hans
                                     inlägg
-                                    i magasinet A list apart </a>.</p>
+                                    i magasinet "A list apart"</a>. För dig som är intresserad att läsa :-). Om du vill
+                                se ett
+                                bra exempel på en responsiv design rekommenderar jag sidan <a href="http://foodsense.is/"
+                                    target="_blank">Foodsense</a>. Du testar sidan responsivt genom att enkelt ändra
+                                webbläsarens bredd. </p>
+
+                            <p> Att designa för responsiva sidor innehåller tre viktiga komponenter. En fluid layout,
+                                mediaqueries och flexibla bilder eller annan media. För att att åstadkomma detta måste
+                                förs viewporten sättas i &lt;head&gt; (nr 1). </p>
                         </div>
 
                         <div class="ui vertical segment">
@@ -278,27 +289,129 @@
 
                         <div class="ui vertical segment">
                             <h2 class="ui header">2. Fluid layout</h2>
+                            <p> För att kunna göra en fluid layout måste vi använda oss av relativa enheter som %, em
+                                eller rem. Procent % anävnds istället för px på <i>width</i>. Em och
+                                rem brukar vanligtvis användas till <i>fontsize</i>, men kan även användas till margin
+                                och padding. På W3schools finns en bra lista <a href="https://www.w3schools.com/cssref/css_units.asp"
+                                    target="_blank">relativa enheter vs absoluta.</a> </p>
+                            <p>Formeln för att bestämma hur många % en box ska ha är längden i px på själva elementen
+                                delat med längden i px på föräldraelementet.
 
-                            <div class="ui compact segment">
-                                <div class="ui segments">
-                                    <div class="ui center aligned segment">
-                                        <img src="../../../assets/images/fluid_layout.png" alt="Fluid layout" width="500px">
-                                    </div>
-                                    <div class="ui secondary segment">
-                                        Bildresultat för target context
-                                        Beginner's Guide to Responsive Web Design | Tayloe/Gray
-                                        tayloegray.com
-                                    </div>
+                            </p>
+                            <div class="ui segments">
+                                <div class="ui center aligned segment">
+                                    <img src="../../../assets/images/fluid_layout.png" alt="Fluid layout" width="500px">
+                                </div>
+                                <div class="ui secondary segment">
+                                    Bildresultat för target context
+                                    Beginner's Guide to Responsive Web Design | Tayloe/Gray
+                                    tayloegray.com
                                 </div>
                             </div>
-
+                            <div class="ui segments"></div>
+                            <p> Genom att använda formeln och omvandla till relativa enheter får vi en dynamisk storlek
+                                på elementen berooende på skärmbredden. För att tillföra ytterliggare kontroll att ett
+                                element inte får blir mindre eller störra än en viss bredd kan man använda <i>min-width</i>,
+                                <i>max-width</i> samt <i>min-height</i> och <i>max-height</i>.</p>
+                            <p> Här följer ett exempel:</p>
+                            <p data-height="265" data-theme-id="light" data-slug-hash="zhAsj" data-default-tab="css,result"
+                                data-user="shayhowe" data-pen-title="Flexible Grid" class="codepen">See the Pen <a href="https://codepen.io/shayhowe/pen/zhAsj/">Flexible
+                                    Grid</a> by Shay Howe (<a href="https://codepen.io/shayhowe">@shayhowe</a>) on <a
+                                    href="https://codepen.io">CodePen</a>.</p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                         </div>
+                        <p> Dock är inte alltid en fluid-layout tillräcklig. För många sidor behöver vi förändra vår
+                            layout enligt vissa regler, vilket vi kan göra med <i>mediaqueries</i></p>
+
 
 
 
 
                         <div class="ui vertical segment">
                             <h2 class="ui header"> 3. Mediaqueries</h2>
+                            <p>En media query kan kort beskrivas som att vi anger en regel och om denna uppfylls så
+                                kommer en (eller flera) CSS-regler att aktiveras. En sådan regel kan till exempel vara
+                                “när webbläsarfönstrets bredd är mindre än 800 pixlar”. Dessa regler kan skrivas och
+                                kombineras på flera olika vis för att vi ska kunna anpassa en webbplats mot flera
+                                enheter och format.
+
+                                Media queries placeras i en CSS-fil, vanligt är att dessa även placeras längst ner för
+                                att inte blanda ihopa vanlig CSS med den responsiva. För att visa hur en media query
+                                ser ut kan ni ta en titt på exemplet nedan.</p>
+
+                            <div class="ui compact segment">
+
+                                <pre><code class="css">@media only screen and (max-width: 800px) {
+    body {
+        background: yellow;
+    }
+} </code></pre>
+
+
+                            </div>
+
+                            <p>
+                                <b>only screen </b> - vår media query ska endast gälla på skärmar (dvs. datorskärm,
+                                surfplattor, smartphones, etc.)
+                            </p>
+                            <p>
+                                <b>(max-width: 800px)</b> - vår media query ska endast gälla vid den högst
+                                tillåtna
+                                bredden på 800 pixlar, dvs. att när bredden är mindre än 800 pixlar kommer vår
+                                regel att gälla
+                            </p>
+                            <p>När dessa två regler uppfylls kommer &lt;body&gt; få en gul bakgrundsfärg. Dessa regler
+                                benämns även som breakpoints, dvs. att vi
+                                bryter vår design på någotvis vid ett visst tillfälle. Observera att alla de
+                                ändringar vi vill ska ske inom en brytpunkt placeras inom <b>@media { ... }</b>.</p>
+                            <p>Det är tillåtet att ha flera brytpunkter i en CSS-fil, dessa placeras helt enkelt efter
+                                varandra, där varje brytpunkt även får innehålla flera CSS-regler. För att demonstrera
+                                detta kan ni ta en titt på exemplet nedan.</p>
+
+                            <div class="ui compact segment">
+
+                                <pre><code class="css">/* Första brytpunkten */
+@media only screen and (max-width: 900px) {
+    body {
+        background: green;
+    }
+
+    h1 {
+        font-size: 21px;
+        font-weight: normal;
+    }
+}
+
+
+/* Andra brytpunkten */
+@media only screen and (max-width: 600px) {
+    body {
+        background: blue;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+         </code></pre>
+
+
+                            </div>
+                            <div class="ui vertical segment">
+                                <h2 class="ui header">4. Flexibla bilder eller annan media</h2>
+                                <p>För att en bild ska kunna anpassa sig för mindre enheter så krävs det att ni anger
+                                    attributet <b>max-width: 100%</b>, detta innebär att dimensionerna för höjd och
+                                    bredd
+                                    kommer att bibehållas.
+
+                                </p>
+                                <p data-height="265" data-theme-id="light" data-slug-hash="fDLAH" data-default-tab="css,result"
+                                    data-user="shayhowe" data-pen-title="Flexible Media" class="codepen">See the Pen <a
+                                        href="https://codepen.io/shayhowe/pen/fDLAH/">Flexible Media</a> by Shay Howe (<a
+                                        href="https://codepen.io/shayhowe">@shayhowe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            </div>
+
 
 
                         </div>
@@ -314,43 +427,13 @@
 
 
 
-                        <div class="ui segment link">
-                            <h4 class="ui header link">Länkar </h4>
-                            <a href="#" target="_blank">
-                            </a>
-                            <br>
-                            <a href="#" target="_blank">
-
-                            </a>
-                            <br>
-
-
-                        </div>
-
                         <div class="ui hidden divider"></div>
 
 
-                        <!--           <div class="ui vertical segment">
-
-
-
-                        </div>
-
-
-
-                        <div class="ui vertical segment">
 
 
 
 
-                            <div class="ui message">
-
-                                <div class="ui header">Kuriosa</div>
-
-
-                            </div>
-
-                        </div> -->
 
                         <div class="ui segment link">
                             <h4 class="ui header link">Länkar </h4>
