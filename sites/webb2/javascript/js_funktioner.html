@@ -200,7 +200,34 @@
                           <div class="ui vertical segment">
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/X7ueyLkBx7Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                       
+                        <p> I Javascript brukar man skilja på att skriva en funktions deklaration. Detta skrivsätt är det som ni bekantat er med i Programmering 1. Funktionen har ett namn och körs när den anropas. </p>
+                                <div class="ui compact segment">
+                                        <pre><code class="js">function calcRectArea(width, height) {
+    var area = width * height;                                    
+    return area;
+}
+
+var area = calcRectArea(5, 6);
+console.log(area); //Skriver ut 30</code></pre>
+        
+                                    </div>
+                                    <p>I Javascript används även ett annat sätt att skriva funktioner. Det kallas funktionsuttryck 
+                                        eller function expression på engelska. I detta fall behöver inte funktionen ha ett namn, 
+                                        d.v.s den är anonym, utan funktionen tilldelas till en variabel. Man anropar sedan variabeln för att köra funtkionen. </p>
+                                    <div class="ui compact segment">
+                                        <pre><code class="js">var getRectArea = function(width, height) {
+    var area = width * height;    
+    return width * height;
+}
+
+var area = getRectArea(3,4);
+console.log(area); //Skriver ut 12</code></pre>
+</div>
+<p>Att välja mellan funktions deklaratation och funktionsuttryck är oftast en stilfråga, 
+    eller hur man lärt sig från början. Dock finns det några skillnader. 
+    För en funktionsdeklaration kan man köra funktionen tidigare i scriptet, 
+    innan funktionen deklarerats. Det kallas för <a href="https://www.w3schools.com/js/js_hoisting.asp" target="_blank">hoisting</a>. Funktionsuttryck kan inte hoistas, d.v.s man måste anropa funktionen efter att variabel har tilldelats funktionen. En annan skillnad är att i ett funktionsuttryck sparas funktionen i en variabel. Denna variabel blir också på så sätt möjlig att spara över.</p>
+                                  
                 <!--   <h3 class="ui header ">Loopar</h3>
                   <div class="ui vertical segment">
                 </div> -->
