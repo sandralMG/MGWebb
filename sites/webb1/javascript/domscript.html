@@ -16,8 +16,8 @@
 </head>
 
 <body>
-     <!--Sidebar-->
-     <div class="ui sidebar vertical menu">
+    <!--Sidebar-->
+    <div class="ui sidebar vertical menu">
 
         <div class="item">
             <div class="header">
@@ -49,6 +49,9 @@
                 </a>
                 <a class="item" href="../intro/historia.html">
                     Historia
+                </a>
+                <a class="item" href="../intro/teknisk_orientering.html">
+                    Teknisk orientering
                 </a>
             </div>
 
@@ -167,30 +170,30 @@
                     Infoga enkla javascript
                 </a>
                 <a class="item" href="domscript.html">
-                    Dokumentobjektsmodellen 
+                    Dokumentobjektsmodellen
                 </a>
 
             </div>
         </div>
         <div class="item">
-                <div class="header">
-                    Övrigt
-                </div>
-                <div class="menu">
-                    <a href="../annat/upphovsratt.html" class="item">
-                        Upphovsrätt
-                    </a>
-                    <a href="../annat/integritet.html" class="item">
-                        Integritet och etik 
-                    </a>
-                    <a href="../annat/tillganglighet.html" class="item">
-                        Tillgänglighet 
-                    <a href="../annat/sakerhet.html" class="item">
-                        Säkerhet
-                    </a>
-    
-                </div>
+            <div class="header">
+                Övrigt
             </div>
+            <div class="menu">
+                <a href="../annat/upphovsratt.html" class="item">
+                    Upphovsrätt
+                </a>
+                <a href="../annat/integritet.html" class="item">
+                    Integritet och etik
+                </a>
+                <a href="../annat/tillganglighet.html" class="item">
+                    Tillgänglighet </a>
+                <a href="../annat/sakerhet.html" class="item">
+                    Säkerhet
+                </a>
+
+            </div>
+        </div>
 
     </div>
     <!--end of sidebar-->
@@ -249,55 +252,59 @@
                         <div class="ui vertical segment">
 
                             <h1 class="ui header"> Dokumentsobjektsmodellen</h1>
-<p>Webbläsaren tolkar koden den får från servern och ritar upp strukturen internt för att veta hur den 
-    ska visa innehållet på webbsidan. DOM-strukturen håller ordning på hur olika delar som head, body, 
-    divar, texter, bilder med mera ska förhålla sig till varandra och hur de ska visas. Såväl HTML-koden 
-    som CSS-koden och skript (t.ex. JavaScript) som körs kan påverka strukturen. Detta sätt att beskriva 
-    sidan kallas <i>dokumentobjektsmodellen</i>, men förkortas oftast DOM.
+                            <p>Webbläsaren tolkar koden den får från servern och ritar upp strukturen internt för att
+                                veta hur den
+                                ska visa innehållet på webbsidan. DOM-strukturen håller ordning på hur olika delar som
+                                head, body,
+                                divar, texter, bilder med mera ska förhålla sig till varandra och hur de ska visas.
+                                Såväl HTML-koden
+                                som CSS-koden och skript (t.ex. JavaScript) som körs kan påverka strukturen. Detta sätt
+                                att beskriva
+                                sidan kallas <i>dokumentobjektsmodellen</i>, men förkortas oftast DOM.
 
-        Ibland vill man att något ska förändras efter att sidan byggts upp i webbläsaren, 
-        till exempel när besökaren håller muspekaren över något eller klickar på en knapp. 
-        Då kan man använda till exempel JavaScript för att göra ändringar i DOM-strukturen 
-        i den befintliga webbsidan.</p>
-                         
+                                Ibland vill man att något ska förändras efter att sidan byggts upp i webbläsaren,
+                                till exempel när besökaren håller muspekaren över något eller klickar på en knapp.
+                                Då kan man använda till exempel JavaScript för att göra ändringar i DOM-strukturen
+                                i den befintliga webbsidan.</p>
+
                         </div>
 
                         <div class="ui vertical segment">
 
-                                <div class="ui compact segment">
+                            <div class="ui compact segment">
 
-                                        <img src="../../../assets/images/dom3.png" alt="Arv CSS" width="500px">
-                                </div>
-                         
-                        </div>
-
-                        <div class="ui vertical segment">
-                                <div class="ui compact segment">
-
-                                        <img src="../../../assets/images/dom2.PNG" alt="Arv CSS" width="500px">
-                                </div>
-                        </div>
-
-
-
-
-                        <div class="ui vertical segment">
-                                <div class="ui compact segment">
-
-                                        <img src="../../../assets/images/dom.png" alt="Arv CSS" width="500px">
-                                </div>
+                                <img src="../../../assets/images/dom3.png" alt="Arv CSS" width="500px">
+                            </div>
 
                         </div>
 
+                        <div class="ui vertical segment">
+                            <div class="ui compact segment">
+
+                                <img src="../../../assets/images/dom2.PNG" alt="Arv CSS" width="500px">
+                            </div>
+                        </div>
+
+
+
 
                         <div class="ui vertical segment">
-                                <h2 class="ui header"> Diskreta domskript</h2>
-                                <p>Tänk dig tillbaka till dokumentobjektsmodellen och trädet med alla noderna. 
-                                    Om man väljer en nod, till exempel ett textstycke, och lägger till egenskapen 
-                                    id och ett unikt värde till taggen, kan man påverka den med ett DOM-skript. 
-                                    Ett DOM-skript kan till exempel vara ett JavaScript.</p>
-                                <div class="ui compact segment">
-                                        <pre><code class=js">HTML:
+                            <div class="ui compact segment">
+
+                                <img src="../../../assets/images/dom.png" alt="Arv CSS" width="500px">
+                            </div>
+
+                        </div>
+
+
+                        <div class="ui vertical segment">
+                            <h2 class="ui header"> Diskreta domskript</h2>
+                            <p>Tänk dig tillbaka till dokumentobjektsmodellen och trädet med alla noderna.
+                                Om man väljer en nod, till exempel ett textstycke, och lägger till egenskapen
+                                id och ett unikt värde till taggen, kan man påverka den med ett DOM-skript.
+                                Ett DOM-skript kan till exempel vara ett JavaScript.</p>
+                            <div class="ui compact segment">
+                                <pre><code class=js">HTML:
 &lt;p id="demo"&gt;Jag har provat göra ett javaskript&lt;/p&gt;
 &lt;button onclick="myFunction()"&gt;Click Me!&lt;/button&gt;
 
@@ -312,14 +319,14 @@ function myFunction() {
 
 </code></pre>
 
-</div>
+                            </div>
 
 
                         </div>
 
 
                         <div class="ui vertical segment">
-                        
+
                         </div>
 
 
@@ -331,10 +338,11 @@ function myFunction() {
                             <a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank">W3 Schools DOM
                             </a>
                             <br>
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">MDN Introduction to the DOM
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"
+                                target="_blank">MDN Introduction to the DOM
                             </a>
                             <br>
-                         
+
 
                         </div>
 
