@@ -231,7 +231,7 @@
         <!--end of pusher-->
         <div class="ui main container">
 
-            <div class="ui center aligned grid">
+            <div class="ui  aligned grid">
                 <div class="row">
                     <div class="three wide column">
                         <!--   <div class="ui grey segment">
@@ -240,11 +240,77 @@
                     </div>
                     <div class="ten wide column">
 
-                        <!-- Kunskapskrav-->
-                        <h1 class="ui header"> Webbens historia</h1>
+
+                        <h1 class="ui header">Teknisk orientering</h1>
                         <div class="ui hidden divider"></div>
-                        <p><a href="webhistory/index.html" target="_blank">En överblick av webbens historia + teknisk
-                                orientering </a>- En gruppgift av 18 TE KOD Hösterminen 2018. </p>
+
+                        <p>Du har en webbläsare (browser) som Chrome, Firefox, Safari eller Edge på din dator. med den
+                            besöker du webbplatser (sajter) eller använder webbapplikationer. Webbläsaren läser in
+                            HTML-kod och visar (eller renderar) det för användaren.
+                            HTML-koden styr innehållet på sidan och kan i sin innehålla en stilmall (CSS) som styr
+                            utseendet på sida, men kan även Javascript som styr sidans beteende. Dess tre tekniker
+                            tokas inuti webbläsaren.
+                        </p>
+                        <p>
+                            För att efterfråga en webbplats/webbapplikation skriver man in en <b>URL</b> i adresslistan
+                            på sin i webbläsare. Du känner igen formatet, exempelvis:</p>
+
+                        <p>http://example.com/path/to/page</p>
+
+                        <b>example.com</b> är det domännamn man skriver i adressfältet för att komma till en sida och
+                        kan följas av en eventuell sökväg som /path/to/page
+                        </p>
+                        <p>En <b>IP-adress</b> (Internet Protocol Adress) är ett nummer som används som adress på
+                            Internet, exempelvis 172.16.254.1. För att kunna matcha den läsliga url:en med en ip-adress
+                            görs en förfrågan hos en <b>DNS (Domain Name System)</b>. DNS är alltså det som håller ihop
+                            domännamn med ip-adresser.</p>
+
+                        <p>
+                            När webbläsaren vet IP-adressen så inleds kommunikation över det <b>protokoll</b> som
+                            angivits.
+                            Ett kommunikationsprotokoll mellan datorer innehåller strikta regler om hur kommunikationen
+                            ska ske.
+                            För webben är det oftast http eller https. <b>HTTP</b> står för <b> Hypertext Transfer
+                                Protocol</b>och är
+                            ett kommunikationsprotokoll som används för att överföra webbsidor över
+                            informationsnätverket World Wide Web (www). Syftet med http är att tillhandahålla en metod
+                            för att överföra html-sidor från webbservrar till webbklienter. Det bygger på ett
+                            förfrågan/svar-förfarande mellan <b>lient</b>k och <b>server</b>.
+                        </p>
+
+                        <h2 class="ui header">Hur efterfrågas em webbsida?</h2>
+
+                        <p>En http-klient (vanligen en webbläsare) som skall hämta en html-fil från en webbserver
+                            skickar en förfrågan som består av en mindre text till en TCP-port på servern. Texten
+                            innehåller information vilken version av http som används och vilken fil som klienten skall
+                            skicka. När förfrågan mottagits av webbservern svarar denna med att skicka tillbaka ett
+                            kort svar tillsamman med en datamängd som innehåller den efterfrågade webbsidan - så länge
+                            den finns på webbservern. </p>
+
+                        <div class="ui compact segment">
+                            <img src="../../../assets/images/klient_server.png" alt="html grundregel" width="500px">
+                        </div>
+
+
+                        <p>Skillnaden med <b>HTTPS</b> är att kommunikationsprotokollet är krypterad där s:et står för
+                            secure.
+                            Krypteringen sker i sin tur med en teknik som kallas <b>SSL(Secure Sockets Layer)</b> . </p>
+
+                        <h3 class="ui header">Statiska vs. dynamiska webbsidor</h3>
+
+                        <p>De enklaste webbplatserna är statiska. Det innebär att sidorna ligger lagrade som HTML-kod i
+                            serverns filsystem. Vid en förfrågan så matchas en url:en ihop med motsvarande fil.
+                            Dynamiska sidor skapas i det ögonblick de efterfrågas, där http-förfrågan (http-request)
+                            triggar igång ett program på servern som i sin tur hämtar data från olika databaser eller
+                            filer på andra program eller andra servrar. <br />I Webbutveckling 1 gör vi endast statiska
+                            sidor.
+                        </p>
+
+                        <p>
+                            De tekniker som tolkas av en webbläsare, d.v.s på klientsidan är det ämnet Webbutveckling
+                            innehåller och yrkesrollen brukar benämnas <b>front-end developer</b>.
+                            De tekniker som används på serversidan ingår i den valbara kursen Webserverprogrammering.
+                            Den yrkesrollen brukar benämnas <b>back-end developer</b>. </p>
 
                     </div>
                     <div class="three wide column">
