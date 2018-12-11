@@ -95,7 +95,7 @@
                 Javascript
             </div>
             <div class="menu">
-                <a class="item" href="intro_js.html"> 
+                <a class="item" href="intro_js.html">
                     Intro Javascript
                 </a>
                 <a class="item" href="js_grunder.html">
@@ -104,7 +104,7 @@
                 <a class="item" href="js_funktioner.html">
                     Javascript Funktioner
                 </a>
-            
+
             </div>
         </div>
 
@@ -193,42 +193,101 @@
                     <div class="ten wide column">
                         <div class="ui vertical segment">
                             <h1 class="ui header ">Javascript Funktioner</h1>
-                          
-                          <p>Här finns det material du behöver för att klara Uppgift 3 - Javascript Funktioner</p>
-                          <h3 class="ui header ">Om funktioner</h3>
-                          <p>Varför funktioner? Olika typer av funktioner? Hur skriver man en funktion?</p>
-                          <div class="ui vertical segment">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/X7ueyLkBx7Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <p> I Javascript brukar man skilja på att skriva en funktions deklaration. Detta skrivsätt är det som ni bekantat er med i Programmering 1. Funktionen har ett namn och körs när den anropas. </p>
-                                <div class="ui compact segment">
-                                        <pre><code class="js">function calcRectArea(width, height) {
-    var area = width * height;                                    
-    return area;
-}
 
-var area = calcRectArea(5, 6);
-console.log(area); //Skriver ut 30</code></pre>
-        
-                                    </div>
-                                    <p>I Javascript används även ett annat sätt att skriva funktioner. Det kallas funktionsuttryck 
-                                        eller function expression på engelska. I detta fall behöver inte funktionen ha ett namn, 
-                                        d.v.s den är anonym, utan funktionen tilldelas till en variabel. Man anropar sedan variabeln för att köra funtkionen. </p>
-                                    <div class="ui compact segment">
-                                        <pre><code class="js">var getRectArea = function(width, height) {
-    var area = width * height;    
-    return width * height;
-}
+                            <p>Här finns det material du behöver för att klara Uppgift 3 - Javascript Funktioner</p>
+                            <h3 class="ui header ">Om funktioner</h3>
+                            <p>Varför funktioner? Olika typer av funktioner? Hur skriver man en funktion?</p>
+                            <div class="ui vertical segment">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/X7ueyLkBx7Q"
+                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
 
-var area = getRectArea(3,4);
-console.log(area); //Skriver ut 12</code></pre>
-</div>
-<p>Att välja mellan funktions deklaratation och funktionsuttryck är oftast en stilfråga, 
-    eller hur man lärt sig från början. Dock finns det några skillnader. 
-    För en funktionsdeklaration kan man köra funktionen tidigare i scriptet, 
-    innan funktionen deklarerats. Det kallas för <a href="https://www.w3schools.com/js/js_hoisting.asp" target="_blank">hoisting</a>. Funktionsuttryck kan inte hoistas, d.v.s man måste anropa funktionen efter att variabel har tilldelats funktionen. En annan skillnad är att i ett funktionsuttryck sparas funktionen i en variabel. Denna variabel blir också på så sätt möjlig att spara över.</p>
-                                  
-                <!--   <h3 class="ui header ">Loopar</h3>
+                            <h4 class="ui header ">Olika typer av funktioner</h4>
+
+                            <p> I Javascript kan man göra väldigt mycket med funktioner. Man kan exmpelvis köra en
+                                funktion som argument till en annan funktion. Vi kommer inte kunan täcka alla deltaljer
+                                om funktioner i kursen, utan endast skrapa på ytan. På det stora hela kan
+                                man dela in funktioner i Javascript som:</p>
+
+                            <ul class="ui list">
+                                <li>Namgivna funktioner (eng. named functions)</li>
+                                <li>Anonyma funktioner (eng. anonymous function)</li>
+                                <li>Immediately invoked functions, förkortat IIFE (hittar ingen översättning)</li>
+                            </ul>
+
+                            <p>I kursen kommer ni primärt i kontakt med namngivna funktioner, lite om anonyma. IIFE är
+                                lite överkurs, men är bra om du vill fördjupa dig. </p>
+
+                            <h4 class="ui header ">Strukturen för en funktion</h4>
+
+                            <p> Även om funktioner kan skrivas
+                                på lite olika sätt i Javascript finns dessa beståndsdelar med mer eller mindre.
+                                Ordet <i>function</i> talar om för Javascript att den ska tolkas som en funktion. Om
+                                funktionen
+                                är en namngiven funktion (named function) så anges dess namn. En funktion kan ha
+                                inparametrar, men behöver inte ha det.
+                                Detsamma är det med utparametern, en funktion kan returnera ett svar som i det här
+                                fallet. Eller utelämna det, då utförs endast de
+                                rader som är innan för kodplocket. Om man vill köra en funktion anropar man det med
+                                dess namn + eventuella inparametrar.
+                                Om funktionen returnerar ett värde måste man spara det i en variabel.
+                            </p>
+
+                            <div class="ui compact small segment">
+
+                                <img src="../../../assets/images/om_funktioner.png" alt="Javascript Funktioner" width="500px">
+                            </div>
+
+                            <p>Funktioner är bra då de kan ta inparametrar och ge ett svar med <i>return</i>.
+                                Funktioner spelar en stor nytta då de blir återanvändbara och man inte behöver upprepa
+                                sin kod.</p>
+                            <div class="ui compact segment">
+
+                                <img class="ui medium image" src="../../../assets/images/return_keyword.png" alt="Return keyword"
+                                    width="500px">
+                            </div>
+
+
+                            <p> För namngivna och anononyma funktioner finns det två skrivsätt som ni kommer att jobba
+                                med i Uppgift 3:</p>
+
+                            <ul class="ui list">
+                                <li>Funktions deklaration (eng. function declaration</li>
+                                <li>Funktionsuttryck (eng. function expression)</li>
+                            </ul>
+                            <h4 class="ui header ">Funktions deklaration</h4>
+
+                            <p> I Javascript brukar man skilja på att skriva en funktions deklaration. Detta skrivsätt
+                                är det som ni bekantat er med i Programmering 1. Funktionen har ett namn och körs när
+                                den anropas. Funktionen kan returnera ett värde eller endast utföra de isntruktioner
+                                som står i kodblocket </p>
+
+                            <script async src="//jsfiddle.net/sandral/x0quLbdm/7/embed/"></script>
+
+                            <h4 class="ui header ">Funktions uttryck</h4>
+
+                            <p>I Javascript används även ett annat sätt att skriva funktioner. Det kallas
+                                funktionsuttryck
+                                eller function expression på engelska. I detta fall behöver inte funktionen ha ett
+                                namn,
+                                d.v.s den är anonym, utan funktionen tilldelas till en variabel. Man anropar sedan
+                                variabeln för att köra funtkionen. </p>
+                            <script async src="//jsfiddle.net/sandral/dfxpsyv4/embed/"></script>
+                            <h4 class="ui header ">Funktions deklaration eller funktionsuttryck?</h4>
+
+                            <p>Att välja mellan funktions deklaratation och funktionsuttryck är oftast en stilfråga,
+                                eller hur man lärt sig från början. Dock finns det några skillnader.
+                                För en funktionsdeklaration kan man köra funktionen tidigare i scriptet,
+                                innan funktionen deklarerats. Det kallas för <a href="https://www.w3schools.com/js/js_hoisting.asp"
+                                    target="_blank">hoisting</a>. Funktionsuttryck kan inte hoistas, d.v.s man måste
+                                anropa funktionen efter att variabel har tilldelats funktionen. En annan skillnad är
+                                att i ett funktionsuttryck sparas funktionen i en variabel. Denna variabel blir också
+                                på så sätt möjlig att spara över.</p>
+                            <h4 class="ui header ">Immediately invoke function (IIFE)</h4>
+                            <p>Dessa funktioner anropar man utan körs direkt när de stöts på i koden.</p>
+                            <script async src="//jsfiddle.net/sandral/x0quLbdm/embed/"></script>
+                            <!--   <h3 class="ui header ">Loopar</h3>
                   <div class="ui vertical segment">
                 </div> -->
                         </div>
@@ -236,24 +295,25 @@ console.log(area); //Skriver ut 12</code></pre>
                             <h4 class="ui header ">Länkar</h4>
                             <a href="http://javascript.info/" target="_blank">Javascript Info - bra referensguide</a>
                             <br />
-                            <a href="http://eloquentjavascript.net/" target="_blank">Eloquent Javascript - bra gratis bok för dig som vill gå på djupet</a>
+                            <a href="http://eloquentjavascript.net/" target="_blank">Eloquent Javascript - bra gratis
+                                bok för dig som vill gå på djupet</a>
                             <br />
                             <a href="https://www.w3schools.com/js/" target="_blank">W3 Schools Javascript Tutorial</a>
                             <br />
 
-                            
+
                         </div>
 
                         <div class="ui hidden divider"></div>
 
 
-                            <a href="intro_js.html">
+                        <a href="intro_js.html">
                             <button class="ui left floated labeled icon button">
                                 <i class="left arrow icon"></i>
                                 Intro Javascript</button>
                         </a>
 
-<!-- 
+                        <!-- 
                         <a href="#">
                             <button class="ui right floated labeled icon button">
                                 <i class="right arrow icon"></i>
