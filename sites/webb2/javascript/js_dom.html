@@ -196,9 +196,42 @@
                     </div>
                     <div class="ten wide column">
                         <div class="ui vertical segment">
-                            <h1 class="ui header ">Javascript Dokumentobjektsmodellen (DOM)</h1>
+                            <h1 class="ui header">Javascript Dokumentobjektsmodellen (DOM)</h1>
 
-                            <p>Här finns det material du behöver för att klara Uppgift 4 - Javascript DOM</p>
+                            <p>Dokumentobjektsmodellen brukar förkortas DOM och är det som gör det möjligt att göra webbsidor interaktiva. 
+                              De flesta webbsidor utför instruktioner som körs av ett Javascript. Exempelvis när man ska klicka fram nya bilder i ett bildspel, en interaktiv navigationsmeny eller att få återkoppling om ett formulär är rätt ifyllt eller inte.
+                              Denna funktionalitet vilar på att Javascript kan få åtkomst till webbsidan genom DOM för att interaktivt kunna få det förändrade innehållet eller få information om vad använderen har matat in på sidan.
+                            </p>
+                            <p>
+                               DOM är själva gränsnittet som tillåter Javascript (och även andra programmeringsspråk) att ändra eööer manipulera innehåll, struktur eller styling till ett html-dokument.
+                               Vi använder ju oss av Javascript och det är genom DOM som vi kan koppla instruktioner i vår kod till en webbsida. 
+                               I detta avsnitt ska vi lära oss grunderna hur vi kan hitta element i en html som vi sedan vill kunna ändra exempelvis textinnehåll, attribut till element eller styling.
+                            </p>
+                            <h2 class="ui header">Vad är DOM?</h2>
+
+                            <p>En webbsida innehåll ett html-dokument. Webbläsare som visar webbsidan är ett program som tolkar, eller 
+                                bättre uttryck intepreterar den HTML och CSS som gör att webbsidan visas som den ska. Med andra ord säger man att webbläsaren renderar innehållet, strukturer och utseendet. 
+
+                            </p>
+                            <p>Förutom att webbsidan renderas av webbläsaren så skapas en representation av dokumentet i webbläsarens - denna representation är Dokumentobjektsmodellen. Denna represenation är en modell som tillåter Javascript att komma åt alla element och dess innehåll av webbsidans dokument där varje del i modellen är ett objekt.</p>
+
+                            <p>Vi tar ett exempel. Detta html-dokument visas i en webbläsare. </p>
+                            <script async src="//jsfiddle.net/sandral/wr0zuygs/1/embed/"></script>
+                            
+                            <p>Nu ska vi titta på webbsidans represention eller modell som den tolkas i webbläsaren. Dokumentobjektsmodell är ett långt ord, men dess innebörd handlar om att webbsidan lagras som en represantation eller modell i det s.k document-objektet vilket innehåller hela representation elelr modellen för webbsidan. Om vi skriver "dokument" i consolen får vi ett svar på webbsidans struktur. Den ser ju likadan som själva html-koden - men det är detta som är själva DOM som vi kan interagera och förändea med Javascript.  </p>
+                            <div class="ui compact small segment">
+
+                                    <img src="../../../assets/images/DOMinbrowser.PNG" alt="Javascript DOM" width="700px">
+                                </div>
+<p>Om vi istället skriver document.body får vi åtkomst endast till body-delen av webbsidan. </p>
+                                <div class="ui compact small segment">
+
+                                        <img src="../../../assets/images/DOMinbrowser2.PNG" alt="Javascript DOM" width="700px">
+                                    </div>
+                                    <div class="ui  compact small segment">
+
+                                            <img src="../../../assets/images/DOMTree.PNG" alt="Javascript DOM" width="300px">
+                                        </div>
 
                             <iframe src="//slides.com/sandralarsson-1/deck-6/embed?style=light" width="576" height="420"
                                 scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
