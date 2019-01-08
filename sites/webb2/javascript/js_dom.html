@@ -1,308 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css"
+    />
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
     <script>
-        hljs.initHighlightingOnLoad();
+      hljs.initHighlightingOnLoad();
     </script>
-    <link rel="stylesheet" type="text/css" href="../../../style/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../style/style.css" />
     <title>Webbutveckling 2</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--Sidebar-->
     <div class="ui sidebar vertical menu">
-
-        <div class="item">
-            <div class="header">
-                Webbutveckling 2
-            </div>
-            <div class="menu">
-                <a class="item" href="../info/planering.html">
-                    Planering
-                </a>
-                <a class="item" href="../info/kursplan.html">
-                    Kursens innehåll
-                </a>
-
-            </div>
+      <div class="item">
+        <div class="header">Webbutveckling 2</div>
+        <div class="menu">
+          <a class="item" href="../info/planering.html"> Planering </a>
+          <a class="item" href="../info/kursplan.html"> Kursens innehåll </a>
         </div>
-        <div class="item">
-            <div class="header">
-                CSS Fördjupning
-
-            </div>
-            <div class="menu">
-                <a class="item" href="selectorsCSS.html">
-                    CSS Selektorer
-                </a>
-                <a class="item" href="flexbox.html">
-                    CSS Flexbox
-                </a>
-                <a class="item" href="grids.html">
-                    CSS Grid
-                </a>
-                <a class="item" href="rwd.html">
-                    Responsive Web Design
-                </a>
-                <a class="item" href="preprocessors.html">
-                    CSS Preprocessors
-                </a>
-            </div>
-
+      </div>
+      <div class="item">
+        <div class="header">CSS Fördjupning</div>
+        <div class="menu">
+          <a class="item" href="selectorsCSS.html"> CSS Selektorer </a>
+          <a class="item" href="flexbox.html"> CSS Flexbox </a>
+          <a class="item" href="grids.html"> CSS Grid </a>
+          <a class="item" href="rwd.html"> Responsive Web Design </a>
+          <a class="item" href="preprocessors.html"> CSS Preprocessors </a>
         </div>
+      </div>
 
-        <div class="item">
-            <div class="header">
-                Bilder och Grafik
-
-            </div>
-            <div class="menu">
-                <a class="item" href="../webgraphics/image_gallery.html">
-                    Bildgalleri med Flexbox/CSS Grid
-                </a>
-                <a class="item" href="../webgraphics/responsive_images.html">
-                    Responsiva bilder
-                </a>
-
-            </div>
-
+      <div class="item">
+        <div class="header">Bilder och Grafik</div>
+        <div class="menu">
+          <a class="item" href="../webgraphics/image_gallery.html">
+            Bildgalleri med Flexbox/CSS Grid
+          </a>
+          <a class="item" href="../webgraphics/responsive_images.html">
+            Responsiva bilder
+          </a>
         </div>
-        <div class="item">
-            <div class="header">
-                Test
-            </div>
-            <div class="menu">
-                <a class="item" href="validation.html">
-                    Validering
-                </a>
-                <a class="item" href="web_support.html">
-                    Webbläsarstöd
-                </a>
-
-            </div>
-
+      </div>
+      <div class="item">
+        <div class="header">Test</div>
+        <div class="menu">
+          <a class="item" href="validation.html"> Validering </a>
+          <a class="item" href="web_support.html"> Webbläsarstöd </a>
         </div>
+      </div>
 
-
-        <div class="item">
-            <div class="header">
-                Javascript
-            </div>
-            <div class="menu">
-                <a class="item" href="intro_js.html">
-                    Intro Javascript
-                </a>
-                <a class="item" href="js_grunder.html">
-                    Javascript Grunder
-                </a>
-                <a class="item" href="js_funktioner.html">
-                    Javascript Funktioner
-                </a>
-                <a class="item" href="js_dom.html">
-                    Javascript DOM
-                </a>
-
-            </div>
+      <div class="item">
+        <div class="header">Javascript</div>
+        <div class="menu">
+          <a class="item" href="intro_js.html"> Intro Javascript </a>
+          <a class="item" href="js_grunder.html"> Javascript Grunder </a>
+          <a class="item" href="js_funktioner.html"> Javascript Funktioner </a>
+          <a class="item" href="js_dom.html"> Javascript DOM </a>
         </div>
+      </div>
 
-        <div class="item">
-            <div class="header">
-                Ramverk och klassbibliotek </div>
-            <div class="menu">
-                <a class="item">
-                </a>
-                <a class="item">
-                </a>
-                <a class="item">
-                </a>
-
-            </div>
+      <div class="item">
+        <div class="header">Ramverk och klassbibliotek</div>
+        <div class="menu">
+          <a class="item"> </a> <a class="item"> </a> <a class="item"> </a>
         </div>
+      </div>
 
-
-        <div class="item">
-            <div class="header">
-                Animation och interaktiv grafik
-            </div>
-            <div class="menu">
-                <a class="item">
-                </a>
-                <a class="item">
-                </a>
-
-            </div>
-        </div>
-
-
+      <div class="item">
+        <div class="header">Animation och interaktiv grafik</div>
+        <div class="menu"><a class="item"> </a> <a class="item"> </a></div>
+      </div>
     </div>
     <!--end of sidebar-->
     <!-- Pusher-->
     <div class="pusher">
-
-        <!-- Top menu-->
-        <div class="top ui fixed menu">
-            <a class="item sidebar">
-                <i class="icon big sidebar"></i>
-            </a>
-            <a class="item">
-                <div class="ui header">Webbutveckling 2</div>
-            </a>
-            <div class="right menu">
-                <div class="right menu">
-                    <div class="item">
-
-                        <a href="../../../index.html">
-                            <img src=" ../../../assets/images/mglogo.jpg " width="100px ">
-                        </a>
-                    </div>
-                    <div class="ui dropdown item">
-                        Kurser
-                        <i class="dropdown icon"></i>
-                        <div class="menu">
-                            <a class="item" href="../../webb1/info/kursplan.html">Webbutveckling 1</a>
-                            <a class="item" href="../info/kursplan.html">Webbutveckling 2</a>
-                            <a class="item" href="../../webbsev1/info/kursplan.html">Webbserverprogrammering 1</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="ui icon input">
-                            <input type="text" placeholder="Sök...">
-                            <i class="search link icon"></i>
-                        </div>
-                    </div>
-
-                </div>
+      <!-- Top menu-->
+      <div class="top ui fixed menu">
+        <a class="item sidebar"> <i class="icon big sidebar"></i> </a>
+        <a class="item"> <div class="ui header">Webbutveckling 2</div> </a>
+        <div class="right menu">
+          <div class="right menu">
+            <div class="item">
+              <a href="../../../index.html">
+                <img src=" ../../../assets/images/mglogo.jpg " width="100px " />
+              </a>
             </div>
-            <!--end of top menu-->
-
+            <div class="ui dropdown item">
+              Kurser <i class="dropdown icon"></i>
+              <div class="menu">
+                <a class="item" href="../../webb1/info/kursplan.html"
+                  >Webbutveckling 1</a
+                >
+                <a class="item" href="../info/kursplan.html"
+                  >Webbutveckling 2</a
+                >
+                <a class="item" href="../../webbsev1/info/kursplan.html"
+                  >Webbserverprogrammering 1</a
+                >
+              </div>
+            </div>
+            <div class="item">
+              <div class="ui icon input">
+                <input type="text" placeholder="Sök..." />
+                <i class="search link icon"></i>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--end of pusher-->
+        <!--end of top menu-->
+      </div>
+      <!--end of pusher-->
 
-        <div class="ui main container">
-
-            <div class="ui grid">
-                <div class="row">
-                    <div class="three wide column">
-                        <!--   <div class="ui grey segment">
+      <div class="ui main container">
+        <div class="ui grid">
+          <div class="row">
+            <div class="three wide column">
+              <!--   <div class="ui grey segment">
               <p>three wide column</p>
             </div> -->
-                    </div>
-                    <div class="ten wide column">
-                        <div class="ui vertical segment">
-                            <h1 class="ui header">Javascript Dokumentobjektsmodellen (DOM)</h1>
+            </div>
+            <div class="ten wide column">
+              <div class="ui vertical segment">
+                <h1 class="ui header">
+                  Javascript Dokumentobjektsmodellen (DOM)
+                </h1>
 
-                            <p>Dokumentobjektsmodellen brukar förkortas DOM och är det som gör det möjligt att göra webbsidor interaktiva. 
-                              De flesta webbsidor utför instruktioner som körs av ett Javascript. Exempelvis när man ska klicka fram nya bilder i ett bildspel, en interaktiv navigationsmeny eller att få återkoppling om ett formulär är rätt ifyllt eller inte.
-                              Denna funktionalitet vilar på att Javascript kan få åtkomst till webbsidan genom DOM för att interaktivt kunna få det förändrade innehållet eller få information om vad använderen har matat in på sidan.
-                            </p>
-                            <p>
-                               DOM är själva gränsnittet som tillåter Javascript (och även andra programmeringsspråk) att ändra eööer manipulera innehåll, struktur eller styling till ett html-dokument.
-                               Vi använder ju oss av Javascript och det är genom DOM som vi kan koppla instruktioner i vår kod till en webbsida. 
-                               I detta avsnitt ska vi lära oss grunderna hur vi kan hitta element i en html som vi sedan vill kunna ändra exempelvis textinnehåll, attribut till element eller styling.
-                            </p>
-                            <h2 class="ui header">Vad är DOM?</h2>
+                <p>
+                  Dokumentobjektsmodellen brukar förkortas DOM och är det som
+                  gör det möjligt att göra webbsidor interaktiva. De flesta
+                  webbsidor utför instruktioner som körs av ett Javascript.
+                  Exempelvis när man ska klicka fram nya bilder i ett bildspel,
+                  en interaktiv navigationsmeny eller att få återkoppling om ett
+                  formulär är rätt ifyllt eller inte. Denna funktionalitet vilar
+                  på att Javascript kan få åtkomst till webbsidan genom DOM för
+                  att interaktivt kunna få det förändrade innehållet eller få
+                  information om vad använderen har matat in på sidan.
+                </p>
+                <p>
+                  DOM är alltså själva gränsnittet som tillåter Javascript (och
+                  även andra programmeringsspråk) att ändra eller manipulera
+                  innehåll, struktur eller styling till ett html-dokument. I
+                  detta avsnitt ska vi lära oss grunderna hur vi kan hitta
+                  element i en html som vi sedan vill kunna ändra exempelvis
+                  textinnehåll, attribut till element eller styling.
+                </p>
+              </div>
+              <div class="ui vertical segment">
+                <h2 class="ui header">Vad är DOM?</h2>
 
-                            <p>En webbsida innehåll ett html-dokument. Webbläsare som visar webbsidan är ett program som tolkar, eller 
-                                bättre uttryck intepreterar den HTML och CSS som gör att webbsidan visas som den ska. Med andra ord säger man att webbläsaren renderar innehållet, strukturer och utseendet. 
+                <p>
+                  En webbläsare är ett program som tolkar, eller bättre uttryck
+                  intepreterar medföljande HTML och CSS. Den renderar webbsidan
+                  så att den visar det den ska. Förutom att webbläsaren renderar
+                  webbsidan så skapas en representation av dokumentet i
+                  webbläsarens - denna representation är
+                  Dokumentobjektsmodellen. Denna represenation är en modell som
+                  tillåter Javascript att komma åt alla element och dess
+                  innehåll av webbsidans dokument där varje del i modellen är
+                  ett objekt.
+                </p>
 
-                            </p>
-                            <p>Förutom att webbsidan renderas av webbläsaren så skapas en representation av dokumentet i webbläsarens - denna representation är Dokumentobjektsmodellen. Denna represenation är en modell som tillåter Javascript att komma åt alla element och dess innehåll av webbsidans dokument där varje del i modellen är ett objekt.</p>
+                <p>Vi tar ett exempel med html-kod för följande html-sida:</p>
+                <div class="ui  segment">
+                  <script
+                    async
+                    src="//jsfiddle.net/sandral/wr0zuygs/embed/html,result/"
+                  ></script>
+                </div>
+                <br />
+                <p>
+                  Nu ska vi titta på webbsidans represention eller modell som
+                  den tolkas i webbläsaren. Dokumentobjektsmodellen är ett långt
+                  ord, men dess innebörd handlar om att webbsidan lagras som en
+                  represantation eller modell i det s.k document-objektet vilket
+                  innehåller hela representation eller modellen för webbsidan.
+                  Om vi skriver <b>document</b> i consolen får vi ett svar på
+                  webbsidans struktur. Den ser ju likadan som själva html-koden
+                  - men det är detta som är själva DOM som vi kan interagera och
+                  förändea med Javascript.
+                </p>
+                <div class="ui compact small segment">
+                  <img
+                    src="../../../assets/images/DOMinbrowser.PNG"
+                    alt="Javascript DOM"
+                    width="700px"
+                  />
+                </div>
+                <p>
+                  Om vi istället skriver <b>document.body</b> får vi åtkomst
+                  endast till body-delen av webbsidan.
+                </p>
+                <div class="ui compact small segment">
+                  <img
+                    src="../../../assets/images/DOMinbrowser2.PNG"
+                    alt="Javascript DOM"
+                    width="700px"
+                  />
+                </div>
 
-                            <p>Vi tar ett exempel. Detta html-dokument visas i en webbläsare. </p>
-                            <script async src="//jsfiddle.net/sandral/wr0zuygs/1/embed/"></script>
-                            
-                            <p>Nu ska vi titta på webbsidans represention eller modell som den tolkas i webbläsaren. Dokumentobjektsmodell är ett långt ord, men dess innebörd handlar om att webbsidan lagras som en represantation eller modell i det s.k document-objektet vilket innehåller hela representation elelr modellen för webbsidan. Om vi skriver "dokument" i consolen får vi ett svar på webbsidans struktur. Den ser ju likadan som själva html-koden - men det är detta som är själva DOM som vi kan interagera och förändea med Javascript.  </p>
-                            <div class="ui compact small segment">
+                <p>
+                  DOM brukar i många fall förklaras med en trädstruktur som
+                  innehåller alla objekt som finns på webbsidan. Varje del i
+                  trädet, eller objekt, brukar kallas <b>nod</b>. Som man ser på
+                  bilden är alltså <b>document</b> roten i trädet som håller
+                  alla noder. Detta gör det möjligt att hitta det element man
+                  vill manipulera.
+                </p>
+                <div class="ui  compact small segment">
+                  <img
+                    src="../../../assets/images/DOMTree.PNG"
+                    alt="Javascript DOM"
+                    width="300px"
+                  />
+                </div>
+                <p>
+                  M.h.a DOM kan vi hitta det elementet som vi är intresserade
+                  av. Exempelvis rubriken h1 och ändra denna till en annan med
+                  Javascript. Hur vi gör det är alltså grunden att skapa
+                  interaktivitet med Javascript, vilket vi nu ska lära oss!
+                </p>
+                <div class="ui vertical segment">
+                  <h2 class="ui header">
+                    DOM Selektorer - metoder för att hitta element
+                  </h2>
 
-                                    <img src="../../../assets/images/DOMinbrowser.PNG" alt="Javascript DOM" width="700px">
-                                </div>
-<p>Om vi istället skriver document.body får vi åtkomst endast till body-delen av webbsidan. </p>
-                                <div class="ui compact small segment">
+                  <p>
+                    Det finns olika metoder att hitta element med Javascript. Vi
+                    kommer framförallt att lära oss dess tre. Det finns även
+                    fler, men man kan klarar sig bra att först lära sig dessa.
+                  </p>
 
-                                        <img src="../../../assets/images/DOMinbrowser2.PNG" alt="Javascript DOM" width="700px">
-                                    </div>
-                                    <div class="ui  compact small segment">
+                  <ul class="ui list">
+                    <li>getElementById()</li>
+                    <li>querySelector()</li>
+                    <li>querySelectorAll()</li>
+                  </ul>
 
-                                            <img src="../../../assets/images/DOMTree.PNG" alt="Javascript DOM" width="300px">
-                                        </div>
+                  <p>
+                    Vi börjar med <b>getElementById()</b>. Denna metod tar en
+                    sträng som argument och returner det matchande elementet med
+                    det angivna id:et.
+                  </p>
+                  <p>
+                    Här är ett exempel hur man kan hitta ett element med ett
+                    visst id. Referensen till objektet eller noden i DOM lagras
+                    i variabeln element. Notera här att det står
+                    document.getElementById(). Varför? Jo vi vill ju leta i
+                    document-objektet som innehåller hela webbsidan.
+                  </p>
 
-                            <iframe src="//slides.com/sandralarsson-1/deck-6/embed?style=light" width="576" height="420"
-                                scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  <p>
+                    Om man vill ändra nodens innehåll med en ny text kan man
+                    använda medtoden <b>textContent</b>.
+                  </p>
+                  <div class="ui  segment">
+                    <script
+                      async
+                      src="//jsfiddle.net/sandral/q0p8fzyx/embed/js,html,result/"
+                    ></script>
+                  </div>
+                  <br />
+                  <p>
+                    Sedan finns även <b>querySelector()</b> som är väldigt
+                    praktisk eftersom det argument den tar in är samma som CSS
+                    Selektorer. Denna returnerar det första elementet med
+                    matchande selektor den stöter på.
+                  </p>
+                  <div class="ui  segment">
+                    <script
+                      async
+                      src="//jsfiddle.net/sandral/eq6coguj/embed/js,html,result/"
+                    ></script>
+                  </div>
+                  <br />
+                  <p>
+                    <b>querySelectorAll()</b> returnerar en list på alla noder
+                    som matchar CSS-selektorn
+                  </p>
+                  <div class="ui  segment">
+                    <script
+                      async
+                      src="//jsfiddle.net/sandral/tz2w4vmg/2/embed/js,html,result/"
+                    ></script>
+                  </div>
+                </div>
+                <div class="ui vertical segment">
+                  <h2 class="ui header">
+                    Ändra i DOM - maniplera de element vi hittar
+                  </h2>
+                  <p>För de element vi hittar kan vi:</p>
+                  <ul class="ui list">
+                    <li>Ändra innehåll (text/element)</li>
+                    <li>Ändra style</li>
+                    <li>Ändra attribut (src, href, etc)</li>
+                    <li>Lägga till eller ta bort classer</li>
+                    <li>m.m om man vill lära sig mer...</li>
+                  </ul>
 
-                            <!--   <div class="ui vertical segment">
+                  <p>
+                    I exemplen ovan visas hur <b>textContent</b> används för att
+                    ändra textinnehållet i en nod. En annan metod som ändrar
+                    innehållet i ett element är <b>innerHtML</b> där skillnaden
+                    ligger i att man även kan inkludera html-taggar.
+                  </p>
+                  <div class="ui  segment">
+                    <script
+                      async
+                      src="//jsfiddle.net/sandral/gd2apew4/embed/js,html,result/"
+                    ></script>
+                  </div>
+                  <p>
+                    Vi kan även ändra utseendet genom CSS och <b>style</b> för
+                    element
+                  </p>
+                  <div class="ui  segment">
+                    <script
+                      async
+                      src="//jsfiddle.net/sandral/6uqpm4tv/1/embed/js,html,result/"
+                    ></script>
+                  </div>
+                  <p>
+                    Det är dock inte rekommenderat att förändra style om man ska
+                    utföra omfattande förändringar i style.
+                  </p>
+                  <p>
+                    Istället för att ändra style med Javascript kan vi använda
+                    oss av lägga till, ta bort eller toggla ett class attribut
+                    på det element vi vill förändra style. Detta göra med
+                    <b>classList.add</b>, <b>classList.remove</b> eller
+                    <b>classList.toggle</b>
+                  </p>
+                  <div class="ui  segment">
+                    <script
+                      async
+                      src="//jsfiddle.net/sandral/61c5rxbd/embed/"
+                    ></script>
+                  </div>
+
+                  <p>
+                    Vi kan också hämta eler ändra ett elements attribut med
+                    <b>getAttribute()</b> och <b>setAttribute()</b>. Bra exempel
+                    på detta är att komma åt "href" i a-taggen eller ändra en
+                    bildkälla med "src" i img-taggen.
+                  </p>
+                  <div class="ui  segment">
+                    <script
+                      async
+                      src="//jsfiddle.net/sandral/hyvr10sk/embed/js,html,result/"
+                    ></script>
+                  </div>
+                </div>
+                <div class="ui vertical segment">
+                  <iframe
+                    src="//slides.com/sandralarsson-1/deck-6/embed?style=light"
+                    width="576"
+                    height="420"
+                    scrolling="no"
+                    frameborder="0"
+                    webkitallowfullscreen
+                    mozallowfullscreen
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <!--   <div class="ui vertical segment">
                             </div> -->
-                        </div>
-                        <div class="ui segment link">
-                            <h4 class="ui header ">Länkar</h4>
-                            <a href="http://javascript.info/" target="_blank">Javascript Info - bra referensguide</a>
-                            <br />
-                            <a href="http://eloquentjavascript.net/" target="_blank">Eloquent Javascript - bra gratis
-                                bok för dig som vill gå på djupet</a>
-                            <br />
-                            <a href="https://www.w3schools.com/js/" target="_blank">W3 Schools Javascript Tutorial</a>
-                            <br />
+                <div class="ui segment link">
+                  <h4 class="ui header ">Länkar</h4>
+                  <a href="http://javascript.info/" target="_blank"
+                    >Javascript Info - bra referensguide</a
+                  >
+                  <br />
+                  <a href="http://eloquentjavascript.net/" target="_blank"
+                    >Eloquent Javascript - bra gratis bok för dig som vill gå på
+                    djupet</a
+                  >
+                  <br />
+                  <a href="https://www.w3schools.com/js/" target="_blank"
+                    >W3 Schools Javascript Tutorial</a
+                  >
+                  <br />
+                </div>
 
+                <div class="ui hidden divider"></div>
 
-                        </div>
+                <a href="js_funktioner.html">
+                  <button class="ui left floated labeled icon button">
+                    <i class="left arrow icon"></i> Javascript Funktioner
+                  </button>
+                </a>
 
-                        <div class="ui hidden divider"></div>
-
-
-                        <a href="js_funktioner.html">
-                            <button class="ui left floated labeled icon button">
-                                <i class="left arrow icon"></i>
-                                Javascript Funktioner</button>
-                        </a>
-
-                        <!-- 
+                <!-- 
                         <a href="#">
                             <button class="ui right floated labeled icon button">
                                 <i class="right arrow icon"></i>
                                 ?</button>
                         </a> -->
-
-
-                    </div>
-                    <div class="three wide column ">
-                        <!--  <div class="ui grey segment ">
+              </div>
+              <div class="three wide column ">
+                <!--  <div class="ui grey segment ">
               <p>three wide column</p>
             </div> -->
-                    </div>
-                </div>
+              </div>
             </div>
-
+          </div>
         </div>
-    </div>
-
+      </div>
     </div>
 
     <!--Footer-->
     <div class="ui inverted vertical center aligned footer segment">
-        <div class="ui container">
-
-            <!-- <h4 class="ui inverted header">Footer Header</h4> -->
-            <p>&copy; &nbsp; Sandra Larsson, Mediagymnasiet Nacka Strand</p>
-
-        </div>
+      <div class="ui container">
+        <!-- <h4 class="ui inverted header">Footer Header</h4> -->
+        <p>&copy; &nbsp; Sandra Larsson, Mediagymnasiet Nacka Strand</p>
+      </div>
     </div>
     <!--end of footer-->
     <!--Code syntax highlightning-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js "></script>
     <!--jQuery include -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js " integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin=" anonymous "></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js "
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin=" anonymous "
+    ></script>
     <!-- Semantic UI include script-->
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js "></script>
     <!--Local script-->
     <script src="../../../src/script.js "></script>
-</body>
-
+  </body>
 </html>
