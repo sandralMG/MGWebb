@@ -67,7 +67,8 @@
           <a class="item" href="intro_js.html"> Intro Javascript </a>
           <a class="item" href="js_grunder.html"> Javascript Grunder </a>
           <a class="item" href="js_funktioner.html"> Javascript Funktioner </a>
-          <a class="item" href="js_dom.html"> Javascript DOM </a>
+          <a class="item" href="js_dom.html"> Vad är DOM? </a>
+          <a class="item" href="js_use_dom.html"> Använda DOM </a>
         </div>
       </div>
 
@@ -231,137 +232,7 @@
                   Javascript. Hur vi gör det är alltså grunden att skapa
                   interaktivitet med Javascript, vilket vi nu ska lära oss!
                 </p>
-                <div class="ui vertical segment">
-                  <h2 class="ui header">
-                    DOM Selektorer - metoder för att hitta element
-                  </h2>
 
-                  <p>
-                    Det finns olika metoder att hitta element med Javascript. Vi
-                    kommer framförallt att lära oss dess tre. Det finns även
-                    fler, men man kan klarar sig bra att först lära sig dessa.
-                  </p>
-
-                  <ul class="ui list">
-                    <li>getElementById()</li>
-                    <li>querySelector()</li>
-                    <li>querySelectorAll()</li>
-                  </ul>
-
-                  <p>
-                    Vi börjar med <b>getElementById()</b>. Denna metod tar en
-                    sträng som argument och returner det matchande elementet med
-                    det angivna id:et.
-                  </p>
-                  <p>
-                    Här är ett exempel hur man kan hitta ett element med ett
-                    visst id. Referensen till objektet eller noden i DOM lagras
-                    i variabeln element. Notera här att det står
-                    document.getElementById(). Varför? Jo vi vill ju leta i
-                    document-objektet som innehåller hela webbsidan.
-                  </p>
-
-                  <p>
-                    Om man vill ändra nodens innehåll med en ny text kan man
-                    använda medtoden <b>textContent</b>.
-                  </p>
-                  <div class="ui  segment">
-                    <script
-                      async
-                      src="//jsfiddle.net/sandral/q0p8fzyx/embed/js,html,result/"
-                    ></script>
-                  </div>
-                  <br />
-                  <p>
-                    Sedan finns även <b>querySelector()</b> som är väldigt
-                    praktisk eftersom det argument den tar in är samma som CSS
-                    Selektorer. Denna returnerar det första elementet med
-                    matchande selektor den stöter på.
-                  </p>
-                  <div class="ui  segment">
-                    <script
-                      async
-                      src="//jsfiddle.net/sandral/eq6coguj/embed/js,html,result/"
-                    ></script>
-                  </div>
-                  <br />
-                  <p>
-                    <b>querySelectorAll()</b> returnerar en list på alla noder
-                    som matchar CSS-selektorn
-                  </p>
-                  <div class="ui  segment">
-                    <script
-                      async
-                      src="//jsfiddle.net/sandral/tz2w4vmg/2/embed/js,html,result/"
-                    ></script>
-                  </div>
-                </div>
-                <div class="ui vertical segment">
-                  <h2 class="ui header">
-                    Ändra i DOM - maniplera de element vi hittar
-                  </h2>
-                  <p>För de element vi hittar kan vi:</p>
-                  <ul class="ui list">
-                    <li>Ändra innehåll (text/element)</li>
-                    <li>Ändra style</li>
-                    <li>Ändra attribut (src, href, etc)</li>
-                    <li>Lägga till eller ta bort classer</li>
-                    <li>m.m om man vill lära sig mer...</li>
-                  </ul>
-
-                  <p>
-                    I exemplen ovan visas hur <b>textContent</b> används för att
-                    ändra textinnehållet i en nod. En annan metod som ändrar
-                    innehållet i ett element är <b>innerHtML</b> där skillnaden
-                    ligger i att man även kan inkludera html-taggar.
-                  </p>
-                  <div class="ui  segment">
-                    <script
-                      async
-                      src="//jsfiddle.net/sandral/gd2apew4/embed/js,html,result/"
-                    ></script>
-                  </div>
-                  <p>
-                    Vi kan även ändra utseendet genom CSS och <b>style</b> för
-                    element
-                  </p>
-                  <div class="ui  segment">
-                    <script
-                      async
-                      src="//jsfiddle.net/sandral/6uqpm4tv/1/embed/js,html,result/"
-                    ></script>
-                  </div>
-                  <p>
-                    Det är dock inte rekommenderat att förändra style om man ska
-                    utföra omfattande förändringar i style.
-                  </p>
-                  <p>
-                    Istället för att ändra style med Javascript kan vi använda
-                    oss av lägga till, ta bort eller toggla ett class attribut
-                    på det element vi vill förändra style. Detta göra med
-                    <b>classList.add</b>, <b>classList.remove</b> eller
-                    <b>classList.toggle</b>
-                  </p>
-                  <div class="ui  segment">
-                    <script
-                      async
-                      src="//jsfiddle.net/sandral/61c5rxbd/embed/"
-                    ></script>
-                  </div>
-
-                  <p>
-                    Vi kan också hämta eler ändra ett elements attribut med
-                    <b>getAttribute()</b> och <b>setAttribute()</b>. Bra exempel
-                    på detta är att komma åt "href" i a-taggen eller ändra en
-                    bildkälla med "src" i img-taggen.
-                  </p>
-                  <div class="ui  segment">
-                    <script
-                      async
-                      src="//jsfiddle.net/sandral/hyvr10sk/embed/js,html,result/"
-                    ></script>
-                  </div>
-                </div>
                 <div class="ui vertical segment">
                   <iframe
                     src="//slides.com/sandralarsson-1/deck-6/embed?style=light"
@@ -392,7 +263,7 @@
                   >
                   <br />
                 </div>
-
+              </div>
                 <div class="ui hidden divider"></div>
 
                 <a href="js_funktioner.html">
@@ -401,12 +272,11 @@
                   </button>
                 </a>
 
-                <!-- 
-                        <a href="#">
-                            <button class="ui right floated labeled icon button">
-                                <i class="right arrow icon"></i>
-                                ?</button>
-                        </a> -->
+                <a href="js_use_dom.html">
+                  <button class="ui right floated labeled icon button">
+                    <i class="right arrow icon"></i> Använda DOM
+                  </button>
+                </a>
               </div>
               <div class="three wide column ">
                 <!--  <div class="ui grey segment ">
