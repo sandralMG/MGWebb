@@ -4,7 +4,7 @@
 4. Inuti din <header> markera navigationslänkarna ("Home", "Menu", "News", "Contact") som en <nav>
 5. Gör en <ul>-lista av navigationslänkarna
 4. Markera "Summer Menu items"-delen som en <article>. Markera även "Low and Slow" som <article>
-5. I den översta <article> markera den övre delen som <header>. I <header> ge en rubrik <h2> och textstycket till <p>
+5. I den översta <article> ge en rubrik <h2> och textstycket till <p>
 6. Inuti den översta <article> markera "Apertizers" och Main coursers som var sin <section>. Inuti dessa 
    ange vardera rubrik <h3>. Markera vardera textstycke med <p>
 7. Markera ett <span> med id="price" där det står ett dollarpris
