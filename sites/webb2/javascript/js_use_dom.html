@@ -90,7 +90,7 @@
     <div class="pusher">
       <!-- Top menu-->
       <div class="top ui fixed menu">
-        <a class="item sidebar">  <i class="icon big sidebar"></i>Meny </a>
+        <a class="item sidebar"> <i class="icon big sidebar"></i>Meny </a>
         <a class="item"> <div class="ui header">Webbutveckling 2</div> </a>
         <div class="right menu">
           <div class="right menu">
@@ -140,13 +140,12 @@
                 <div class="ui vertical segment">
                   <p>
                     Syftet med att använda sig av DOM är att man kan förändra en
-                    webbsidans innehåll eller utseende enbart genom Javascript.
-                    Detta är primärt användbart när vi kommer att lära oss hur
-                    man kan trigga händelser med att klicka på en knapp eller
+                    webbsidas innehåll eller utseende enbart genom Javascript.
+                    Detta är användbart när vi kommer till att lära oss hur man
+                    kan trigga händelser med att klicka på en knapp eller andra
                     interaktioner från en användare. Vi har inte kommit till att
                     lära oss detta ännu utan i detta avsnitt kommer vi enbart
-                    fokusera på man kan ändra eller manipulera element genom
-                    DOM.
+                    fokusera på att ändra eller manipulera element genom DOM.
                   </p>
 
                   <p>
@@ -157,15 +156,16 @@
                     CSS. Man kan också ändra attribut till element.
                   </p>
                   <p>
-                    Att hitta en referens till ett element gör genom att välja
-                    en lämplig metod, s.k. DOM Selektorer.
+                    Att hitta en referens till ett element gör man genom att
+                    välja en lämplig metod, s.k. DOM Selektorer.
                   </p>
                   <h2 class="ui header red">HITTA element</h2>
                   <p>
                     Det finns olika metoder att hitta element med Javascript,
                     vilket kallas för <strong>DOM Selektorer</strong>. Vi kommer
-                    framförallt att lära oss dessa tre. Det finns även fler, men
-                    man kommer långt med endast dessa.
+                    framförallt att lära oss tre olika metoder för att selektera
+                    vilka html-element man vil hitta. Det finns även fler, men
+                    man kommer långt med att enbart lära sig följande metoder:
                   </p>
                   <strong>
                     <ol>
@@ -179,15 +179,9 @@
                   <p>
                     Denna metod tar en sträng som argument och returner det
                     matchande elementet med det <strong>id</strong> som är
-                    angivet i elementet.
-                  </p>
-                  <p>
-                    Här är ett exempel hur man kan hitta ett element med ett
-                    visst id. Referensen till objektet eller noden i DOM lagras
-                    i variabeln element. Notera här att det står
-                    <strong> document.getElementById()</strong>. Varför? Jo vi
-                    vill ju leta i document-objektet som innehåller hela
-                    webbsidan.
+                    angivet i elementet. Nedan är ett exempel hur man kan hitta
+                    ett element med ett visst id. Referensen till elementer
+                    lagras i variabeln <i>element</i>.
                   </p>
 
                   <p>
@@ -200,6 +194,13 @@
                       src="//jsfiddle.net/sandral/q0p8fzyx/embed/js,html,result/"
                     ></script>
                   </div>
+
+                  <p>
+                    Notera att det står
+                    <strong> document.getElementById()</strong>. Varför? Jo vi
+                    vill ju leta i document-objektet som innehåller hela
+                    webbsidan.
+                  </p>
                   <br />
                   <h2 class="ui header">2. querySelector()</h2>
                   <p>
@@ -208,10 +209,13 @@
                     CSS Selektorer. Denna returnerar det första elementet med
                     matchande selektor den stöter på.
                   </p>
+                  <p>
+                    I exemplet nedan hittar metoden elementet med class="bold".
+                  </p>
                   <div class="ui  segment">
                     <script
                       async
-                      src="//jsfiddle.net/sandral/eq6coguj/embed/js,html,result/"
+                      src="//jsfiddle.net/sandral/eq6coguj/embed/"
                     ></script>
                   </div>
                   <br />
@@ -219,9 +223,7 @@
                   <p>
                     Denna metod är ungefär samma som querySelector() men
                     skillnaden ligger i att den returnerar en lista på alla
-                    noder som matchar CSS-selektorn. I exemplet nedan när man
-                    vill hämta alla "li" finns det flera referenser än en. I
-                    dessa fall är denna metod att föredra.
+                    noder som matchar CSS-selektorn. I exemplet finns det flera li-element där li-element på arrayposition 2 ändras till en ny text.
                   </p>
                   <div class="ui  segment">
                     <script
@@ -270,7 +272,7 @@
                   <p>
                     Istället för att ändra style med Javascript kan vi använda
                     oss av lägga till, ta bort eller toggla ett attribut som
-                    exempelvis class=".some-class" på det element vi vill
+                    exempelvis class="some-class" på det element vi vill
                     förändra style. Detta kan göras med <b>classList.add()</b>,
                     <b>classList.remove()</b> eller <b>classList.toggle()</b>.
                     Då kommer elementet bli tilldelat stilregler som finns
@@ -285,10 +287,10 @@
                   </div>
 
                   <p>
-                    Vi kan också hämta eler ändra ett elements attribut med
+                    Vi kan också hämta eller ändra ett elements attribut med
                     <b>getAttribute()</b> och <b>setAttribute()</b>. Bra exempel
                     på detta är att komma åt "href" i a-taggen eller ändra en
-                    bildkälla med "src" i img-taggen.
+                    bildkälla med "src" i img-taggen. Just att ändra vilken filreferens ett img-element har är användbart till bildspel.
                   </p>
                   <div class="ui  segment">
                     <script
